@@ -1,0 +1,15 @@
+.site {
+  font-family: 'Exo 2', sans-serif;
+}
+
+#site-header {
+	@include rhythm-borders;
+}
+
+#site-nav {
+	@include rhythm-borders;
+}
+
+#site-footer {
+	@include rhythm-borders;
+}

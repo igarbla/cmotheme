@@ -1,0 +1,44 @@
+$total-columns : 4;
+$column-width  : 4em;
+$gutter-width  : 1em;
+$grid-padding  : 0em;
+
+$break-1 : 30em 6;
+$break-2 : 50em 12;
+$break-3 : 60em 15;
+
+$relative-font-sizing  : true;
+$show-grid-backgrounds : true;
+
+
+.site {
+	@include container;
+	@include susy-grid-background;
+	margin: 0 auto;
+
+	@include at-breakpoint($break-3) {
+		@include container;
+		@include susy-grid-background;
+	}
+}
+
+#site-header {
+	@include at-breakpoint($break-3) {
+		overflow: hidden;
+		h1.title {
+			@include span-columns(5, 15);
+			margin-left: -4em;
+		}
+
+		p {
+			@include span-columns(10 omega, 15);
+			@include adjust-font-size-to(13px);
+			text-align: right;
+		}
+
+		#site-languages {
+			@include horizontal-list;
+			float: right;
+		}
+	}
+}
