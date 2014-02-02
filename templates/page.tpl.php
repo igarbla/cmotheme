@@ -95,17 +95,16 @@
   </nav> 
   <?php endif; ?>
 
-<section id="site-banner" class="banner">
-<?php print $site_name; ?>
-</section>
-
-  <?php if ($breadcrumb): ?>
-  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-  <?php endif; ?>
+  <section id="site-banner" class="banner">
+  <?php print $site_name; ?>
+  </section>
 
   <?php print $messages; ?>
 
   <section id="main-content">
+  <?php if ($breadcrumb): ?>
+  <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+  <?php endif; ?>
   <?php print render($title_prefix); ?>
   <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
   <?php print render($title_suffix); ?>

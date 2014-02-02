@@ -7,8 +7,14 @@
 
 #site-nav {
 	//background-color: rgba(blue, 0.5);
-	p {
-	  color: #999;
+	a {
+		@include rhythm-borders;
+		border: none;
+		color: #017CC2;
+		&:hover {
+			background-color: #017cc2;
+			color: white;
+		}
 	}
 }
 

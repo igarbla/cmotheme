@@ -85,6 +85,11 @@ html {
   line-height: 1.5em;
 }
 
+/* line 13, ../sass/_base.scss */
+a {
+  text-decoration: none;
+}
+
 /* line 14, ../sass/_layout.scss */
 .site {
   *zoom: 1;
@@ -270,11 +275,20 @@ html {
 }
 
 /* line 10, ../sass/_colors.scss */
-#site-nav p {
-  color: #999;
+#site-nav a {
+  border-style: solid;
+  border-width: 0.0625em;
+  padding: 1.4375em;
+  border: none;
+  color: #017CC2;
+}
+/* line 14, ../sass/_colors.scss */
+#site-nav a:hover {
+  background-color: #017cc2;
+  color: white;
 }
 
-/* line 15, ../sass/_colors.scss */
+/* line 21, ../sass/_colors.scss */
 #site-banner {
   background-image: -webkit-gradient(radial, 50% 0, 0, 50% 0, 100, color-stop(0%, #d5f1fd), color-stop(90%, #93c9ee), color-stop(100%, #52a9de));
   background-image: -webkit-radial-gradient(50% 0, ellipse, #d5f1fd, #93c9ee 90%, #52a9de);
@@ -285,11 +299,11 @@ html {
   text-shadow: rgba(0, 0, 255, 0.5) 2px 2px 3px;
 }
 
-/* line 21, ../sass/_colors.scss */
+/* line 27, ../sass/_colors.scss */
 #site-footer {
   background-color: rgba(128, 128, 128, 0.5);
 }
-/* line 23, ../sass/_colors.scss */
+/* line 29, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
