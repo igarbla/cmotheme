@@ -1,19 +1,25 @@
 #site-header {
-	background-color: rgba(yellow, 0.5);
+	//background-color: rgba(yellow, 0.5);
 	p {
 	  color: #999;
 	}
 }
 
 #site-nav {
-	background-color: rgba(yellow, 0.5);
+	//background-color: rgba(blue, 0.5);
 	p {
 	  color: #999;
 	}
 }
 
+#site-banner {
+	@include background-image(radial-gradient(50% 0, ellipse, #d5f1fd, #93c9ee 90%, #52a9de));
+	color: #0073b5;
+	@include text-shadow(rgba(blue, 0.5) 2px 2px 3px);
+}
+
 #site-footer {
-	background-color: rgba(yellow, 0.5);
+	background-color: rgba(gray, 0.5);
 	p {
 	  color: #999;
 	}

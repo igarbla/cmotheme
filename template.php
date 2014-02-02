@@ -65,3 +65,93 @@ function cmotheme_process_html(&$variables) {
 //  }
 //}
 
+function cmotheme_item_list($variables) {
+  $items = $variables['items'];
+  $title = $variables['title'];
+  $type = $variables['type'];
+  $attributes = $variables['attributes'];
+
+  // Only output the list container and title, if there are any list items.
+  // Check to see whether the block title exists before adding a header.
+  // Empty headers are not semantic and present accessibility challenges.
+  $output = '';
+  if (isset($title) && $title !== '') {
+    $output .= '<h3>' . $title . '</h3>';
+  }
+
+  if (!empty($items)) {
+    $output .= "<$type" . drupal_attributes($attributes) . '>';
+    $num_items = count($items);
+    $i = 0;
+    foreach ($items as $item) {
+      $attributes = array();
+      $children = array();
+      $data = '';
+      $i++;
+      if (is_array($item)) {
+        foreach ($item as $key => $value) {
+          if ($key == 'data') {
+            $data = $value;
+          }
+          elseif ($key == 'children') {
+            $children = $value;
+          }
+          else {
+            $attributes[$key] = $value;
+          }
+        }
+      }
+      else {
+        $data = $item;
+      }
+      if (count($children) > 0) {
+        // Render nested list.
+        $data .= theme_item_list(array('items' => $children, 'title' => NULL, 'type' => $type, 'attributes' => $attributes));
+      }
+      if ($i == 1) {
+        $attributes['class'][] = 'firstooo';
+      }
+      if ($i == $num_items) {
+        $attributes['class'][] = 'last';
+      }
+      $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>\n";
+    }
+    $output .= "</$type>";
+  }
+  $output .= '';
+  return $output;
+}
+
+function cmotheme_links__locale_block(&$variables) {
+  //dsm($variables);
+  // the global $language variable tells you what the current language is
+  global $language;
+  // an array of list items
+  $items = array();
+  foreach($variables['links'] as $lang => $info) {
+      $name     = $info['language']->native;
+      $href     = isset($info['href']) ? $info['href'] : '';
+      $li_classes   = array('list-item-class');
+      // if the global language is that of this item's language, add the active class
+      if($lang === $language->language){
+            $li_classes[] = 'active';
+      }
+      $link_classes = array();
+      $options = array('attributes' => array('class'    => $link_classes),
+                                             'language' => $info['language'],
+                                             'html'     => true
+                                             );
+      $link = l($name, $href, $options);
+      // display only translated links
+      if ($href) $items[] = array('data' => $link, 'class' => $li_classes);
+   }
+  // output
+  $attributes = array('class' => array(''));
+  $output = theme_item_list(array('items' => $items,
+                                  'title' => '',
+                                  'type'  => 'ul',
+                                  'attributes' => $attributes
+  			  ));
+  return $output;
+}
+

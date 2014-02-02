@@ -13,12 +13,12 @@ $show-grid-backgrounds : true;
 
 .site {
 	@include container;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 	margin: 0 auto;
 
 	@include at-breakpoint($break-3) {
 		@include container;
-		@include susy-grid-background;
+		//@include susy-grid-background;
 	}
 }
 
@@ -36,9 +36,24 @@ $show-grid-backgrounds : true;
 			text-align: right;
 		}
 
-		#site-languages {
-			@include horizontal-list;
-			float: right;
+		#block-locale-language {
+			@include span-columns(10 omega, 15);
+			div {
+				ul {
+					@include horizontal-list;
+					float: right;
+				}
+			}
 		}
 	}
 }
+
+#site-nav {
+	overflow: hidden;
+	margin-top: -4.5em;
+	ul {
+		@include horizontal-list;
+		float: right;
+	}
+}
+

@@ -4,10 +4,26 @@
 
 #site-header {
 	@include rhythm-borders;
+	border: none;
 }
 
 #site-nav {
 	@include rhythm-borders;
+	border: none;
+}
+
+#site-banner {
+	@include adjust-font-size-to(22px);
+	line-height: 6em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: 600;
+}
+
+#main-content {
+	@include rhythm-borders;
+	border: none;
 }
 
 #site-footer {

@@ -95,6 +95,10 @@
   </nav> 
   <?php endif; ?>
 
+<section id="site-banner" class="banner">
+<?php print $site_name; ?>
+</section>
+
   <?php if ($breadcrumb): ?>
   <div id="breadcrumb"><?php print $breadcrumb; ?></div>
   <?php endif; ?>
