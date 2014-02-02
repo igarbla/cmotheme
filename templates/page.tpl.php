@@ -92,6 +92,9 @@
   <?php if ($main_menu || $secondary_menu): ?>
   <nav id="site-nav">
     <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+<?php if (!empty($primary_nav)): ?>
+<?php print theme('menu_tree__primery', $primary_nav); ?>
+  <?php endif; ?>
   </nav> 
   <?php endif; ?>
 

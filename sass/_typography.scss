@@ -10,6 +10,9 @@
 #site-nav {
 	@include rhythm-borders;
 	border: none;
+	@include adjust-font-size-to(15px);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
 }
 
 #site-banner {

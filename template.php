@@ -17,6 +17,7 @@
 //}
  */
 
+
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
   $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
@@ -28,6 +29,20 @@ function cmotheme_process_html(&$variables) {
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Exo+2:400,600,900" rel="stylesheet" type="text/css">';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
+}
+function cmotheme_preprocess_page(&$vars) {
+	$vars['primary_nav'] = FALSE;
+	if ($vars['main_menu']) {
+		// Build links.
+		$vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+		// Provide default theme wrapper function.
+		$vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+	}
+}
+
+
+function cmotheme_menu_tree__primary(&$vars) {
+  return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
  
 //function crazybird_preprocess_node(&$variables) {
@@ -155,3 +170,16 @@ function cmotheme_links__locale_block(&$variables) {
   return $output;
 }
 
+function cmotheme_menu_link(array $variables) {
+  print_r($variables);
+  $element = $variables['element'];
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+function cmotheme_menu_tree($variables) {
+  return '<ul class="menu">' . $variables['tree'] . '</ul>';
+}

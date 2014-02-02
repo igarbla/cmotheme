@@ -241,9 +241,13 @@ a {
   border-width: 0.0625em;
   padding: 1.4375em;
   border: none;
+  font-size: 0.9375em;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* line 15, ../sass/_typography.scss */
+/* line 18, ../sass/_typography.scss */
 #site-banner {
   font-size: 1.375em;
   line-height: 2.18182em;
@@ -254,7 +258,7 @@ a {
   font-weight: 600;
 }
 
-/* line 24, ../sass/_typography.scss */
+/* line 27, ../sass/_typography.scss */
 #main-content {
   border-style: solid;
   border-width: 0.0625em;
@@ -262,7 +266,7 @@ a {
   border: none;
 }
 
-/* line 29, ../sass/_typography.scss */
+/* line 32, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
