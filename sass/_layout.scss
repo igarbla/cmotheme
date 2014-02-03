@@ -58,9 +58,6 @@ $show-grid-backgrounds : true;
 		li,
 	  li.first,
 	  li.last	{
-			@include apply-side-rhythm-border(left);
-			@include apply-side-rhythm-border(right);
-			border: none;
 			a {
 			}
 		}
@@ -73,10 +70,11 @@ $show-grid-backgrounds : true;
 			&:hover {
 				ul {
 					display: block;
-					bottom: 1em1em1em1em1em1em1em1em1em1em1em;
+					top: 2.1em;
 					left: 0;
 					li {
 						display: inline-block;
+						width: 100%;
 					}
 				}
 			}
@@ -85,4 +83,6 @@ $show-grid-backgrounds : true;
 }
 
 #site-banner {
+	@include margin-leader(1);
 }
+

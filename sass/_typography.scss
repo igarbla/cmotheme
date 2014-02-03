@@ -10,11 +10,19 @@
 #site-nav {
 	@include rhythm-borders;
 	border: none;
-	@include adjust-font-size-to(15px);
+	@include adjust-font-size-to(16px);
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	ul {
-		li{
+		li,
+		li.first,
+		li.last	{
+			@include apply-side-rhythm-border(left);
+			@include apply-side-rhythm-border(right);
+			@include rhythm(0,0.3,0.3,0);
+			border: none;
+			a {
+			}
 		}
 	}
 }

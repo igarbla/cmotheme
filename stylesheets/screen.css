@@ -222,36 +222,30 @@ a {
 #site-nav ul li.last {
   padding-right: 0;
 }
-/* line 60, ../sass/_layout.scss */
-#site-nav ul li,
-#site-nav ul li.first,
-#site-nav ul li.last {
-  border-left-style: solid;
-  border-left-width: 0.0625em;
-  padding-left: 1.4375em;
-  border-right-style: solid;
-  border-right-width: 0.0625em;
-  padding-right: 1.4375em;
-  border: none;
-}
-/* line 67, ../sass/_layout.scss */
+/* line 64, ../sass/_layout.scss */
 #site-nav ul li.expanded {
   position: relative;
 }
-/* line 69, ../sass/_layout.scss */
+/* line 66, ../sass/_layout.scss */
 #site-nav ul li.expanded ul {
   position: absolute;
   display: none;
 }
-/* line 74, ../sass/_layout.scss */
+/* line 71, ../sass/_layout.scss */
 #site-nav ul li.expanded:hover ul {
   display: block;
-  bottom: 1em1em1em1em1em1em1em1em1em1em1em;
+  top: 2.1em;
   left: 0;
 }
-/* line 78, ../sass/_layout.scss */
+/* line 75, ../sass/_layout.scss */
 #site-nav ul li.expanded:hover ul li {
   display: inline-block;
+  width: 100%;
+}
+
+/* line 85, ../sass/_layout.scss */
+#site-banner {
+  margin-top: 1.5em;
 }
 
 /* line 1, ../sass/_typography.scss */
@@ -273,13 +267,29 @@ a {
   border-width: 0.0625em;
   padding: 1.4375em;
   border: none;
-  font-size: 0.9375em;
-  line-height: 1.6em;
+  font-size: 1em;
+  line-height: 1.5em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+/* line 19, ../sass/_typography.scss */
+#site-nav ul li,
+#site-nav ul li.first,
+#site-nav ul li.last {
+  border-left-style: solid;
+  border-left-width: 0.0625em;
+  padding-left: 1.4375em;
+  border-right-style: solid;
+  border-right-width: 0.0625em;
+  padding-right: 1.4375em;
+  margin-top: 0em;
+  padding-top: 0.45em;
+  padding-bottom: 0.45em;
+  margin-bottom: 0em;
+  border: none;
+}
 
-/* line 22, ../sass/_typography.scss */
+/* line 30, ../sass/_typography.scss */
 #site-banner {
   font-size: 1.375em;
   line-height: 2.18182em;
@@ -290,7 +300,7 @@ a {
   font-weight: 600;
 }
 
-/* line 31, ../sass/_typography.scss */
+/* line 39, ../sass/_typography.scss */
 #main-content {
   border-style: solid;
   border-width: 0.0625em;
@@ -298,7 +308,7 @@ a {
   border: none;
 }
 
-/* line 36, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
