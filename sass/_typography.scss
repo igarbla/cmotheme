@@ -7,6 +7,14 @@
 #site-header {
 	@include rhythm-borders;
 	border: none;
+	p {
+		@include adjust-font-size-to(13px);
+		text-align: right;
+	}
+
+	#block-locale-language {
+		@include adjust-font-size-to(13px);
+	}
 }
 
 #site-nav {
@@ -46,6 +54,11 @@
 #main-content {
 	@include rhythm-borders;
 	border: none;
+
+	p {
+			@include rhythm(0,1,1,0);
+		}
+
 }
 
 #site-footer {
