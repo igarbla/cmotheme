@@ -17,7 +17,6 @@
 //}
  */
 
-
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
   $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
@@ -30,6 +29,13 @@ function cmotheme_process_html(&$variables) {
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
 }
+
+function cmotheme_css_alter(&$css) {
+    unset($css[drupal_get_path('module','system').'/system.theme.css']);
+    unset($css[drupal_get_path('module','system').'/system.menus.css']);
+    unset($css[drupal_get_path('module','system').'/system.base.css']);
+}
+
 
 //function crazybird_preprocess_node(&$variables) {
 //  if ($variables['submitted']) {
@@ -162,7 +168,6 @@ function cmotheme_links($variables) {
     foreach ($tree as $key => $value) {
       if (!empty($value['#below']) && in_array('expanded', $value['#attributes']['class'], true)) {
 	$value['#localized_options']['attributes']['class'][] = 'icon-icomoon-arrow-down2';
-	print $value['#title'];
 	$tree[$key] = $value;
       }
     }
