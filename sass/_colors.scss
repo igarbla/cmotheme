@@ -7,13 +7,30 @@
 
 #site-nav {
 	//background-color: rgba(blue, 0.5);
-	a {
-		@include rhythm-borders;
-		border: none;
-		color: #017CC2;
+	li {
 		&:hover {
 			background-color: #017cc2;
-			color: white;
+			a {
+				color: white;
+			}
+		}
+		a {
+			color: #017cc2;
+		}
+	}
+	li.expanded {
+		&:hover {
+			ul {
+				background-color: white;
+				li:hover {
+					a {
+						color: white;
+					}
+				}
+				a {
+					color: #017cc2;
+				}
+			}
 		}
 	}
 }

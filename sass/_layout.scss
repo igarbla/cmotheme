@@ -49,11 +49,40 @@ $show-grid-backgrounds : true;
 }
 
 #site-nav {
-	overflow: hidden;
+	overflow: visible;
 	margin-top: -4.5em;
 	ul {
 		@include horizontal-list;
 		float: right;
+	  overflow: visible;
+		li,
+	  li.first,
+	  li.last	{
+			@include apply-side-rhythm-border(left);
+			@include apply-side-rhythm-border(right);
+			border: none;
+			a {
+			}
+		}
+		li.expanded {
+			position: relative;
+			ul {
+				position: absolute;
+				display: none;
+			}
+			&:hover {
+				ul {
+					display: block;
+					bottom: 1em1em1em1em1em1em1em1em1em1em1em;
+					left: 0;
+					li {
+						display: inline-block;
+					}
+				}
+			}
+		}
 	}
 }
 
+#site-banner {
+}
