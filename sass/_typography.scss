@@ -1,3 +1,5 @@
+@import "icomoon";
+
 .site {
   font-family: 'Exo 2', sans-serif;
 }
@@ -23,6 +25,11 @@
 			border: none;
 			a {
 			}
+			ul {
+				border: solid 1px rgba(gray, 0.5);
+			}
+		}
+		li.expanded {
 		}
 	}
 }
@@ -43,4 +50,18 @@
 
 #site-footer {
 	@include rhythm-borders;
+}
+
+
+// Iconos menu principal
+.icon-icomoon-arrow-down2:before {
+	content: "";
+}
+.icon-icomoon-arrow-down2:after {
+	font-family: 'icomoon';
+	content: "\e72c";
+}
+.icon-icomoon-arrow-down2 {
+	font-family: 'Exo 2';
+	text-transform: uppercase;
 }

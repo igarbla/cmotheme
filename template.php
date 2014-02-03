@@ -110,7 +110,7 @@ function cmotheme_item_list($variables) {
         $data .= theme_item_list(array('items' => $children, 'title' => NULL, 'type' => $type, 'attributes' => $attributes));
       }
       if ($i == 1) {
-        $attributes['class'][] = 'firstooo';
+        $attributes['class'][] = 'first';
       }
       if ($i == $num_items) {
         $attributes['class'][] = 'last';
@@ -124,7 +124,6 @@ function cmotheme_item_list($variables) {
 }
 
 function cmotheme_links__locale_block(&$variables) {
-  //dsm($variables);
   // the global $language variable tells you what the current language is
   global $language;
   // an array of list items
@@ -160,6 +159,13 @@ function cmotheme_links($variables) {
   if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'main-menu') {
     $pid = variable_get('menu_main_links_source', 'main-menu');
     $tree = menu_tree($pid);
+    foreach ($tree as $key => $value) {
+      if (!empty($value['#below']) && in_array('expanded', $value['#attributes']['class'], true)) {
+	$value['#localized_options']['attributes']['class'][] = 'icon-icomoon-arrow-down2';
+	print $value['#title'];
+	$tree[$key] = $value;
+      }
+    }
     return drupal_render($tree);
   }
   return theme_links($variables);
