@@ -41,6 +41,13 @@
 	@include text-shadow(rgba(blue, 0.5) 2px 2px 3px);
 }
 
+#main-content {
+	@include at-breakpoint($break-3) {
+		background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
+		@include background-size(cover);
+	}
+}
+
 #site-footer {
 	background-color: rgba(gray, 0.5);
 	p {

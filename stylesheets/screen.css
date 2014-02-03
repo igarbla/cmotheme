@@ -2656,11 +2656,22 @@ a {
   text-shadow: rgba(0, 0, 255, 0.5) 2px 2px 3px;
 }
 
-/* line 44, ../sass/_colors.scss */
+@media (min-width: 60em) {
+  /* line 44, ../sass/_colors.scss */
+  #main-content {
+    background: white url(../images/backgr_factory_group.jpg) bottom left no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+/* line 51, ../sass/_colors.scss */
 #site-footer {
   background-color: rgba(128, 128, 128, 0.5);
 }
-/* line 46, ../sass/_colors.scss */
+/* line 53, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
