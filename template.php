@@ -161,16 +161,15 @@ function cmotheme_links__locale_block(&$variables) {
   return $output;
 }
 
+/*
+ * Menu principal con un solo nivel
+ */
+
 function cmotheme_links($variables) {
   if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'main-menu') {
     $pid = variable_get('menu_main_links_source', 'main-menu');
-    $tree = menu_tree($pid);
-    foreach ($tree as $key => $value) {
-      if (!empty($value['#below']) && in_array('expanded', $value['#attributes']['class'], true)) {
-	$value['#localized_options']['attributes']['class'][] = 'icon-icomoon-arrow-down2';
-	$tree[$key] = $value;
-      }
-    }
+    $tree = menu_tree_output(menu_build_tree($pid, array('max_depth' => 2)));
+    //dsm($tree);
     return drupal_render($tree);
   }
   return theme_links($variables);
