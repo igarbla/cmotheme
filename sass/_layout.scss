@@ -82,6 +82,47 @@ $show-grid-backgrounds : true;
 	}
 }
 
+#main-content {
+
+	@include at-breakpoint($break-3) {
+	  article.serie {
+			overflow: hidden;
+			ul {
+				li{
+					@include span-columns(3, 12);
+					@include nth-omega(4n);
+
+					div.box {
+						position: relative;
+						overflow: hidden;
+						clear: both;
+						text-align: center;
+						&:after {
+							content: "";
+						}
+						a {
+							div.slide {
+								height: 210px;
+							}
+							img {
+								width: 100%;
+								height: 100%;
+							}
+							div.scontent {
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								top: 0;
+								padding-top: 6em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 #site-banner {
 	@include margin-leader(1);
 }

@@ -54,11 +54,18 @@
 #main-content {
 	@include rhythm-borders;
 	border: none;
-
 	p {
-			@include rhythm(0,1,1,0);
+		@include rhythm(0,1,1,0);
+	}
+	@include at-breakpoint($break-3) {
+		h1 {
+			@include adjust-font-size-to(48px);
+			text-align: center;
 		}
-
+		h2 {
+			@include adjust-font-size-to(24px);
+		}
+	}
 }
 
 #site-footer {

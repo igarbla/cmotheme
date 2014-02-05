@@ -243,7 +243,53 @@ a {
   width: 100%;
 }
 
-/* line 85, ../sass/_layout.scss */
+@media (min-width: 60em) {
+  /* line 88, ../sass/_layout.scss */
+  #main-content article.serie {
+    overflow: hidden;
+  }
+  /* line 91, ../sass/_layout.scss */
+  #main-content article.serie ul li {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/susy-1.0.9/sass/susy/_grid.scss */
+  #main-content article.serie ul li:nth-child(4n) {
+    float: right;
+    margin-right: 0;
+  }
+  /* line 95, ../sass/_layout.scss */
+  #main-content article.serie ul li div.box {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+  }
+  /* line 100, ../sass/_layout.scss */
+  #main-content article.serie ul li div.box:after {
+    content: "";
+  }
+  /* line 104, ../sass/_layout.scss */
+  #main-content article.serie ul li div.box a div.slide {
+    height: 210px;
+  }
+  /* line 107, ../sass/_layout.scss */
+  #main-content article.serie ul li div.box a img {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 111, ../sass/_layout.scss */
+  #main-content article.serie ul li div.box a div.scontent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top: 6em;
+  }
+}
+
+/* line 126, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }
@@ -2601,33 +2647,46 @@ a {
   padding: 1.4375em;
   border: none;
 }
-/* line 58, ../sass/_typography.scss */
+/* line 57, ../sass/_typography.scss */
 #main-content p {
   margin-top: 0em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   margin-bottom: 0em;
 }
+@media (min-width: 60em) {
+  /* line 61, ../sass/_typography.scss */
+  #main-content h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  /* line 65, ../sass/_typography.scss */
+  #main-content h2 {
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+}
 
-/* line 64, ../sass/_typography.scss */
+/* line 71, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
   padding: 1.4375em;
 }
 
-/* line 70, ../sass/_typography.scss */
+/* line 77, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:before {
   content: "";
 }
 
-/* line 73, ../sass/_typography.scss */
+/* line 80, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:after {
   font-family: 'icomoon';
   content: "\e72c";
 }
 
-/* line 77, ../sass/_typography.scss */
+/* line 84, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2 {
   font-family: 'Exo 2';
   text-transform: uppercase;
@@ -2683,13 +2742,58 @@ a {
     -o-background-size: cover;
     background-size: cover;
   }
+  /* line 48, ../sass/_colors.scss */
+  #main-content h1, #main-content h2 {
+    color: navy;
+  }
+  /* line 58, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box a div.slide:hover div.scontent {
+    opacity: 0;
+  }
+  /* line 61, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box a div.slide:hover img {
+    -webkit-transform: scale(1.5, 1.5);
+    -moz-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    -o-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+  }
+  /* line 66, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box a img {
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+  }
+  /* line 70, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box a div.scontent {
+    color: white;
+    background-color: black;
+    opacity: 0.75;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+  }
+  /* line 76, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box a div.scontent h2 {
+    color: white;
+  }
 }
 
-/* line 51, ../sass/_colors.scss */
+/* line 88, ../sass/_colors.scss */
 #site-footer {
   background-color: rgba(128, 128, 128, 0.5);
 }
-/* line 53, ../sass/_colors.scss */
+/* line 90, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }

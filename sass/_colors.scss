@@ -45,6 +45,43 @@
 	@include at-breakpoint($break-3) {
 		background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
 		@include background-size(cover);
+		h1, h2 {
+			color: navy;
+		}
+		article.serie {
+			ul {
+				li {
+					div.box {
+						a {
+							div.slide {
+								&:hover {
+									div.scontent {
+										opacity: 0;
+									}
+									img {
+										@include scale(1.5, 1.5);
+									}
+								}
+							}
+							img {
+								@include transition-property(all);
+								@include transition-duration(1s);
+							}
+							div.scontent {
+								color: white;
+								background-color: black;
+								opacity: 0.75;
+								@include transition-property(opacity);
+								@include transition-duration(1s);
+								h2 {
+									color: white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
