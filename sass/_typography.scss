@@ -27,11 +27,11 @@
 		li,
 		li.first,
 		li.last	{
+			a {
 			@include apply-side-rhythm-border(left);
 			@include apply-side-rhythm-border(right);
-			@include rhythm(0,0.3,0.3,0);
 			border: none;
-			a {
+			@include rhythm(0,0.3,0.3,0);
 			}
 			ul {
 				border: solid 1px rgba(gray, 0.5);

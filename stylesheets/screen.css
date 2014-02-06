@@ -234,7 +234,7 @@ a {
 /* line 71, ../sass/_layout.scss */
 #site-nav ul li.expanded:hover ul {
   display: block;
-  top: 2.1em;
+  top: 1.7em;
   left: 0;
 }
 /* line 75, ../sass/_layout.scss */
@@ -2606,21 +2606,21 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-/* line 29, ../sass/_typography.scss */
-#site-nav ul li,
-#site-nav ul li.first,
-#site-nav ul li.last {
+/* line 30, ../sass/_typography.scss */
+#site-nav ul li a,
+#site-nav ul li.first a,
+#site-nav ul li.last a {
   border-left-style: solid;
   border-left-width: 0.0625em;
   padding-left: 1.4375em;
   border-right-style: solid;
   border-right-width: 0.0625em;
   padding-right: 1.4375em;
+  border: none;
   margin-top: 0em;
   padding-top: 0.45em;
   padding-bottom: 0.45em;
   margin-bottom: 0em;
-  border: none;
 }
 /* line 36, ../sass/_typography.scss */
 #site-nav ul li ul,
@@ -2746,11 +2746,20 @@ a {
   #main-content h1, #main-content h2 {
     color: navy;
   }
-  /* line 58, ../sass/_colors.scss */
+  /* line 54, ../sass/_colors.scss */
+  #main-content article.serie ul li div.box {
+    border: solid 5px #666;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -ms-border-radius: 0.25em;
+    -o-border-radius: 0.25em;
+    border-radius: 0.25em;
+  }
+  /* line 60, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover div.scontent {
     opacity: 0;
   }
-  /* line 61, ../sass/_colors.scss */
+  /* line 63, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover img {
     -webkit-transform: scale(1.5, 1.5);
     -moz-transform: scale(1.5, 1.5);
@@ -2758,7 +2767,7 @@ a {
     -o-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
   }
-  /* line 66, ../sass/_colors.scss */
+  /* line 68, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a img {
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -2769,11 +2778,11 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 70, ../sass/_colors.scss */
+  /* line 72, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent {
     color: white;
     background-color: black;
-    opacity: 0.75;
+    opacity: 0.65;
     -webkit-transition-property: opacity;
     -moz-transition-property: opacity;
     -o-transition-property: opacity;
@@ -2783,17 +2792,17 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 76, ../sass/_colors.scss */
+  /* line 78, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent h2 {
     color: white;
   }
 }
 
-/* line 88, ../sass/_colors.scss */
+/* line 90, ../sass/_colors.scss */
 #site-footer {
   background-color: rgba(128, 128, 128, 0.5);
 }
-/* line 90, ../sass/_colors.scss */
+/* line 92, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
