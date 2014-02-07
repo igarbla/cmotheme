@@ -234,18 +234,19 @@ function cmotheme_field__field_fichero_man_instalacion__producto($variables) {
  * Visto en: https://drupal.org/comment/4238936#comment-4238936
  */
 function producto_sibling($dir = 'next', $node, $next_node_text=NULL, $prepend_text=NULL, $append_text=NULL, $tid = FALSE){
+  global $language;
   if($tid){
-    $query = 'SELECT n.nid, n.title FROM {node} n INNER JOIN {term_node} tn ON n.nid=tn.nid WHERE '
+    $query = 'SELECT n.nid, n.title FROM {node} n INNER JOIN {taxonomy_index} tn ON n.nid=tn.nid WHERE '
            . 'n.nid ' . ($dir == 'previous' ? '<' : '>') . ' :nid AND n.type = :type AND n.status=1 '
-           . 'AND tn.tid = :tid ORDER BY n.nid ' . ($dir == 'previous' ? 'DESC' : 'ASC');
+           . 'AND tn.tid = :tid AND n.language = :language ORDER BY n.nid ' . ($dir == 'previous' ? 'DESC' : 'ASC');
     //use fetchObject to fetch a single row
-    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type, ':tid' => $tid))->fetchObject();
+    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type, ':tid' => $tid, ':language' => $language->language))->fetchObject();
   }else{
     $query = 'SELECT n.nid, n.title FROM {node} n WHERE '
-           . 'n.nid ' . ($dir == 'previous' ? '<' : '>') . ' :nid AND n.type = :type AND n.status=1 '
+           . 'n.nid ' . ($dir == 'previous' ? '<' : '>') . ' :nid AND n.type = :type AND n.status=1 AND n.language = :language '
            . 'ORDER BY n.nid ' . ($dir == 'previous' ? 'DESC' : 'ASC');
     //use fetchObject to fetch a single row
-    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type))->fetchObject();
+    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type, ':language' => $language->language))->fetchObject();
   }
   if($row) {
     $text = $next_node_text ? $next_node_text : $row->title;

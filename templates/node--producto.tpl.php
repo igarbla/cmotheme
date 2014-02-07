@@ -78,7 +78,7 @@
  * @see template_process()
  */
 ?>
-<?php //dsm(get_defined_vars()); ?>
+<?php dsm(get_defined_vars()); ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -103,9 +103,11 @@
   hide($content['comments']);
   hide($content['links']);
   hide($content['field_detalles_producto']);
+  hide($content['field_catalogo']);
+  $catalogo = $field_catalogo[0]['tid'];
   print render($content);
-  $next = producto_sibling('next',$node,NULL,NULL,NULL,FALSE);
-  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,FALSE); 
+  $next = producto_sibling('next',$node,NULL,NULL,NULL,$catalogo);
+  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo); 
   print $previous.'||'.$next;
   print render($content['field_detalles_producto']);
 ?>
