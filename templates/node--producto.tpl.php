@@ -78,7 +78,7 @@
  * @see template_process()
  */
 ?>
-<?php dsm(get_defined_vars()); ?>
+<?php //dsm(get_defined_vars()); ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
