@@ -203,3 +203,55 @@ function cmotheme_views_view_fields__catalogo__page($variables) {
 	return $output;
 }
 
+/*
+ * Producto theme functions
+ */
+function cmotheme_field__field_fichero_man_instalacion__producto($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/*
+ * Navegación entre productos
+ *
+ * Visto en: https://drupal.org/comment/4238936#comment-4238936
+ */
+function producto_sibling($dir = 'next', $node, $next_node_text=NULL, $prepend_text=NULL, $append_text=NULL, $tid = FALSE){
+  if($tid){
+    $query = 'SELECT n.nid, n.title FROM {node} n INNER JOIN {term_node} tn ON n.nid=tn.nid WHERE '
+           . 'n.nid ' . ($dir == 'previous' ? '<' : '>') . ' :nid AND n.type = :type AND n.status=1 '
+           . 'AND tn.tid = :tid ORDER BY n.nid ' . ($dir == 'previous' ? 'DESC' : 'ASC');
+    //use fetchObject to fetch a single row
+    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type, ':tid' => $tid))->fetchObject();
+  }else{
+    $query = 'SELECT n.nid, n.title FROM {node} n WHERE '
+           . 'n.nid ' . ($dir == 'previous' ? '<' : '>') . ' :nid AND n.type = :type AND n.status=1 '
+           . 'ORDER BY n.nid ' . ($dir == 'previous' ? 'DESC' : 'ASC');
+    //use fetchObject to fetch a single row
+    $row = db_query($query, array(':nid' => $node->nid, ':type' => $node->type))->fetchObject();
+  }
+  if($row) {
+    $text = $next_node_text ? $next_node_text : $row->title;
+    return $prepend_text . l($text, 'node/'.$row->nid, array('rel' => $dir)) . $append_text;
+  } else {
+      return FALSE;
+  }
+}
+

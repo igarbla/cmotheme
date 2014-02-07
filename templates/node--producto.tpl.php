@@ -78,7 +78,7 @@
  * @see template_process()
  */
 ?>
-<?php dsm(get_defined_vars()); ?>
+<?php //dsm(get_defined_vars()); ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -98,12 +98,17 @@
   <?php endif; ?>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
+  <?php
+  // We hide the comments and links now so that we can render them later.
+  hide($content['comments']);
+  hide($content['links']);
+  hide($content['field_detalles_producto']);
+  print render($content);
+  $next = producto_sibling('next',$node,NULL,NULL,NULL,FALSE);
+  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,FALSE); 
+  print $previous.'||'.$next;
+  print render($content['field_detalles_producto']);
+?>
   </div>
 
   <?php
