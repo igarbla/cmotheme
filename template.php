@@ -28,6 +28,8 @@ function cmotheme_process_html(&$variables) {
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Exo+2:400,600,900" rel="stylesheet" type="text/css">';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
+  // http://www.milesjcarter.co.uk/blog/web-design-development/drupal-7-seo-controlling-page-titles-theme-layer/
+  //$variables['head_title'] = implode(' | ', array(drupal_get_title(), variable_get('site_name', ''), ));
 }
 
 function cmotheme_css_alter(&$css) {
@@ -36,6 +38,25 @@ function cmotheme_css_alter(&$css) {
     //unset($css[drupal_get_path('module','system').'/system.base.css']);
 }
 
+function cmotheme_preprocess_page(&$variables, $hook) {
+  if (isset($variables['node'])) {
+    // If the node type is "blog_madness" the template suggestion will be "page--blog-madness.tpl.php".
+    $variables['theme_hook_suggestions'][] = 'page__'. str_replace('_', '--', $variables['node']->type);
+ 
+  if ($variables['node']->type == 'producto') {
+	  $term = $variables['node']->field_catalogo['und'][0]['taxonomy_term'];
+	  $parent = catalogo_top_parent($term->tid);
+	  drupal_set_title($parent->name . ' - ' . $variables['node']->title);
+      }
+  }
+}
+function cmotheme_preprocess_node(&$variables, $hook) {
+	/*$node = $variables['node'];
+	if ($node->type == 'producto') {
+          $parent = catalogo_top_parent($variables['field_catalogo'][0]['tid']);
+	  $variables['title'] = $parent->name . ' - ' . $variables['title'];
+	}*/
+}
 
 //function crazybird_preprocess_node(&$variables) {
 //  if ($variables['submitted']) {
@@ -273,3 +294,20 @@ function producto_sibling($dir = 'next', $node, $next_node_text=NULL, $prepend_t
   }
 }
 
+/*
+ * https://api.drupal.org/api/drupal/modules!taxonomy!taxonomy.module/function/taxonomy_get_parents_all/7
+ */
+function catalogo_top_parent($tid=NULL) {
+  if ($tid) {
+    $top_parent_term = null;
+    $parent_terms = taxonomy_get_parents_all($tid);
+    foreach($parent_terms as $parent) {
+      $parent_parents = taxonomy_get_parents_all($parent->tid);
+      if ($parent_parents != false) {
+        //this is top parent term
+        $top_parent_term = $parent;
+      }
+    }
+    return $top_parent_term;
+  }
+}

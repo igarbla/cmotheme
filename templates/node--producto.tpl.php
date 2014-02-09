@@ -106,11 +106,16 @@
   hide($content['field_catalogo']);
   $catalogo = $field_catalogo[0]['tid'];
   print render($content);
+  ?>
+  <div class="product-navigation">
+  <?php
   $next = producto_sibling('next',$node,NULL,NULL,NULL,$catalogo);
-  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo); 
-  print $previous.'||'.$next;
-  print render($content['field_detalles_producto']);
-?>
+  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo);
+  ?>
+  <div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div>
+  <div class="icon-icomoon-arrow-right2"><?php print $next; ?></div>
+  </div>
+  <?php print render($content['field_detalles_producto']); ?>
   </div>
 
   <?php
