@@ -85,10 +85,11 @@ $show-grid-backgrounds : true;
 #main-content {
 
 	@include at-breakpoint($break-3) {
-	  article.serie {
+
+		article.serie {
 			overflow: hidden;
 			div.item-list {
-			overflow: hidden;
+				overflow: hidden;
 				clear: both;
 				@include margin-trailer;
 			}
@@ -131,6 +132,30 @@ $show-grid-backgrounds : true;
 				}
 			}
 		}
+
+		article.producto {
+			h1 {
+				@include span-columns(4, 12);
+			}
+
+			div.field-name-field-fichero-doc-tecnica {
+				@include span-columns(4, 12);
+				@include nth-omega(2n);
+			}
+			div.field-name-body {
+				@include span-columns(6, 12);
+			}
+			div.field-name-field-foto-producto {
+				@include span-columns(6 omega, 12);
+			}
+			div.product-navigation {
+				@include span-columns(12);
+			}
+			div.field-name-field-detalles-producto {
+				@include span-columns(12);
+			}
+		}
+
 	}
 }
 

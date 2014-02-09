@@ -42,12 +42,16 @@
 }
 
 #main-content {
+
 	@include at-breakpoint($break-3) {
-		background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
-		@include background-size(cover);
+		//background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
 		h1, h2 {
 			color: #09f;
 		}
+		article {
+	  	background: transparent url(../images/me_backg_opa.jpg) top left;
+		  @include background-size(auto);
+  	}
 		article.serie {
 			h3 {
     		background: #09f url(../images/cmo_logo_white.png) 1em no-repeat;
@@ -88,6 +92,11 @@
 				}
 			}
 		}
+
+		article.producto {
+
+		}
+
 	}
 }
 
