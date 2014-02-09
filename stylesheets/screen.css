@@ -249,6 +249,12 @@ a {
     overflow: hidden;
   }
   /* line 90, ../sass/_layout.scss */
+  #main-content article.serie div.item-list {
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 1.5em;
+  }
+  /* line 95, ../sass/_layout.scss */
   #main-content article.serie h3 {
     border-style: solid;
     border-width: 0.0625em;
@@ -257,7 +263,7 @@ a {
     padding-left: 4em;
     margin-bottom: 1.5em;
   }
-  /* line 97, ../sass/_layout.scss */
+  /* line 102, ../sass/_layout.scss */
   #main-content article.serie ul li {
     width: 23.72881%;
     float: left;
@@ -268,27 +274,27 @@ a {
     float: right;
     margin-right: 0;
   }
-  /* line 101, ../sass/_layout.scss */
+  /* line 106, ../sass/_layout.scss */
   #main-content article.serie ul li div.box {
     position: relative;
     overflow: hidden;
     clear: both;
     text-align: center;
   }
-  /* line 106, ../sass/_layout.scss */
+  /* line 111, ../sass/_layout.scss */
   #main-content article.serie ul li div.box:after {
     content: "";
   }
-  /* line 110, ../sass/_layout.scss */
+  /* line 115, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide {
     height: 210px;
   }
-  /* line 113, ../sass/_layout.scss */
+  /* line 118, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a img {
     width: 100%;
     height: 100%;
   }
-  /* line 117, ../sass/_layout.scss */
+  /* line 122, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.scontent {
     position: absolute;
     width: 100%;
@@ -298,7 +304,7 @@ a {
   }
 }
 
-/* line 132, ../sass/_layout.scss */
+/* line 137, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }

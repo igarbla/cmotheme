@@ -208,7 +208,7 @@ function cmotheme_views_view_fields__productos_por_serie__page($variables) {
 	$nombre = $variables['fields']['title_field_1']->content;
 	$foto   = $variables['fields']['field_miniatura_producto']->content;
 
-	$output  = '<div class="box kk">';
+	$output  = '<div class="box">';
 	$output .= str_replace($nombre .'</a>', '', $enlace);
 	$output .= '<div class="slide">';
 	$output .= $foto;

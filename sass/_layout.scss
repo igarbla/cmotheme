@@ -87,6 +87,11 @@ $show-grid-backgrounds : true;
 	@include at-breakpoint($break-3) {
 	  article.serie {
 			overflow: hidden;
+			div.item-list {
+			overflow: hidden;
+				clear: both;
+				@include margin-trailer;
+			}
 			h3 {
 				@include rhythm-borders;
 				border: none;
