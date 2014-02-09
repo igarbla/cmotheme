@@ -87,6 +87,12 @@ $show-grid-backgrounds : true;
 	@include at-breakpoint($break-3) {
 	  article.serie {
 			overflow: hidden;
+			h3 {
+				@include rhythm-borders;
+				border: none;
+				padding-left: 4em;
+				@include margin-trailer;
+			}
 			ul {
 				li{
 					@include span-columns(3, 12);

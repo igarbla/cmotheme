@@ -46,9 +46,13 @@
 		background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
 		@include background-size(cover);
 		h1, h2 {
-			color: navy;
+			color: #09f;
 		}
 		article.serie {
+			h3 {
+    		background: #09f url(../images/cmo_logo_white.png) 1em no-repeat;
+				color: white;
+			}
 			ul {
 				li {
 					div.box {

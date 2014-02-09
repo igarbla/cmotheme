@@ -179,10 +179,6 @@ function cmotheme_links($variables) {
  * Catálogo View Theme Functions
  */
 
-//function cmotheme_views_view_list__catalogo__page($variables) {
-	//kpr($variables);
-//}
-
 function cmotheme_views_view_fields__catalogo__page($variables) {
 	//kpr($variables);
 	$enlace = $variables['fields']['name_field']->content;
@@ -192,6 +188,27 @@ function cmotheme_views_view_fields__catalogo__page($variables) {
 	$output  = '<div class="box">';
 	//$output .= $variables['fields']['name_field']->content;
 	//$output .= substr($variables['fields']['name_field']->content, 0, -4);
+	$output .= str_replace($nombre .'</a>', '', $enlace);
+	$output .= '<div class="slide">';
+	$output .= $foto;
+	$output .= '<div class="scontent">';
+	$output .= '<h2>'. $nombre . '</h2>';
+	$output .= '</div></div>';
+	$output .= '</a>';
+	$output .= '</div>';
+	return $output;
+}
+
+/*
+ * Productos por serie View Theme Functions
+ */
+
+function cmotheme_views_view_fields__productos_por_serie__page($variables) {
+	$enlace = $variables['fields']['title_field']->content;
+	$nombre = $variables['fields']['title_field_1']->content;
+	$foto   = $variables['fields']['field_miniatura_producto']->content;
+
+	$output  = '<div class="box kk">';
 	$output .= str_replace($nombre .'</a>', '', $enlace);
 	$output .= '<div class="slide">';
 	$output .= $foto;

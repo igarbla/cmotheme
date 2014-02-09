@@ -248,7 +248,16 @@ a {
   #main-content article.serie {
     overflow: hidden;
   }
-  /* line 91, ../sass/_layout.scss */
+  /* line 90, ../sass/_layout.scss */
+  #main-content article.serie h3 {
+    border-style: solid;
+    border-width: 0.0625em;
+    padding: 1.4375em;
+    border: none;
+    padding-left: 4em;
+    margin-bottom: 1.5em;
+  }
+  /* line 97, ../sass/_layout.scss */
   #main-content article.serie ul li {
     width: 23.72881%;
     float: left;
@@ -259,27 +268,27 @@ a {
     float: right;
     margin-right: 0;
   }
-  /* line 95, ../sass/_layout.scss */
+  /* line 101, ../sass/_layout.scss */
   #main-content article.serie ul li div.box {
     position: relative;
     overflow: hidden;
     clear: both;
     text-align: center;
   }
-  /* line 100, ../sass/_layout.scss */
+  /* line 106, ../sass/_layout.scss */
   #main-content article.serie ul li div.box:after {
     content: "";
   }
-  /* line 104, ../sass/_layout.scss */
+  /* line 110, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide {
     height: 210px;
   }
-  /* line 107, ../sass/_layout.scss */
+  /* line 113, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a img {
     width: 100%;
     height: 100%;
   }
-  /* line 111, ../sass/_layout.scss */
+  /* line 117, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.scontent {
     position: absolute;
     width: 100%;
@@ -289,7 +298,7 @@ a {
   }
 }
 
-/* line 126, ../sass/_layout.scss */
+/* line 132, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }
@@ -2744,9 +2753,14 @@ a {
   }
   /* line 48, ../sass/_colors.scss */
   #main-content h1, #main-content h2 {
-    color: navy;
+    color: #09f;
   }
-  /* line 54, ../sass/_colors.scss */
+  /* line 52, ../sass/_colors.scss */
+  #main-content article.serie h3 {
+    background: #0099ff url(../images/cmo_logo_white.png) 1em no-repeat;
+    color: white;
+  }
+  /* line 58, ../sass/_colors.scss */
   #main-content article.serie ul li div.box {
     border: solid 5px #666;
     -webkit-border-radius: 0.25em;
@@ -2755,11 +2769,11 @@ a {
     -o-border-radius: 0.25em;
     border-radius: 0.25em;
   }
-  /* line 60, ../sass/_colors.scss */
+  /* line 64, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover div.scontent {
     opacity: 0;
   }
-  /* line 63, ../sass/_colors.scss */
+  /* line 67, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover img {
     -webkit-transform: scale(1.5, 1.5);
     -moz-transform: scale(1.5, 1.5);
@@ -2767,7 +2781,7 @@ a {
     -o-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
   }
-  /* line 68, ../sass/_colors.scss */
+  /* line 72, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a img {
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -2778,7 +2792,7 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 72, ../sass/_colors.scss */
+  /* line 76, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent {
     color: white;
     background-color: black;
@@ -2792,17 +2806,17 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 78, ../sass/_colors.scss */
+  /* line 82, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent h2 {
     color: white;
   }
 }
 
-/* line 90, ../sass/_colors.scss */
+/* line 94, ../sass/_colors.scss */
 #site-footer {
   background-color: rgba(128, 128, 128, 0.5);
 }
-/* line 92, ../sass/_colors.scss */
+/* line 96, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
