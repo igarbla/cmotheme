@@ -103,6 +103,7 @@ $show-grid-backgrounds : true;
 				li{
 					@include span-columns(3, 12);
 					@include nth-omega(4n);
+					@include margin-trailer;
 
 					div.box {
 						position: relative;
