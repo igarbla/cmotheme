@@ -96,6 +96,7 @@ $show-grid-backgrounds : true;
 			h3 {
 				@include rhythm-borders;
 				border: none;
+				@include rhythm(0,0.2,0.2,0);
 				padding-left: 4em;
 				@include margin-trailer;
 			}

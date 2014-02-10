@@ -260,10 +260,14 @@ a {
     border-width: 0.0625em;
     padding: 1.4375em;
     border: none;
+    margin-top: 0em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0em;
     padding-left: 4em;
     margin-bottom: 1.5em;
   }
-  /* line 103, ../sass/_layout.scss */
+  /* line 104, ../sass/_layout.scss */
   #main-content article.serie ul li {
     width: 23.72881%;
     float: left;
@@ -275,27 +279,27 @@ a {
     float: right;
     margin-right: 0;
   }
-  /* line 108, ../sass/_layout.scss */
+  /* line 109, ../sass/_layout.scss */
   #main-content article.serie ul li div.box {
     position: relative;
     overflow: hidden;
     clear: both;
     text-align: center;
   }
-  /* line 113, ../sass/_layout.scss */
+  /* line 114, ../sass/_layout.scss */
   #main-content article.serie ul li div.box:after {
     content: "";
   }
-  /* line 117, ../sass/_layout.scss */
+  /* line 118, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide {
     height: 210px;
   }
-  /* line 120, ../sass/_layout.scss */
+  /* line 121, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a img {
     width: 100%;
     height: 100%;
   }
-  /* line 124, ../sass/_layout.scss */
+  /* line 125, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.scontent {
     position: absolute;
     width: 100%;
@@ -303,13 +307,13 @@ a {
     top: 0;
     padding-top: 6em;
   }
-  /* line 138, ../sass/_layout.scss */
+  /* line 139, ../sass/_layout.scss */
   #main-content article.producto h1 {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 142, ../sass/_layout.scss */
+  /* line 143, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-fichero-doc-tecnica {
     width: 32.20339%;
     float: left;
@@ -320,25 +324,25 @@ a {
     float: right;
     margin-right: 0;
   }
-  /* line 146, ../sass/_layout.scss */
+  /* line 147, ../sass/_layout.scss */
   #main-content article.producto div.field-name-body {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 149, ../sass/_layout.scss */
+  /* line 150, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-foto-producto {
     width: 49.15254%;
     float: right;
     margin-right: 0;
   }
-  /* line 152, ../sass/_layout.scss */
+  /* line 153, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation {
     width: 79.72973%;
     float: left;
     margin-right: 1.35135%;
   }
-  /* line 155, ../sass/_layout.scss */
+  /* line 156, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-detalles-producto {
     width: 79.72973%;
     float: left;
@@ -346,7 +350,7 @@ a {
   }
 }
 
-/* line 163, ../sass/_layout.scss */
+/* line 164, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }
@@ -2818,12 +2822,12 @@ a {
   }
   /* line 62, ../sass/_colors.scss */
   #main-content article.serie ul li div.box {
-    border: solid 5px #666;
-    -webkit-border-radius: 0.25em;
-    -moz-border-radius: 0.25em;
-    -ms-border-radius: 0.25em;
-    -o-border-radius: 0.25em;
-    border-radius: 0.25em;
+    border: solid 2px #666;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
   }
   /* line 68, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover div.scontent {
@@ -2851,8 +2855,7 @@ a {
   /* line 80, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent {
     color: white;
-    background-color: black;
-    opacity: 0.65;
+    background-color: rgba(0, 0, 60, 0.25);
     -webkit-transition-property: opacity;
     -moz-transition-property: opacity;
     -o-transition-property: opacity;

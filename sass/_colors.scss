@@ -60,8 +60,8 @@
 			ul {
 				li {
 					div.box {
-						border: solid 5px #666;
-				    @include border-radius(0.25em);
+						border: solid 2px #666;
+				    @include border-radius(0.5em);
 						a {
 							div.slide {
 								&:hover {
@@ -79,8 +79,8 @@
 							}
 							div.scontent {
 								color: white;
-								background-color: black;
-								opacity: 0.65;
+								background-color: rgba(0,0,60,.25);
+								//opacity: 0.5;
 								@include transition-property(opacity);
 								@include transition-duration(1s);
 								h2 {
