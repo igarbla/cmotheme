@@ -261,8 +261,8 @@ a {
     padding: 1.4375em;
     border: none;
     margin-top: 0em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
     margin-bottom: 0em;
     padding-left: 4em;
     margin-bottom: 1.5em;
@@ -2818,9 +2818,10 @@ a {
   /* line 56, ../sass/_colors.scss */
   #main-content article.serie h3 {
     background: #0099ff url(../images/cmo_logo_white.png) 1em no-repeat;
+    background-size: 2%;
     color: white;
   }
-  /* line 62, ../sass/_colors.scss */
+  /* line 63, ../sass/_colors.scss */
   #main-content article.serie ul li div.box {
     border: solid 2px #666;
     -webkit-border-radius: 0.5em;
@@ -2829,11 +2830,11 @@ a {
     -o-border-radius: 0.5em;
     border-radius: 0.5em;
   }
-  /* line 68, ../sass/_colors.scss */
+  /* line 69, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover div.scontent {
     opacity: 0;
   }
-  /* line 71, ../sass/_colors.scss */
+  /* line 72, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover img {
     -webkit-transform: scale(1.5, 1.5);
     -moz-transform: scale(1.5, 1.5);
@@ -2841,7 +2842,7 @@ a {
     -o-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
   }
-  /* line 76, ../sass/_colors.scss */
+  /* line 77, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a img {
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -2852,7 +2853,7 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 80, ../sass/_colors.scss */
+  /* line 81, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent {
     color: white;
     background-color: rgba(0, 0, 60, 0.25);
@@ -2865,17 +2866,17 @@ a {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 86, ../sass/_colors.scss */
+  /* line 87, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent h2 {
     color: white;
   }
 }
 
-/* line 103, ../sass/_colors.scss */
+/* line 104, ../sass/_colors.scss */
 #site-footer {
   background: white url(../images/foot_graphic.jpg) bottom left no-repeat;
 }
-/* line 105, ../sass/_colors.scss */
+/* line 106, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
