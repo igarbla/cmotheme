@@ -228,6 +228,7 @@ function cmotheme_views_view_fields__productos_por_serie__page($variables) {
 	$enlace = $variables['fields']['title_field']->content;
 	$nombre = $variables['fields']['title_field_1']->content;
 	$foto   = $variables['fields']['field_miniatura_producto']->content;
+	$desc   = $variables['fields']['field_miniatura_producto_desc']->content;
 
 	$output  = '<div class="box">';
 	$output .= str_replace($nombre .'</a>', '', $enlace);
@@ -235,6 +236,7 @@ function cmotheme_views_view_fields__productos_por_serie__page($variables) {
 	$output .= $foto;
 	$output .= '<div class="scontent">';
 	$output .= '<h2>'. $nombre . '</h2>';
+	$output .= '<p>'. $desc . '</p>';
 	$output .= '</div></div>';
 	$output .= '</a>';
 	$output .= '</div>';
