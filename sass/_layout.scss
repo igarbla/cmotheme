@@ -127,7 +127,21 @@ $show-grid-backgrounds : true;
 								width: 100%;
 								height: 100%;
 								top: 0;
-								padding-top: 6em;
+								padding: 1em;
+								//padding-top: 6em;
+								h2 {
+					        padding-left: 2.5em;
+								}
+							}
+
+							div.slide.catalogo {
+								div.scontent {
+									padding: 0;
+									padding-top: 2em;
+									h2 {
+										padding-left: 0;
+									}
+								}
 							}
 						}
 					}

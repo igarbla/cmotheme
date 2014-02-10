@@ -210,7 +210,7 @@ function cmotheme_views_view_fields__catalogo__page($variables) {
 	//$output .= $variables['fields']['name_field']->content;
 	//$output .= substr($variables['fields']['name_field']->content, 0, -4);
 	$output .= str_replace($nombre .'</a>', '', $enlace);
-	$output .= '<div class="slide">';
+	$output .= '<div class="slide catalogo">';
 	$output .= $foto;
 	$output .= '<div class="scontent">';
 	$output .= '<h2>'. $nombre . '</h2>';

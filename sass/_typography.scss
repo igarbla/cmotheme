@@ -75,6 +75,24 @@
 			div.field-name-field-fichero-doc-tecnica {
 			}
 		}
+
+		article.serie {
+			div.scontent {
+				text-align: left;
+				h2 {
+					@include adjust-font-size-to(16px);
+					font-weight: bold;
+					//text-align: left;
+					text-transform: uppercase;
+				}
+			}
+			div.slide.catalogo {
+				div.scontent {
+				  text-align: center;
+				}
+			}
+		}
+
 	}
 }
 

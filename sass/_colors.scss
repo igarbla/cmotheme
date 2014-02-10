@@ -85,10 +85,19 @@
 								@include transition-property(opacity);
 								@include transition-duration(1s);
 								h2 {
+    		          background: #09f url(../images/cmo_logo_white.png) 1em no-repeat;
+          				background-size: 9%;
 									color: white;
 								}
 							}
+							div.slide.catalogo {
+								div.scontent {
+									h2 {
+										background: transparent;
+								}
+							}
 						}
+						} 
 					}
 				}
 			}
