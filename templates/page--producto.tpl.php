@@ -73,8 +73,7 @@
  * @ingroup themeable
  */
 ?>
-<?php //dsm($variables); ?>
-
+<?php //dsm($node); ?>
 <div class="site">
 
   <header id="site-header">
@@ -102,16 +101,29 @@
   <?php print $messages; ?>
 
   <section id="main-content">
-  <article class="producto">
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-  <?php print render($title_suffix); ?>
-  <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-  <?php print render($page['help']); ?>
-  <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-  <?php print render($page['content']); ?>
-  <?php print $feed_icons; ?>
-  </article>
+
+    <article class="producto">
+
+      <header>
+
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php print render($title_suffix); ?>
+
+        <!-- https://drupal.org/node/950434 -->
+        <section id="ficheros">
+        <?php print render(field_view_field('node', $node, 'field_fichero_doc_tecnica', array('label'=>'hidden'))); ?>
+        <?php print render(field_view_field('node', $node, 'field_fichero_man_instalacion', array('label'=>'hidden'))); ?>
+        </section>
+
+      </header>
+
+      <section id="page-help"><?php print render($page['help']); ?></section>
+      <?php if ($action_links): ?><section id="page-links"><ul class="action-links"><?php print render($action_links); ?></ul></section><?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php if ($tabs): ?><section class="tabs"><?php print render($tabs); ?></section><?php endif; ?>
+      <?php print $feed_icons; ?>
+    </article>
   </section> 
 
   <?php if ($page['sidebar_first']): ?>

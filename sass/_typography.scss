@@ -67,12 +67,21 @@
 		}
 
 		article.producto {
-			h1 {
+			h1, h2 {
 				@include adjust-font-size-to(16px);
 				font-weight: bold;
 				text-align: left;
 			}
-			div.field-name-field-fichero-doc-tecnica {
+			section#ficheros {
+					@include adjust-font-size-to(13px);
+					text-transform: capitalize;
+					letter-spacing: 0.1em;
+				div.field-name-field-fichero-doc-tecnica {
+				}
+			}
+			div.tabs {
+				ul.tabs.primary {
+			}
 			}
 		}
 

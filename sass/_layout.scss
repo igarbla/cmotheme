@@ -1,6 +1,6 @@
 $total-columns : 4;
 $column-width  : 4em;
-$gutter-width  : 1em;
+$gutter-width  : 0.5em;
 $grid-padding  : 0em;
 
 $break-1 : 30em 6;
@@ -150,13 +150,22 @@ $show-grid-backgrounds : true;
 		}
 
 		article.producto {
+			header {
+				overflow: hidden;
+				@include trailing-border;
+				@include margin-trailer;
+			}
 			h1 {
 				@include span-columns(4, 12);
 			}
-
+      section#ficheros {
+				@include span-columns(8 omega, 12);
+			}
 			div.field-name-field-fichero-doc-tecnica {
-				@include span-columns(4, 12);
-				@include nth-omega(2n);
+				@include span-columns(4, 8);
+			}
+			div.field-name-field-fichero-man-instalacion {
+				@include span-columns(4 omega, 8);
 			}
 			div.field-name-body {
 				@include span-columns(6, 12);

@@ -79,6 +79,7 @@
  */
 ?>
 <?php //dsm(get_defined_vars()); ?>
+<?php //dsm($variables); ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -90,13 +91,6 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php if ($display_submitted): ?>
-    <div class="meta submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
-
   <div class="content clearfix"<?php print $content_attributes; ?>>
   <?php
   // We hide the comments and links now so that we can render them later.
@@ -105,6 +99,8 @@
   hide($content['field_detalles_producto']);
   hide($content['field_catalogo']);
   $catalogo = $field_catalogo[0]['tid'];
+  hide($content['field_fichero_doc_tecnica']);
+  hide($content['field_fichero_man_instalacion']);
   print render($content);
   ?>
   <div class="product-navigation">
@@ -112,8 +108,8 @@
   $next = producto_sibling('next',$node,NULL,NULL,NULL,$catalogo);
   $previous = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo);
   ?>
-  <div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div>
-  <div class="icon-icomoon-arrow-right2"><?php print $next; ?></div>
+  <?php if ($previous): ?><div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div><?php endif; ?>
+  <?php if ($next): ?><div class="icon-icomoon-arrow-right2"><?php print $next; ?></div><?php endif; ?>
   </div>
   <?php print render($content['field_detalles_producto']); ?>
   </div>
