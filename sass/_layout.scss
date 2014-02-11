@@ -199,6 +199,6 @@ $show-grid-backgrounds : true;
 }
 
 #site-banner {
-	@include margin-leader(1);
+	@include margin-leader(0.7);
 }
 

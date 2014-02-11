@@ -10,8 +10,8 @@ sup {
 }
 
 #site-header {
-	@include rhythm-borders;
-	border: none;
+	//@include rhythm-borders;
+	//border: none;
 	p {
 		@include adjust-font-size-to(13px);
 		text-align: right;
