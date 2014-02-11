@@ -196,9 +196,16 @@ $show-grid-backgrounds : true;
 					@include span-columns(4 omega, 12);
 				}
 			}
-			div.field-name-field-detalles-producto {
-				@include span-columns(10);
+			section#catalogo {
+				overflow: hidden;
+				padding: 0.5em;
+				@include span-columns(10, 12);
 				@include pre(1);
+				border: solid 1px black;
+				div.field-name-field-fichero-catalogo-producto {
+				}
+				div.field-name-field-detalles-producto {
+				}
 			}
 		}
 

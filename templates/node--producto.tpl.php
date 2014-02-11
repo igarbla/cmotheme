@@ -95,10 +95,11 @@
   // We hide the comments and links now so that we can render them later.
   hide($content['comments']);
   hide($content['links']);
-  hide($content['field_detalles_producto']);
   hide($content['field_catalogo']);
   hide($content['field_fichero_doc_tecnica']);
   hide($content['field_fichero_man_instalacion']);
+  hide($content['field_fichero_catalogo_producto']);
+  hide($content['field_detalles_producto']);
   print render($content);
   ?>
   <div class="product-navigation">
@@ -109,6 +110,9 @@
     <div class="icon-icomoon-arrow-right2"><?php print $next; ?></div>
   <?php endif; ?>
   </div>
-  <?php print render($content['field_detalles_producto']); ?>
+  <section id="catalogo">
+    <?php print render($content['field_fichero_catalogo_producto']); ?>
+    <?php print render($content['field_detalles_producto']); ?>
+  </section>
 </div>
 
