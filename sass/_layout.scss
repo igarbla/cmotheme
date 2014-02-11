@@ -169,6 +169,9 @@ $show-grid-backgrounds : true;
 			}
 			div.field-name-body {
 				@include span-columns(6, 12);
+				p, ul {
+					padding-left: 1em;
+				}
 			}
 			div.field-name-field-foto-producto {
 				@include span-columns(6 omega, 12);

@@ -1,5 +1,10 @@
 @import "icomoon";
 
+sup {
+	@include adjust-font-size-to(12px);
+	vertical-align: super;
+}
+
 .site {
   font-family: 'Exo 2', sans-serif;
 }
@@ -54,7 +59,7 @@
 #main-content {
 	@include rhythm-borders;
 	border: none;
-	p {
+	p, ul {
 		@include rhythm(0,1,1,0);
 	}
 	@include at-breakpoint($break-3) {
@@ -78,6 +83,9 @@
 					letter-spacing: 0.1em;
 				div.field-name-field-fichero-doc-tecnica {
 				}
+			}
+			div.field-name-body {
+				@include adjust-font-size-to(14px);
 			}
 			div.tabs {
 				ul.tabs.primary {

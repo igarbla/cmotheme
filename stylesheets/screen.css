@@ -358,19 +358,23 @@ a {
     float: left;
     margin-right: 0.93458%;
   }
-  /* line 173, ../sass/_layout.scss */
+  /* line 172, ../sass/_layout.scss */
+  #main-content article.producto div.field-name-body p, #main-content article.producto div.field-name-body ul {
+    padding-left: 1em;
+  }
+  /* line 176, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-foto-producto {
     width: 49.53271%;
     float: right;
     margin-right: 0;
   }
-  /* line 176, ../sass/_layout.scss */
+  /* line 179, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation {
     width: 79.85075%;
     float: left;
     margin-right: 0.74627%;
   }
-  /* line 179, ../sass/_layout.scss */
+  /* line 182, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-detalles-producto {
     width: 79.85075%;
     float: left;
@@ -378,7 +382,7 @@ a {
   }
 }
 
-/* line 187, ../sass/_layout.scss */
+/* line 190, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }
@@ -2661,30 +2665,37 @@ a {
 }
 
 /* line 3, ../sass/_typography.scss */
+sup {
+  font-size: 0.75em;
+  line-height: 2em;
+  vertical-align: super;
+}
+
+/* line 8, ../sass/_typography.scss */
 .site {
   font-family: 'Exo 2', sans-serif;
 }
 
-/* line 7, ../sass/_typography.scss */
+/* line 12, ../sass/_typography.scss */
 #site-header {
   border-style: solid;
   border-width: 0.0625em;
   padding: 1.4375em;
   border: none;
 }
-/* line 10, ../sass/_typography.scss */
+/* line 15, ../sass/_typography.scss */
 #site-header p {
   font-size: 0.8125em;
   line-height: 1.84615em;
   text-align: right;
 }
-/* line 15, ../sass/_typography.scss */
+/* line 20, ../sass/_typography.scss */
 #site-header #block-locale-language {
   font-size: 0.8125em;
   line-height: 1.84615em;
 }
 
-/* line 20, ../sass/_typography.scss */
+/* line 25, ../sass/_typography.scss */
 #site-nav {
   border-style: solid;
   border-width: 0.0625em;
@@ -2695,7 +2706,7 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-/* line 30, ../sass/_typography.scss */
+/* line 35, ../sass/_typography.scss */
 #site-nav ul li a,
 #site-nav ul li.first a,
 #site-nav ul li.last a {
@@ -2711,14 +2722,14 @@ a {
   padding-bottom: 0.45em;
   margin-bottom: 0em;
 }
-/* line 36, ../sass/_typography.scss */
+/* line 41, ../sass/_typography.scss */
 #site-nav ul li ul,
 #site-nav ul li.first ul,
 #site-nav ul li.last ul {
   border: solid 1px rgba(128, 128, 128, 0.5);
 }
 
-/* line 45, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 #site-banner {
   font-size: 1.375em;
   line-height: 2.18182em;
@@ -2729,64 +2740,69 @@ a {
   font-weight: 600;
 }
 
-/* line 54, ../sass/_typography.scss */
+/* line 59, ../sass/_typography.scss */
 #main-content {
   border-style: solid;
   border-width: 0.0625em;
   padding: 1.4375em;
   border: none;
 }
-/* line 57, ../sass/_typography.scss */
-#main-content p {
+/* line 62, ../sass/_typography.scss */
+#main-content p, #main-content ul {
   margin-top: 0em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   margin-bottom: 0em;
 }
 @media (min-width: 60em) {
-  /* line 61, ../sass/_typography.scss */
+  /* line 66, ../sass/_typography.scss */
   #main-content h1 {
     font-size: 3em;
     line-height: 1.5em;
     text-align: center;
   }
-  /* line 65, ../sass/_typography.scss */
+  /* line 70, ../sass/_typography.scss */
   #main-content h2 {
     font-size: 1.5em;
     line-height: 2em;
   }
-  /* line 70, ../sass/_typography.scss */
+  /* line 75, ../sass/_typography.scss */
   #main-content article.producto h1, #main-content article.producto h2 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: bold;
     text-align: left;
   }
-  /* line 75, ../sass/_typography.scss */
+  /* line 80, ../sass/_typography.scss */
   #main-content article.producto section#ficheros {
     font-size: 0.8125em;
     line-height: 1.84615em;
     text-transform: capitalize;
     letter-spacing: 0.1em;
   }
-  /* line 89, ../sass/_typography.scss */
+  /* line 87, ../sass/_typography.scss */
+  #main-content article.producto div.field-name-body {
+    font-size: 0.875em;
+    line-height: 1.71429em;
+  }
+  /* line 97, ../sass/_typography.scss */
   #main-content article.serie div.scontent {
     text-align: left;
   }
-  /* line 91, ../sass/_typography.scss */
+  /* line 99, ../sass/_typography.scss */
   #main-content article.serie div.scontent h2 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
   }
-  /* line 99, ../sass/_typography.scss */
+  /* line 107, ../sass/_typography.scss */
   #main-content article.serie div.slide.catalogo div.scontent {
     text-align: center;
   }
 }
 
-/* line 108, ../sass/_typography.scss */
+/* line 116, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
@@ -2794,18 +2810,18 @@ a {
   min-height: 601px;
 }
 
-/* line 115, ../sass/_typography.scss */
+/* line 123, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:before {
   content: "";
 }
 
-/* line 118, ../sass/_typography.scss */
+/* line 126, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:after {
   font-family: 'icomoon';
   content: "\e72c";
 }
 
-/* line 122, ../sass/_typography.scss */
+/* line 130, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2 {
   font-family: 'Exo 2';
   text-transform: uppercase;
