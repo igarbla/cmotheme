@@ -88,6 +88,7 @@ html {
 /* line 13, ../sass/_base.scss */
 a {
   text-decoration: none;
+  outline: none;
 }
 
 /* line 14, ../sass/_layout.scss */
