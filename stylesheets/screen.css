@@ -94,10 +94,10 @@ a {
 /* line 14, ../sass/_layout.scss */
 .site {
   *zoom: 1;
-  max-width: 17.5em;
-  _width: 17.5em;
-  padding-left: 0em;
-  padding-right: 0em;
+  max-width: 18.5em;
+  _width: 18.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
@@ -111,9 +111,9 @@ a {
 @media (min-width: 60em) {
   /* line 14, ../sass/_layout.scss */
   .site {
-    max-width: 67em;
-    padding-left: 0em;
-    padding-right: 0em;
+    max-width: 68em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto;
   }
@@ -293,14 +293,14 @@ a {
   }
   /* line 118, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide {
-    height: 210px;
+    height: 160px;
   }
-  /* line 121, ../sass/_layout.scss */
+  /* line 122, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a img {
     width: 100%;
     height: 100%;
   }
-  /* line 125, ../sass/_layout.scss */
+  /* line 126, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.scontent {
     position: absolute;
     width: 100%;
@@ -308,20 +308,20 @@ a {
     top: 0;
     padding: 1em;
   }
-  /* line 132, ../sass/_layout.scss */
+  /* line 133, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.scontent h2 {
     padding-left: 2.5em;
   }
-  /* line 138, ../sass/_layout.scss */
+  /* line 139, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide.catalogo div.scontent {
     padding: 0;
     padding-top: 2em;
   }
-  /* line 141, ../sass/_layout.scss */
+  /* line 142, ../sass/_layout.scss */
   #main-content article.serie ul li div.box a div.slide.catalogo div.scontent h2 {
     padding-left: 0;
   }
-  /* line 153, ../sass/_layout.scss */
+  /* line 154, ../sass/_layout.scss */
   #main-content article.producto header {
     overflow: hidden;
     border-bottom-style: solid;
@@ -329,47 +329,53 @@ a {
     padding-bottom: 1.4375em;
     margin-bottom: 1.5em;
   }
-  /* line 158, ../sass/_layout.scss */
+  /* line 159, ../sass/_layout.scss */
   #main-content article.producto h1 {
     width: 32.71028%;
     float: left;
     margin-right: 0.93458%;
   }
-  /* line 161, ../sass/_layout.scss */
+  /* line 162, ../sass/_layout.scss */
   #main-content article.producto section#ficheros {
     width: 66.35514%;
     float: right;
     margin-right: 0;
   }
-  /* line 164, ../sass/_layout.scss */
+  /* line 165, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-fichero-doc-tecnica {
     width: 49.29577%;
     float: left;
     margin-right: 1.40845%;
   }
-  /* line 167, ../sass/_layout.scss */
+  /* line 168, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-fichero-man-instalacion {
     width: 49.29577%;
     float: right;
     margin-right: 0;
   }
-  /* line 170, ../sass/_layout.scss */
+  /* line 171, ../sass/_layout.scss */
   #main-content article.producto div.field-name-body {
     width: 49.53271%;
     float: left;
     margin-right: 0.93458%;
   }
-  /* line 172, ../sass/_layout.scss */
+  /* line 173, ../sass/_layout.scss */
   #main-content article.producto div.field-name-body p, #main-content article.producto div.field-name-body ul {
     padding-left: 1em;
   }
-  /* line 176, ../sass/_layout.scss */
+  /* line 177, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-foto-producto {
     width: 49.53271%;
     float: right;
     margin-right: 0;
   }
   /* line 179, ../sass/_layout.scss */
+  #main-content article.producto div.field-name-field-foto-producto img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  /* line 185, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation {
     width: 100%;
     float: left;
@@ -378,32 +384,33 @@ a {
     border-top-width: 0.0625em;
     padding-top: 1.4375em;
   }
-  /* line 182, ../sass/_layout.scss */
+  /* line 188, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation div {
     width: 32.71028%;
     float: left;
     margin-right: 0.93458%;
   }
-  /* line 184, ../sass/_layout.scss */
+  /* line 190, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation div a {
     display: block;
     width: 100%;
   }
-  /* line 189, ../sass/_layout.scss */
+  /* line 195, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation div.icon-icomoon-arrow-right2 {
     width: 32.71028%;
     float: right;
     margin-right: 0;
   }
-  /* line 193, ../sass/_layout.scss */
+  /* line 199, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-detalles-producto {
-    width: 79.85075%;
+    width: 66.41791%;
     float: left;
     margin-right: 0.74627%;
+    margin-left: 6.71642%;
   }
 }
 
-/* line 201, ../sass/_layout.scss */
+/* line 208, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.05em;
 }
@@ -2756,12 +2763,9 @@ sup {
 
 /* line 59, ../sass/_typography.scss */
 #main-content {
-  border-style: solid;
-  border-width: 0.0625em;
-  padding: 1.4375em;
-  border: none;
+  padding-top: 1.5em;
 }
-/* line 62, ../sass/_typography.scss */
+/* line 63, ../sass/_typography.scss */
 #main-content p, #main-content ul {
   margin-top: 0em;
   padding-top: 1.5em;
@@ -2769,18 +2773,18 @@ sup {
   margin-bottom: 0em;
 }
 @media (min-width: 60em) {
-  /* line 66, ../sass/_typography.scss */
+  /* line 67, ../sass/_typography.scss */
   #main-content h1 {
     font-size: 3em;
     line-height: 1.5em;
     text-align: center;
   }
-  /* line 70, ../sass/_typography.scss */
+  /* line 71, ../sass/_typography.scss */
   #main-content h2 {
     font-size: 1.5em;
     line-height: 2em;
   }
-  /* line 75, ../sass/_typography.scss */
+  /* line 76, ../sass/_typography.scss */
   #main-content article.producto h1, #main-content article.producto h2 {
     font-size: 0.875em;
     line-height: 1.71429em;
@@ -2788,51 +2792,71 @@ sup {
     text-align: left;
     letter-spacing: 0.045em;
   }
-  /* line 81, ../sass/_typography.scss */
+  /* line 83, ../sass/_typography.scss */
+  #main-content article.producto div.field-item h2 {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  /* line 87, ../sass/_typography.scss */
   #main-content article.producto section#ficheros {
     font-size: 0.8125em;
     line-height: 1.84615em;
     text-transform: capitalize;
     letter-spacing: 0.1em;
   }
-  /* line 88, ../sass/_typography.scss */
+  /* line 94, ../sass/_typography.scss */
   #main-content article.producto div.field-name-body {
     font-size: 0.875em;
     line-height: 1.71429em;
   }
-  /* line 92, ../sass/_typography.scss */
+  /* line 98, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div {
     margin-top: 0em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     margin-bottom: 0em;
   }
-  /* line 94, ../sass/_typography.scss */
+  /* line 100, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div a {
+    font-weight: bold;
     padding: 0 4em;
   }
-  /* line 98, ../sass/_typography.scss */
+  /* line 105, ../sass/_typography.scss */
+  #main-content article.producto div.product-navigation div.icon-icomoon-arrow-left2 {
+    font-family: 'Exo 2', sans-serif;
+  }
+  /* line 108, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div.icon-icomoon-arrow-right2 {
+    font-family: 'Exo 2', sans-serif;
     text-align: right;
   }
-  /* line 109, ../sass/_typography.scss */
+  /* line 120, ../sass/_typography.scss */
   #main-content article.serie div.scontent {
     text-align: left;
   }
-  /* line 111, ../sass/_typography.scss */
+  /* line 122, ../sass/_typography.scss */
   #main-content article.serie div.scontent h2 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
   }
-  /* line 119, ../sass/_typography.scss */
+  /* line 128, ../sass/_typography.scss */
+  #main-content article.serie div.scontent p {
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    font-weight: bold;
+    text-shadow: rgba(0, 51, 102, 0.5) 2px 2px 3px;
+    letter-spacing: 0.12em;
+    text-align: center;
+  }
+  /* line 137, ../sass/_typography.scss */
   #main-content article.serie div.slide.catalogo div.scontent {
     text-align: center;
   }
 }
 
-/* line 128, ../sass/_typography.scss */
+/* line 146, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
@@ -2840,54 +2864,60 @@ sup {
   min-height: 601px;
 }
 
-/* line 135, ../sass/_typography.scss */
+/* line 153, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:before {
   content: "";
 }
 
-/* line 138, ../sass/_typography.scss */
+/* line 156, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:after {
   font-family: 'icomoon';
   content: "\e72c";
 }
 
-/* line 142, ../sass/_typography.scss */
+/* line 160, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2 {
   font-family: 'Exo 2';
   text-transform: uppercase;
 }
 
-/* line 3, ../sass/_colors.scss */
+/* line 4, ../sass/_colors.scss */
+a,
+a.visited {
+  color: #0099ff;
+}
+
+/* line 10, ../sass/_colors.scss */
 #site-header p {
   color: #999;
 }
 
-/* line 11, ../sass/_colors.scss */
+/* line 18, ../sass/_colors.scss */
 #site-nav li:hover {
-  background-color: #017cc2;
+  background-color: #0099ff;
 }
-/* line 13, ../sass/_colors.scss */
+/* line 21, ../sass/_colors.scss */
 #site-nav li:hover a {
   color: white;
 }
-/* line 17, ../sass/_colors.scss */
+/* line 25, ../sass/_colors.scss */
 #site-nav li a {
-  color: #017cc2;
+  color: #0099ff;
 }
-/* line 23, ../sass/_colors.scss */
+/* line 32, ../sass/_colors.scss */
 #site-nav li.expanded:hover ul {
   background-color: white;
 }
-/* line 26, ../sass/_colors.scss */
+/* line 35, ../sass/_colors.scss */
 #site-nav li.expanded:hover ul li:hover a {
   color: white;
 }
-/* line 30, ../sass/_colors.scss */
+/* line 39, ../sass/_colors.scss */
 #site-nav li.expanded:hover ul a {
-  color: #017cc2;
+  color: #0099ff;
 }
 
-/* line 38, ../sass/_colors.scss */
+/* line 47, ../sass/_colors.scss */
 #site-banner {
   background-image: -webkit-gradient(radial, 50% 0, 0, 50% 0, 100, color-stop(0%, #d5f1fd), color-stop(90%, #93c9ee), color-stop(100%, #52a9de));
   background-image: -webkit-radial-gradient(50% 0, ellipse, #d5f1fd, #93c9ee 90%, #52a9de);
@@ -2899,11 +2929,11 @@ sup {
 }
 
 @media (min-width: 60em) {
-  /* line 48, ../sass/_colors.scss */
+  /* line 57, ../sass/_colors.scss */
   #main-content h1, #main-content h2 {
-    color: #017cc2;
+    color: #0099ff;
   }
-  /* line 51, ../sass/_colors.scss */
+  /* line 60, ../sass/_colors.scss */
   #main-content article {
     background: transparent url(../images/me_backg_opa.jpg) top left;
     -webkit-background-size: auto;
@@ -2911,13 +2941,13 @@ sup {
     -o-background-size: auto;
     background-size: auto;
   }
-  /* line 56, ../sass/_colors.scss */
+  /* line 65, ../sass/_colors.scss */
   #main-content article.serie h3 {
     background: #0099ff url(../images/cmo_logo_white.png) 1em no-repeat;
     background-size: 2%;
     color: white;
   }
-  /* line 63, ../sass/_colors.scss */
+  /* line 72, ../sass/_colors.scss */
   #main-content article.serie ul li div.box {
     border: solid 2px #666;
     -webkit-border-radius: 0.5em;
@@ -2926,11 +2956,11 @@ sup {
     -o-border-radius: 0.5em;
     border-radius: 0.5em;
   }
-  /* line 69, ../sass/_colors.scss */
+  /* line 78, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover div.scontent {
     opacity: 0;
   }
-  /* line 72, ../sass/_colors.scss */
+  /* line 81, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide:hover img {
     -webkit-transform: scale(1.5, 1.5);
     -moz-transform: scale(1.5, 1.5);
@@ -2938,7 +2968,7 @@ sup {
     -o-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
   }
-  /* line 77, ../sass/_colors.scss */
+  /* line 86, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a img {
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -2949,7 +2979,7 @@ sup {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 81, ../sass/_colors.scss */
+  /* line 90, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent {
     color: white;
     background-color: rgba(0, 0, 60, 0.25);
@@ -2962,45 +2992,45 @@ sup {
     -o-transition-duration: 1s;
     transition-duration: 1s;
   }
-  /* line 87, ../sass/_colors.scss */
+  /* line 96, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.scontent h2 {
     background: #0099ff url(../images/cmo_logo_white.png) 1em no-repeat;
     background-size: 9%;
     color: white;
   }
-  /* line 95, ../sass/_colors.scss */
+  /* line 104, ../sass/_colors.scss */
   #main-content article.serie ul li div.box a div.slide.catalogo div.scontent h2 {
     background: transparent;
   }
-  /* line 109, ../sass/_colors.scss */
+  /* line 118, ../sass/_colors.scss */
   #main-content article.producto header section#ficheros a {
     color: black;
   }
-  /* line 116, ../sass/_colors.scss */
+  /* line 125, ../sass/_colors.scss */
   #main-content article.producto div.product-navigation .icon-icomoon-arrow-left2:before {
     content: "";
   }
-  /* line 119, ../sass/_colors.scss */
+  /* line 128, ../sass/_colors.scss */
   #main-content article.producto div.product-navigation .icon-icomoon-arrow-left2 {
     background: transparent url(../images/arrow_l.png) center left no-repeat;
     background-size: 15%;
   }
-  /* line 123, ../sass/_colors.scss */
+  /* line 132, ../sass/_colors.scss */
   #main-content article.producto div.product-navigation .icon-icomoon-arrow-right2:before {
     content: "";
   }
-  /* line 126, ../sass/_colors.scss */
+  /* line 135, ../sass/_colors.scss */
   #main-content article.producto div.product-navigation .icon-icomoon-arrow-right2 {
     background: transparent url(../images/arrow_r.png) center right no-repeat;
     background-size: 15%;
   }
 }
 
-/* line 136, ../sass/_colors.scss */
+/* line 145, ../sass/_colors.scss */
 #site-footer {
   background: white url(../images/foot_graphic.jpg) bottom left no-repeat;
 }
-/* line 138, ../sass/_colors.scss */
+/* line 147, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }

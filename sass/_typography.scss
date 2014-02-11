@@ -57,8 +57,9 @@ sup {
 }
 
 #main-content {
-	@include rhythm-borders;
-	border: none;
+	//@include rhythm-borders;
+	//border: none;
+	@include padding-leader;
 	p, ul {
 		@include rhythm(0,1,1,0);
 	}
@@ -78,6 +79,11 @@ sup {
 				text-align: left;
 				letter-spacing: 0.045em;
 			}
+			div.field-item {
+				h2 {
+				  @include adjust-font-size-to(16px);
+				}
+			}
 			section#ficheros {
 				@include adjust-font-size-to(13px);
 				text-transform: capitalize;
@@ -90,12 +96,17 @@ sup {
 			}
 			div.product-navigation {
 				div {
-						@include rhythm(0,1,1,0);
+					@include rhythm(0,1,1,0);
 					a {
-					  padding: 0 4em;
+						font-weight: bold;
+						padding: 0 4em;
 					}
 				}
+				div.icon-icomoon-arrow-left2 {
+          font-family: 'Exo 2', sans-serif;
+				}
 				div.icon-icomoon-arrow-right2 {
+          font-family: 'Exo 2', sans-serif;
 					text-align: right;
 				}
 			}
@@ -114,10 +125,17 @@ sup {
 					//text-align: left;
 					text-transform: uppercase;
 				}
+				p {
+					@include adjust-font-size-to(14px);
+					font-weight: bold;
+					@include text-shadow(rgba(#036, 0.5) 2px 2px 3px);
+					letter-spacing: 0.12em;
+					text-align: center;
+				}
 			}
 			div.slide.catalogo {
 				div.scontent {
-				  text-align: center;
+					text-align: center;
 				}
 			}
 		}

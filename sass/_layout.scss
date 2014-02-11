@@ -1,7 +1,7 @@
 $total-columns : 4;
 $column-width  : 4em;
 $gutter-width  : 0.5em;
-$grid-padding  : 0em;
+$grid-padding  : 0.5em;
 
 $break-1 : 30em 6;
 $break-2 : 50em 12;
@@ -116,7 +116,8 @@ $show-grid-backgrounds : true;
 						}
 						a {
 							div.slide {
-								height: 210px;
+								//height: 210px;
+								height: 160px;
 							}
 							img {
 								width: 100%;
@@ -175,6 +176,11 @@ $show-grid-backgrounds : true;
 			}
 			div.field-name-field-foto-producto {
 				@include span-columns(6 omega, 12);
+				img {
+					max-width: 100%;
+					width: 100%;
+					height: auto;
+				}	
 			}
 			div.product-navigation {
 				@include span-columns(12, 12);
@@ -191,7 +197,8 @@ $show-grid-backgrounds : true;
 				}
 			}
 			div.field-name-field-detalles-producto {
-				@include span-columns(12);
+				@include span-columns(10);
+				@include pre(1);
 			}
 		}
 
