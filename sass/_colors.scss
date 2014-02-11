@@ -111,6 +111,23 @@
 					}
 				}
 			}
+      // Iconos barra navegación de productos
+			div.product-navigation {
+				.icon-icomoon-arrow-left2:before {
+					content: "";
+				}
+				.icon-icomoon-arrow-left2 {
+					background: transparent url(../images/arrow_l.png) center left no-repeat;
+					background-size: 15%;
+				}
+				.icon-icomoon-arrow-right2:before {
+					content: "";
+				}
+				.icon-icomoon-arrow-right2 {
+					background: transparent url(../images/arrow_r.png) center right no-repeat;
+					background-size: 15%;
+				}
+			}
 		}
 
 	}

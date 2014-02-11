@@ -180,8 +180,14 @@ $show-grid-backgrounds : true;
 				@include span-columns(12, 12);
 				@include leading-border;
 				div {
-					@include span-columns(2, 12);
-					@include nth-omega(2n);
+					@include span-columns(4, 12);
+					a {
+						display: block;
+						width: 100%;
+					}
+				}
+				div.icon-icomoon-arrow-right2 {
+					@include span-columns(4 omega, 12);
 				}
 			}
 			div.field-name-field-detalles-producto {

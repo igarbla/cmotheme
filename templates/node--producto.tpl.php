@@ -102,26 +102,13 @@
   print render($content);
   ?>
   <div class="product-navigation">
-  <?php
-  ?>
-  <?php if ($previous): ?><div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div><?php endif; ?>
-  <?php if ($next): ?><div class="icon-icomoon-arrow-right2"><?php print $next; ?></div><?php endif; ?>
+  <?php if ($previous): ?>
+    <div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div>
+  <?php endif; ?>
+  <?php if ($next): ?>
+    <div class="icon-icomoon-arrow-right2"><?php print $next; ?></div>
+  <?php endif; ?>
   </div>
   <?php print render($content['field_detalles_producto']); ?>
-
-  <?php
-    // Remove the "Add new comment" link on the teaser page or if the comment
-    // form is being displayed on the same page.
-    if ($teaser || !empty($content['comments']['comment_form'])) {
-      unset($content['links']['comment']['#links']['comment-add']);
-    }
-    // Only display the wrapper div if there are links.
-    $links = render($content['links']);
-    if ($links):
-  ?>
-    <div class="link-wrapper">
-      <?php print $links; ?>
-    </div>
-  <?php endif; ?>
-
 </div>
+

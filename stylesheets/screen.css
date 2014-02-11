@@ -379,16 +379,22 @@ a {
   }
   /* line 182, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation div {
-    width: 15.88785%;
+    width: 32.71028%;
     float: left;
     margin-right: 0.93458%;
   }
-  /* line 184, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/susy-1.0.9/sass/susy/_grid.scss */
-  #main-content article.producto div.product-navigation div:nth-child(2n) {
+  /* line 184, ../sass/_layout.scss */
+  #main-content article.producto div.product-navigation div a {
+    display: block;
+    width: 100%;
+  }
+  /* line 189, ../sass/_layout.scss */
+  #main-content article.producto div.product-navigation div.icon-icomoon-arrow-right2 {
+    width: 32.71028%;
     float: right;
     margin-right: 0;
   }
-  /* line 187, ../sass/_layout.scss */
+  /* line 193, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-detalles-producto {
     width: 79.85075%;
     float: left;
@@ -396,7 +402,7 @@ a {
   }
 }
 
-/* line 195, ../sass/_layout.scss */
+/* line 201, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }
@@ -2799,24 +2805,39 @@ sup {
     font-size: 0.875em;
     line-height: 1.71429em;
   }
+  /* line 91, ../sass/_typography.scss */
+  #main-content article.producto div.product-navigation div {
+    margin-top: 0em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0em;
+  }
+  /* line 93, ../sass/_typography.scss */
+  #main-content article.producto div.product-navigation div a {
+    padding: 0 4em;
+  }
   /* line 97, ../sass/_typography.scss */
+  #main-content article.producto div.product-navigation div.icon-icomoon-arrow-right2 {
+    text-align: right;
+  }
+  /* line 108, ../sass/_typography.scss */
   #main-content article.serie div.scontent {
     text-align: left;
   }
-  /* line 99, ../sass/_typography.scss */
+  /* line 110, ../sass/_typography.scss */
   #main-content article.serie div.scontent h2 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
   }
-  /* line 107, ../sass/_typography.scss */
+  /* line 118, ../sass/_typography.scss */
   #main-content article.serie div.slide.catalogo div.scontent {
     text-align: center;
   }
 }
 
-/* line 116, ../sass/_typography.scss */
+/* line 127, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
@@ -2824,18 +2845,18 @@ sup {
   min-height: 601px;
 }
 
-/* line 123, ../sass/_typography.scss */
+/* line 134, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:before {
   content: "";
 }
 
-/* line 126, ../sass/_typography.scss */
+/* line 137, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:after {
   font-family: 'icomoon';
   content: "\e72c";
 }
 
-/* line 130, ../sass/_typography.scss */
+/* line 141, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2 {
   font-family: 'Exo 2';
   text-transform: uppercase;
@@ -2960,13 +2981,31 @@ sup {
   #main-content article.producto header section#ficheros a {
     color: black;
   }
+  /* line 116, ../sass/_colors.scss */
+  #main-content article.producto div.product-navigation .icon-icomoon-arrow-left2:before {
+    content: "";
+  }
+  /* line 119, ../sass/_colors.scss */
+  #main-content article.producto div.product-navigation .icon-icomoon-arrow-left2 {
+    background: transparent url(../images/arrow_l.png) center left no-repeat;
+    background-size: 15%;
+  }
+  /* line 123, ../sass/_colors.scss */
+  #main-content article.producto div.product-navigation .icon-icomoon-arrow-right2:before {
+    content: "";
+  }
+  /* line 126, ../sass/_colors.scss */
+  #main-content article.producto div.product-navigation .icon-icomoon-arrow-right2 {
+    background: transparent url(../images/arrow_r.png) center right no-repeat;
+    background-size: 15%;
+  }
 }
 
-/* line 119, ../sass/_colors.scss */
+/* line 136, ../sass/_colors.scss */
 #site-footer {
   background: white url(../images/foot_graphic.jpg) bottom left no-repeat;
 }
-/* line 121, ../sass/_colors.scss */
+/* line 138, ../sass/_colors.scss */
 #site-footer p {
   color: #999;
 }
