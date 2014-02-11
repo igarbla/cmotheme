@@ -120,8 +120,11 @@
 
       <section id="page-help"><?php print render($page['help']); ?></section>
       <?php if ($action_links): ?><section id="page-links"><ul class="action-links"><?php print render($action_links); ?></ul></section><?php endif; ?>
-      <?php print render($page['content']); ?>
+
       <?php if ($tabs): ?><section class="tabs"><?php print render($tabs); ?></section><?php endif; ?>
+
+      <?php print render($page['content']); ?>
+
       <?php print $feed_icons; ?>
     </article>
   </section> 
