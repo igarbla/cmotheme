@@ -91,28 +91,23 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="content clearfix"<?php print $content_attributes; ?>>
   <?php
   // We hide the comments and links now so that we can render them later.
   hide($content['comments']);
   hide($content['links']);
   hide($content['field_detalles_producto']);
   hide($content['field_catalogo']);
-  $catalogo = $field_catalogo[0]['tid'];
   hide($content['field_fichero_doc_tecnica']);
   hide($content['field_fichero_man_instalacion']);
   print render($content);
   ?>
   <div class="product-navigation">
   <?php
-  $next = producto_sibling('next',$node,NULL,NULL,NULL,$catalogo);
-  $previous = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo);
   ?>
   <?php if ($previous): ?><div class="icon-icomoon-arrow-left2"><?php print $previous; ?></div><?php endif; ?>
   <?php if ($next): ?><div class="icon-icomoon-arrow-right2"><?php print $next; ?></div><?php endif; ?>
   </div>
   <?php print render($content['field_detalles_producto']); ?>
-  </div>
 
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
@@ -128,7 +123,5 @@
       <?php print $links; ?>
     </div>
   <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
 
 </div>

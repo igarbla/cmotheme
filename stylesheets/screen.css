@@ -370,11 +370,25 @@ a {
   }
   /* line 179, ../sass/_layout.scss */
   #main-content article.producto div.product-navigation {
-    width: 79.85075%;
+    width: 100%;
     float: left;
-    margin-right: 0.74627%;
+    margin-right: 0.93458%;
+    border-top-style: solid;
+    border-top-width: 0.0625em;
+    padding-top: 1.4375em;
   }
   /* line 182, ../sass/_layout.scss */
+  #main-content article.producto div.product-navigation div {
+    width: 15.88785%;
+    float: left;
+    margin-right: 0.93458%;
+  }
+  /* line 184, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/susy-1.0.9/sass/susy/_grid.scss */
+  #main-content article.producto div.product-navigation div:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+  /* line 187, ../sass/_layout.scss */
   #main-content article.producto div.field-name-field-detalles-producto {
     width: 79.85075%;
     float: left;
@@ -382,7 +396,7 @@ a {
   }
 }
 
-/* line 190, ../sass/_layout.scss */
+/* line 195, ../sass/_layout.scss */
 #site-banner {
   margin-top: 1.5em;
 }

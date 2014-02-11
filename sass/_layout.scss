@@ -177,7 +177,12 @@ $show-grid-backgrounds : true;
 				@include span-columns(6 omega, 12);
 			}
 			div.product-navigation {
-				@include span-columns(12);
+				@include span-columns(12, 12);
+				@include leading-border;
+				div {
+					@include span-columns(2, 12);
+					@include nth-omega(2n);
+				}
 			}
 			div.field-name-field-detalles-producto {
 				@include span-columns(12);

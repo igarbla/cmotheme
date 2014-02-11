@@ -51,11 +51,15 @@ function cmotheme_preprocess_page(&$variables, $hook) {
   }
 }
 function cmotheme_preprocess_node(&$variables, $hook) {
-	/*$node = $variables['node'];
+	$node = $variables['node'];
 	if ($node->type == 'producto') {
-          $parent = catalogo_top_parent($variables['field_catalogo'][0]['tid']);
-	  $variables['title'] = $parent->name . ' - ' . $variables['title'];
-	}*/
+          //$parent = catalogo_top_parent($variables['field_catalogo'][0]['tid']);
+	  //$variables['title'] = $parent->name . ' - ' . $variables['title'];
+          //$catalogo = $field_catalogo[0]['tid'];
+          $catalogo = $node->field_catalogo['und'][0]['tid'];
+          $variables['next'] = producto_sibling('next',$node,NULL,NULL,NULL,$catalogo);
+          $variables['previous'] = producto_sibling('previous',$node,NULL,NULL,NULL,$catalogo);
+	}
 }
 
 //function crazybird_preprocess_node(&$variables) {
