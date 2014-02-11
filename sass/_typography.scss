@@ -73,9 +73,10 @@ sup {
 
 		article.producto {
 			h1, h2 {
-				@include adjust-font-size-to(16px);
+				@include adjust-font-size-to(14px);
 				font-weight: bold;
 				text-align: left;
+				letter-spacing: 0.045em;
 			}
 			section#ficheros {
 				@include adjust-font-size-to(13px);

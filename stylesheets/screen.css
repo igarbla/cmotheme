@@ -2782,56 +2782,57 @@ sup {
   }
   /* line 75, ../sass/_typography.scss */
   #main-content article.producto h1, #main-content article.producto h2 {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 0.875em;
+    line-height: 1.71429em;
     font-weight: bold;
     text-align: left;
+    letter-spacing: 0.045em;
   }
-  /* line 80, ../sass/_typography.scss */
+  /* line 81, ../sass/_typography.scss */
   #main-content article.producto section#ficheros {
     font-size: 0.8125em;
     line-height: 1.84615em;
     text-transform: capitalize;
     letter-spacing: 0.1em;
   }
-  /* line 87, ../sass/_typography.scss */
+  /* line 88, ../sass/_typography.scss */
   #main-content article.producto div.field-name-body {
     font-size: 0.875em;
     line-height: 1.71429em;
   }
-  /* line 91, ../sass/_typography.scss */
+  /* line 92, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div {
     margin-top: 0em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     margin-bottom: 0em;
   }
-  /* line 93, ../sass/_typography.scss */
+  /* line 94, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div a {
     padding: 0 4em;
   }
-  /* line 97, ../sass/_typography.scss */
+  /* line 98, ../sass/_typography.scss */
   #main-content article.producto div.product-navigation div.icon-icomoon-arrow-right2 {
     text-align: right;
   }
-  /* line 108, ../sass/_typography.scss */
+  /* line 109, ../sass/_typography.scss */
   #main-content article.serie div.scontent {
     text-align: left;
   }
-  /* line 110, ../sass/_typography.scss */
+  /* line 111, ../sass/_typography.scss */
   #main-content article.serie div.scontent h2 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
   }
-  /* line 118, ../sass/_typography.scss */
+  /* line 119, ../sass/_typography.scss */
   #main-content article.serie div.slide.catalogo div.scontent {
     text-align: center;
   }
 }
 
-/* line 127, ../sass/_typography.scss */
+/* line 128, ../sass/_typography.scss */
 #site-footer {
   border-style: solid;
   border-width: 0.0625em;
@@ -2839,18 +2840,18 @@ sup {
   min-height: 601px;
 }
 
-/* line 134, ../sass/_typography.scss */
+/* line 135, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:before {
   content: "";
 }
 
-/* line 137, ../sass/_typography.scss */
+/* line 138, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2:after {
   font-family: 'icomoon';
   content: "\e72c";
 }
 
-/* line 141, ../sass/_typography.scss */
+/* line 142, ../sass/_typography.scss */
 .icon-icomoon-arrow-down2 {
   font-family: 'Exo 2';
   text-transform: uppercase;
@@ -2900,7 +2901,7 @@ sup {
 @media (min-width: 60em) {
   /* line 48, ../sass/_colors.scss */
   #main-content h1, #main-content h2 {
-    color: #09f;
+    color: #017cc2;
   }
   /* line 51, ../sass/_colors.scss */
   #main-content article {
