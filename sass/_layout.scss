@@ -161,6 +161,11 @@ $show-grid-backgrounds : true;
 			}
       section#ficheros {
 				@include span-columns(8 omega, 12);
+					padding: 0 3em;
+
+				span.file {
+				}
+
 			}
 			div.field-name-field-fichero-doc-tecnica {
 				@include span-columns(4, 8);
