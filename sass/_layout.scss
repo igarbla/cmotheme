@@ -97,7 +97,7 @@ $show-grid-backgrounds : true;
 				@include rhythm-borders;
 				border: none;
 				@include rhythm(0,0.1,0.1,0);
-				padding-left: 4em;
+				padding-left: 3em;
 				@include margin-trailer;
 			}
 			ul {
@@ -118,6 +118,15 @@ $show-grid-backgrounds : true;
 							div.slide {
 								//height: 210px;
 								height: 160px;
+								&:hover {
+									div.scontent {
+										h2 {
+											@include translate(0, 6em);
+											opacity: 0.75;
+											background-color: #09f;
+										}
+									}
+								}
 							}
 							img {
 								width: 100%;
@@ -132,6 +141,8 @@ $show-grid-backgrounds : true;
 								//padding-top: 6em;
 								h2 {
 					        padding-left: 2.5em;
+  								@include transition-property(all);
+	  							@include transition-duration(1s);
 								}
 							}
 

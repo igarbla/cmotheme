@@ -118,6 +118,12 @@ sup {
 		}
 
 		article.serie {
+			div.item-list {
+				h3 {
+					@include text-shadow(rgba(#036, 1) 1px 1px 1px);
+				}
+			}
+
 			div.scontent {
 				text-align: left;
 				h2 {
@@ -125,6 +131,7 @@ sup {
 					font-weight: bold;
 					//text-align: left;
 					text-transform: uppercase;
+					@include text-shadow(rgba(#036, 1) 2px 2px 3px);
 				}
 				p {
 					@include adjust-font-size-to(14px);
