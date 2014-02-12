@@ -73,6 +73,7 @@ sup {
 		}
 
 		article.producto {
+	    @include padding-leader;
 			h1, h2 {
 				@include adjust-font-size-to(14px);
 				font-weight: bold;
