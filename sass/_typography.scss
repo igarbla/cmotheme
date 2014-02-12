@@ -59,7 +59,7 @@ sup {
 #main-content {
 	//@include rhythm-borders;
 	//border: none;
-	@include padding-leader;
+	//@include padding-leader;
 	p, ul {
 		@include rhythm(0,1,1,0);
 	}
