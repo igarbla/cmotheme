@@ -1,4 +1,4 @@
-$azul: #09f;
+$azul: #017cc2;
 
 a,
 a.visited {
@@ -152,7 +152,8 @@ a.visited {
 }
 
 #site-footer {
-	background: #fff url(../images/foot_graphic.jpg) bottom left no-repeat;
+	//background: #fff url(../images/foot_graphic.jpg) bottom left no-repeat;
+	background-color: #999;
 	p {
 	  color: #999;
 	}

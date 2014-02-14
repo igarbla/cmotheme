@@ -1,7 +1,7 @@
 $total-columns : 4;
 $column-width  : 4em;
 $gutter-width  : 0.5em;
-$grid-padding  : 0.5em;
+$grid-padding  : 0em;
 
 $break-1 : 30em 6;
 $break-2 : 50em 12;
@@ -9,6 +9,7 @@ $break-3 : 60em 15;
 
 $relative-font-sizing  : true;
 $show-grid-backgrounds : true;
+$container-width: 100%;
 
 
 .site {
@@ -85,6 +86,8 @@ $show-grid-backgrounds : true;
 #main-content {
 
 	@include at-breakpoint($break-3) {
+		@include pre(2);
+		@include post(2);
 
 		article.serie {
 			overflow: hidden;
@@ -221,6 +224,9 @@ $show-grid-backgrounds : true;
 				div.field-name-field-fichero-catalogo-producto {
 				}
 				div.field-name-field-detalles-producto {
+					img {
+						max-width: 100%
+					}
 				}
 			}
 		}
@@ -232,3 +238,15 @@ $show-grid-backgrounds : true;
 	@include margin-leader(0.7);
 }
 
+#site-footer {
+	div.region-footer {
+		@include at-breakpoint($break-2) {
+			@include pre(1);
+			@include post(1);
+		}
+		@include at-breakpoint($break-3) {
+			@include pre(2);
+			@include post(2);
+		}
+	}
+}
