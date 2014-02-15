@@ -240,7 +240,7 @@ function cmotheme_views_view_fields__productos_por_serie__page($variables) {
 	$output .= $foto;
 	$output .= '<div class="scontent">';
 	$output .= '<h2>'. $nombre . '</h2>';
-	$output .= '<p>'. $desc . '</p>';
+	//$output .= '<p>'. $desc . '</p>';
 	$output .= '</div></div>';
 	$output .= '</a>';
 	$output .= '</div>';
