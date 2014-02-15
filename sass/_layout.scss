@@ -217,7 +217,9 @@ $container-width: 100%;
 				}
 				div.field-name-field-detalles-producto {
 					img {
-						max-width: 100%
+						max-width: 100%;
+						width: 100%;
+						height: auto;
 					}
 				}
 			}
