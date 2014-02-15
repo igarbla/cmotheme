@@ -66,7 +66,7 @@ $azul: #017cc2;
 		article.serie {
 			h3 {
     		background: $azul url(../images/cmo_logo_white.png) 1em no-repeat;
-				background-size: 2%;
+				background-size: 1.5em;
 				color: white;
 			}
 			ul {
@@ -93,7 +93,7 @@ $azul: #017cc2;
 								//opacity: 0.5;
 								h2 {
     		          background: $azul url(../images/cmo_logo_white.png) 0.5em no-repeat;
-          				background-size: 9%;
+          				background-size: 1.5em;
 									color: white;
 								}
 								p {
@@ -128,14 +128,14 @@ $azul: #017cc2;
 				}
 				.icon-icomoon-arrow-left2 {
 					background: transparent url(../images/arrow_l.png) center left no-repeat;
-					background-size: 15%;
+					background-size: 2.5em;
 				}
 				.icon-icomoon-arrow-right2:before {
 					content: "";
 				}
 				.icon-icomoon-arrow-right2 {
 					background: transparent url(../images/arrow_r.png) center right no-repeat;
-					background-size: 15%;
+					background-size: 2.5em;
 				}
 			}
 		}

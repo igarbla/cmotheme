@@ -26,12 +26,7 @@
 									div.scontent {
 								    background-color: rgba(0,0,60,0);
 										h2 {
-											opacity: 0.75;
-											@include translate(70px, $base-line-height * 4);
-											width: 70%;
-											//position: absolute;
-											//bottom: $base-line-height * 3;
-											//right: 0;
+											opacity: 0;
 										}
 										//opacity: 0.25;
 										p {
@@ -51,6 +46,8 @@
 								@include transition-property(all);
 								@include transition-duration(1s);
 								h2 {
+									@include transition-property(all);
+									@include transition-duration(1s);
 								}
 								p {
 									@include transition-property(all);
@@ -63,9 +60,8 @@
 								div.scontent {
 									h2 {
 											//background-color: transparent;
-											@include translate(0, $base-line-height * 4);
-											@include skew(30deg, -20deg);
-											width: 100%;
+											//@include translate(0, $base-line-height * 4);
+											//@include skew(30deg, -20deg);
 									}
 								}
 							}
