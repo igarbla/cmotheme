@@ -1,0 +1,86 @@
+
+.site {
+}
+
+#site-header {
+}
+
+#site-nav {
+}
+
+#site-banner {
+}
+
+#main-content {
+
+	@include at-breakpoint($break-3) {
+		article.serie {
+			h3 {
+			}
+			ul {
+				li {
+					div.box {
+						a {
+							div.slide {
+								&:hover {
+									div.scontent {
+								    background-color: rgba(0,0,60,0);
+										h2 {
+											opacity: 0.75;
+											@include translate(70px, $base-line-height * 4);
+											width: 70%;
+											//position: absolute;
+											//bottom: $base-line-height * 3;
+											//right: 0;
+										}
+										//opacity: 0.25;
+										p {
+											opacity: 0;
+										}
+									}
+									img {
+										@include scale(1.1, 1.1);
+									}
+								}
+							}
+							img {
+								@include transition-property(all);
+								@include transition-duration(1s);
+							}
+							div.scontent {
+								@include transition-property(all);
+								@include transition-duration(1s);
+								h2 {
+								}
+								p {
+									@include transition-property(all);
+									@include transition-duration(1s);
+								}
+							}
+
+							div.slide.catalogo {
+								&:hover {
+								div.scontent {
+									h2 {
+											//background-color: transparent;
+											@include translate(0, $base-line-height * 4);
+											@include skew(30deg, -20deg);
+											width: 100%;
+									}
+								}
+							}
+							}
+						} 
+					}
+				}
+			}
+		}
+
+		article.producto {
+		}
+
+	}
+}
+
+#site-footer {
+}
