@@ -39,10 +39,21 @@ $container-width: 100%;
 
 		#block-locale-language {
 			@include span-columns(10 omega, 15);
+			padding-right: 1em;
 			div {
 				ul {
-					@include horizontal-list;
-					float: right;
+					//@include horizontal-list;
+					@include span-columns(2 omega, 15);
+					background-color: gray;
+					li {
+						display: none;
+					}
+					li.active {
+						display: block;
+					}
+					&:hover li {
+						display: block;
+					}
 				}
 			}
 		}
