@@ -201,8 +201,8 @@ $container-width: 100%;
 			div.field-name-field-foto-producto {
 				@include span-columns(6 omega, 12);
 				img {
-					max-width: 100%;
-					width: 100%;
+					//max-width: 100%;
+					//width: 100%;
 					height: auto;
 				}	
 			}
