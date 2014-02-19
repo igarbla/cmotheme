@@ -43,6 +43,7 @@ sup {
 			}
 		}
 		li.expanded {
+			padding: 0;
 		}
 	}
 }
@@ -104,6 +105,7 @@ sup {
 
 		article.producto {
 	    @include padding-leader;
+	    @include padding-trailer;
 			h1, h2 {
 				@include adjust-font-size-to(14px);
 				font-weight: bold;
