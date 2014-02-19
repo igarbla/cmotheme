@@ -1,11 +1,14 @@
 $azul: #017cc2;
+$gris: #333131;
 
 .site {
 	background: transparent url(../images/me_backg_opa.jpg) top left;
 	@include background-size(auto);
+	color: $gris;
 	a,
 	a.visited {
-		color: $azul;
+		//color: $azul;
+	  color: $gris;
 	}
 }
 
@@ -120,7 +123,7 @@ $azul: #017cc2;
 			header {
 				section#ficheros {
 					a {
-						color: black;
+						//color: black;
 					}
 				}
 			}

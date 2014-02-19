@@ -118,13 +118,16 @@ sup {
 			section#ficheros {
 				@include adjust-font-size-to(13px);
 				text-transform: capitalize;
-				letter-spacing: 0.1em;
+				letter-spacing: 0.65px;
 				text-align: right;
 				div.field-name-field-fichero-doc-tecnica {
 				}
 			}
 			div.field-name-body {
 				@include adjust-font-size-to(14px);
+				p, ul {
+					margin-left: 2em;
+				}
 			}
 			div.product-navigation {
 				div {

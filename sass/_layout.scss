@@ -173,7 +173,7 @@ $container-width: 100%;
 			header {
 				overflow: hidden;
 				@include trailing-border;
-				@include margin-trailer;
+				//@include margin-trailer;
 			}
 			h1 {
 				@include span-columns(4, 12);
@@ -195,7 +195,6 @@ $container-width: 100%;
 			div.field-name-body {
 				@include span-columns(6, 12);
 				p, ul {
-					padding-left: 1em;
 				}
 			}
 			div.field-name-field-foto-producto {
@@ -204,7 +203,7 @@ $container-width: 100%;
 					//max-width: 100%;
 					//width: 100%;
 					display: block;
-					margin: 4em auto;
+					margin: 3em auto;
 					height: auto;
 				}	
 			}
