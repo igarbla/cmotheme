@@ -94,8 +94,11 @@ sup {
 			}
 			
 			ul {
+				@include adjust-font-size-to(13px);
 				list-style-type: disc;
 				padding-left: 8em;
+				li {
+				}
 			}
 		}
 
