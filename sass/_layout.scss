@@ -18,14 +18,15 @@ $container-width: 100%;
 	margin: 0 auto;
 
 	@include at-breakpoint($break-3) {
-		@include container;
+		//@include container;
 		//@include susy-grid-background;
 	}
 }
 
 #site-header {
 	@include at-breakpoint($break-3) {
-		overflow: hidden;
+		@include span-columns(15, 15);
+		overflow: visible;
 		h1.title {
 			@include span-columns(5, 15);
 			margin-left: -4em;
@@ -38,18 +39,30 @@ $container-width: 100%;
 		}
 
 		#block-locale-language {
+			@include margin-leader;
+		  position: relative; // http://www.desarrolloweb.com/articulos/propiedad-z-index.html
+		  z-index: 10;
 			@include span-columns(10 omega, 15);
 			padding-right: 1em;
+			position: relative;
+			min-height: 2.5em;
 			div {
 				ul {
-					//@include horizontal-list;
 					@include span-columns(2 omega, 15);
-					background-color: gray;
+					position: absolute;
+					top: 0;
+					right: 1em;
 					li {
 						display: none;
+						margin: 0;
+						a {
+							display: block;
+						}
 					}
 					li.active {
 						display: block;
+						a {
+						}
 					}
 					&:hover li {
 						display: block;
@@ -61,8 +74,9 @@ $container-width: 100%;
 }
 
 #site-nav {
+	@include span-columns(15, 15);
 	overflow: visible;
-	margin-top: -4.5em;
+	margin-top: -3em;
 	ul {
 		@include horizontal-list;
 		float: right;
@@ -244,7 +258,8 @@ $container-width: 100%;
 }
 
 #site-banner {
-	@include margin-leader(0.7);
+	@include span-columns(15, 15);
+	//@include margin-leader(0.7);
 }
 
 #site-footer {

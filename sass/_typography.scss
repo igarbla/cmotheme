@@ -1,4 +1,5 @@
 @import "icomoon";
+@import "entypo";
 
 sup {
 	@include adjust-font-size-to(12px);
@@ -19,12 +20,25 @@ sup {
 
 	#block-locale-language {
 		@include adjust-font-size-to(13px);
+		ul {
+			li {
+				a {
+					//@include rhythm(0,0.2,0.2,0);
+					padding-left: 0.2em;
+				}
+			}
+			li.active a:after {
+				font-family: 'entypo';
+				content: " \e6ce";
+			}
+		}
 	}
 }
 
 #site-nav {
 	@include rhythm-borders;
 	border: none;
+	padding-bottom: 0;
 	@include adjust-font-size-to(16px);
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
@@ -33,10 +47,10 @@ sup {
 		li.first,
 		li.last	{
 			a {
-			@include apply-side-rhythm-border(left);
-			@include apply-side-rhythm-border(right);
-			border: none;
-			@include rhythm(0,0.3,0.3,0);
+				@include apply-side-rhythm-border(left);
+				@include apply-side-rhythm-border(right);
+				border: none;
+				@include rhythm(0,0.3,0.3,0);
 			}
 			ul {
 				border: solid 1px rgba(gray, 0.5);

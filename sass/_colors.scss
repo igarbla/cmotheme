@@ -13,9 +13,40 @@ $gris: #333131;
 }
 
 #site-header {
-	//background-color: rgba(yellow, 0.5);
 	p {
 	  color: #999;
+	}
+
+	#block-locale-language {
+		div {
+			ul {
+				border: solid 1px $gris;
+				@include single-box-shadow;
+				@include border-radius;
+				//background-color: white;
+				@include background-image(linear-gradient(white, #cccccc, #cccccc));
+				li {
+					a {
+					}
+					&:hover {
+						background-color: $azul;
+						a {
+							color: white;
+						}
+					}
+				}
+				li.active {
+					background: none;
+					color: $gris;
+					&:hover {
+						background-color: $azul;
+						a {
+							color: white;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
