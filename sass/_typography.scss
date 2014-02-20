@@ -1,5 +1,6 @@
 @import "icomoon";
 @import "entypo";
+@import "font-awesome";
 
 sup {
 	@include adjust-font-size-to(12px);
@@ -16,6 +17,21 @@ sup {
 	p {
 		@include adjust-font-size-to(13px);
 		text-align: right;
+
+		span[type="email"] {
+			&:before {
+				@include adjust-font-size-to(18px);
+				font-family: font-awesome;
+				content: "\e603   ";
+			}
+		}
+		span[type="tel"] {
+			&:before {
+				@include adjust-font-size-to(18px);
+				font-family: font-awesome;
+				content: "\e68c   ";
+			}
+		}
 	}
 
 	#block-locale-language {
@@ -31,6 +47,7 @@ sup {
 				font-family: 'entypo';
 				content: " \e6ce";
 			}
+
 		}
 	}
 }

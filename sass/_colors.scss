@@ -21,7 +21,7 @@ $gris: #333131;
 		div {
 			ul {
 				border: solid 1px $gris;
-				@include single-box-shadow;
+				@include single-box-shadow(tint($azul, 50%));
 				@include border-radius;
 				//background-color: white;
 				@include background-image(linear-gradient(white, #cccccc, #cccccc));
