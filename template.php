@@ -1,21 +1,21 @@
 <?php
-/*
-//function crazybird_preprocess_html(&$variables) {
-//  $options = array(
-//    'group' => JS_THEME,
-//  );
+
+function cmotheme_preprocess_html(&$variables) {
+  $options = array(
+    'group' => JS_THEME,
+  );
 //  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.js', $options);
 //  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.jcarousel.js', $options);
 //  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/index.js', $options);
 //  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jcarousel.responsive.js', $options);
-//  drupal_add_js('http://code.jquery.com/jquery-1.10.1.min.js', $options);
-//  drupal_add_js('http://code.jquery.com/jquery-migrate-1.2.1.min.js', $options);
-//  drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.easing.1.3.js', $options);
+  drupal_add_js('http://code.jquery.com/jquery-1.10.1.min.js', $options);
+  drupal_add_js('http://code.jquery.com/jquery-migrate-1.2.1.min.js', $options);
+  drupal_add_js(drupal_get_path('theme', 'cmotheme') . '/js/jquery.easing.1.3.js', $options);
 //  drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.jcarousel.min.js', $options);
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.jcarousel.pack.js', $options);
+  drupal_add_js(drupal_get_path('theme', 'cmotheme') . '/js/jquery.jcarousel.pack.js', $options);
 //  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/index.js', $options);
-//}
- */
+}
+
 
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
