@@ -41,7 +41,7 @@ $container-width: 100%;
 		#block-locale-language {
 			@include margin-leader;
 		  position: relative; // http://www.desarrolloweb.com/articulos/propiedad-z-index.html
-		  z-index: 10;
+		  z-index: 20;
 			@include span-columns(10 omega, 15);
 			padding-right: 1em;
 			position: relative;
