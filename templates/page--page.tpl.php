@@ -140,7 +140,12 @@
     <?php print $menu; ?>
     </nav> 
     <?php endif; ?>
-  <?php print render($page['footer']); ?>
+
+    <section id="copyright">
+      <p>&copy;2014 <?php print $site_name; ?></p>
+    </section>
+
+    <?php print render($page['footer']); ?>
   </footer>
 
 </div>
