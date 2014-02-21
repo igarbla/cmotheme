@@ -91,7 +91,15 @@
 
   <?php if ($main_menu || $secondary_menu): ?>
   <nav id="site-nav">
-    <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+  <?php
+    /* Asigno el menu a una variable porque si no
+     * al reproducir la función por segunda vez en el footer
+     * recibo el siguiente erro: Notice: Trying to get property of non-object en node_page_title()
+     * y  de esta manera lo evito
+     */
+    ?>
+    <?php $menu = theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+    <?php print $menu; ?>
   </nav> 
   <?php endif; ?>
 
@@ -127,6 +135,11 @@
   <?php endif; ?>
 
   <footer id="site-footer">
+    <?php if ($main_menu): ?>
+    <nav>
+    <?php print $menu; ?>
+    </nav> 
+    <?php endif; ?>
   <?php print render($page['footer']); ?>
   </footer>
 

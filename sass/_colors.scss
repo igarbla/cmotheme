@@ -186,4 +186,14 @@ $gris: #333131;
 	p {
 	  color: #999;
 	}
+	nav {
+		ul {
+			li {
+				a,
+				a.active {
+					color: white;
+				}
+			}
+		}
+	}
 }

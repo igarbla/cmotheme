@@ -74,36 +74,39 @@ $container-width: 100%;
 }
 
 #site-nav {
-	@include span-columns(15, 15);
-	overflow: visible;
-	margin-top: -3em;
-	ul {
-		@include horizontal-list;
-		float: right;
-	  overflow: visible;
-		li,
-	  li.first,
-	  li.last	{
-			a {
+
+	@include at-breakpoint($break-3) {
+		@include span-columns(15, 15);
+		overflow: visible;
+		margin-top: -3em;
+		ul {
+			@include horizontal-list;
+			float: right;
+			overflow: visible;
+			li,
+			li.first,
+			li.last	{
+				a {
+				}
 			}
-		}
-		li.leaf {
-			padding: 0;
-		}
-		li.expanded {
-			position: relative;
-			ul {
-				position: absolute;
-				display: none;
+			li.leaf {
+				padding: 0;
 			}
-			&:hover {
+			li.expanded {
+				position: relative;
 				ul {
-					display: block;
-					top: 1.5em;
-					left: 0;
-					li {
-						display: inline-block;
-						width: 100%;
+					position: absolute;
+					display: none;
+				}
+				&:hover {
+					ul {
+						display: block;
+						top: 1.5em;
+						left: 0;
+						li {
+							display: inline-block;
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -265,10 +268,69 @@ $container-width: 100%;
 }
 
 #site-footer {
+
 	@include at-breakpoint($break-3) {
-		@include span-columns(15, 15);
-		overflow: visible;
+		overflow: hidden;
+		clear: both;
+		&:after {
+			content: " ";
+		}
 	}
+	nav {
+		min-height: 8em;
+		ul {
+			@include horizontal-list;
+			overflow: visible;
+			li,
+			li.first,
+			li.last	{
+				margin-right: 4em;
+				a {
+				}
+			}
+			li.leaf {
+				padding: 0;
+			}
+			li.expanded {
+				padding-top: 0;
+				position: relative;
+				ul {
+					position: absolute;
+					display: block;
+					top: 1.5em;
+					//left: 0;
+					li {
+						display: inline-block;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		@include at-breakpoint($break-2) {
+			@include span-columns(12, 12);
+			overflow: visible;
+			//@include pre(1);
+			//@include post(1);
+		}
+		@include at-breakpoint($break-3) {
+			@include span-columns(15, 15);
+			//overflow: visible;
+			overflow: visible;
+			clear: both;
+			&:after {
+				content: " ";
+			}
+
+			ul li {
+				@include span-columns(3, 15);
+			}
+			ul li:first-child {
+				display: none;
+			}
+		}
+	}
+
 	div.region-footer {
 		@include at-breakpoint($break-2) {
 			@include pre(1);

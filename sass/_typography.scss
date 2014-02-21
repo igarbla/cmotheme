@@ -220,7 +220,26 @@ sup {
 
 #site-footer {
 	@include rhythm-borders;
-	min-height: 601px;
+	border: none;
+	@include adjust-font-size-to(16px);
+	font-weight: bold;
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+	//min-height: 601px;
+	nav {
+  	ul {
+	  	li{
+		  	ul {
+					li {
+	          @include adjust-font-size-to(14px);
+						font-weight: normal;
+	          letter-spacing: 0.65px;
+	          text-transform: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 
