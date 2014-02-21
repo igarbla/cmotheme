@@ -193,6 +193,12 @@ $gris: #333131;
 				a.active {
 					color: white;
 				}
+				a:before {
+					color: #999;
+				}
+				a:hover:before {
+					color: $azul;
+				}
 			}
 		}
 	}
