@@ -196,4 +196,13 @@ $gris: #333131;
 			}
 		}
 	}
+
+	section#copyright {
+		p {
+			color: white;
+			&:before {
+				color: $azul;
+			}
+		}
+	}
 }

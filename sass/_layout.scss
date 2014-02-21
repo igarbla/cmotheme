@@ -331,6 +331,13 @@ $container-width: 100%;
 		}
 	}
 
+	section#copyright {
+		
+		@include at-breakpoint($break-3) {
+			@include span-columns(7, 15);
+		}
+	}
+
 	div.region-footer {
 		@include at-breakpoint($break-2) {
 			@include pre(1);

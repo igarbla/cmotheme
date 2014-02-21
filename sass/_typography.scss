@@ -1,6 +1,7 @@
 @import "icomoon";
 @import "entypo";
 @import "font-awesome";
+@import "cmo";
 
 sup {
 	@include adjust-font-size-to(12px);
@@ -237,6 +238,21 @@ sup {
 	          text-transform: none;
 					}
 				}
+			}
+		}
+	}
+
+	section#copyright {
+		p {
+			@include adjust-font-size-to(14px);
+			font-weight: normal;
+			letter-spacing: 0.65px;
+			text-transform: none;
+			&:before {
+  			@include adjust-font-size-to(72px);
+				font-family: "cmo";
+				content: "\e600";
+			  vertical-align: middle;
 			}
 		}
 	}

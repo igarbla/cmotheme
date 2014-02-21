@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'cmo';
+	src:url('../fonts/cmo.eot?-z97oh9');
+	src:url('../fonts/cmo.eot?#iefix-z97oh9') format('embedded-opentype'),
+		url('../fonts/cmo.woff?-z97oh9') format('woff'),
+		url('../fonts/cmo.ttf?-z97oh9') format('truetype'),
+		url('../fonts/cmo.svg?-z97oh9#cmo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-cmo-"], [class*=" icon-cmo-"] {
+	font-family: 'cmo';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cmo-logo:before {
+	content: "\e600";
+}
