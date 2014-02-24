@@ -183,6 +183,18 @@ function cmotheme_links__locale_block(&$variables) {
                                   'type'  => 'ul',
                                   'attributes' => $attributes
   			  ));
+  // Dropdown for mobile!!!
+  $output .= "<select>";
+  //kpr($variables['links']);
+  foreach($variables['links'] as $lang => $info) {
+    $output .= '<option value="' . url($info['href'], array('language' => $info['language'])) . '"';
+    ($lang == $language->language) ? $sel = 'selected="selected"' : $sel='';
+    $output .= ' ' . $sel . '>';
+    $output .= $info['language']->native . '</option>';
+    //kpr($info['language']->native);
+  }
+  $output .= "</select>";
+  $output .= '<script>$("nav select").change(function() { window.location = $(this).find("option:selected").val(); });</script>';
   return $output;
 }
 
