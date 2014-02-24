@@ -13,8 +13,10 @@ sup {
 }
 
 #site-header {
-	//@include rhythm-borders;
-	//border: none;
+	@include rhythm-borders;
+	border: none;
+	padding-right: 4em;
+	padding-bottom: 0;
 	p {
 		@include adjust-font-size-to(13px);
 		text-align: right;
@@ -56,6 +58,7 @@ sup {
 #site-nav {
 	@include rhythm-borders;
 	border: none;
+	padding-left: 8em;
 	padding-bottom: 0;
 	@include adjust-font-size-to(16px);
 	letter-spacing: 0.05em;
