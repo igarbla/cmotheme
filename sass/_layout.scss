@@ -119,7 +119,8 @@ $container-width: 100%;
 #main-content {
 
 	@include at-breakpoint($break-3) {
-		@include span-columns(15, 15);
+		@include span-columns(13, 15);
+		@include squish(1,1);
 		overflow: visible;
 
 		article.serie {
