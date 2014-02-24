@@ -62,7 +62,7 @@ sup {
 	padding-bottom: 0;
 	@include adjust-font-size-to(16px);
 	letter-spacing: 0.05em;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	ul {
 		li,
 		li.first,
