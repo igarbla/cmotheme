@@ -40,13 +40,24 @@ $container-width: 100%;
 
 		#block-locale-language {
 			@include margin-leader;
-		  position: relative; // http://www.desarrolloweb.com/articulos/propiedad-z-index.html
-		  z-index: 20;
+			position: relative; // http://www.desarrolloweb.com/articulos/propiedad-z-index.html
+			z-index: 20;
 			@include span-columns(10 omega, 15);
 			padding-right: 1em;
 			position: relative;
 			min-height: 2.5em;
+
 			div {
+				display: none;
+				@include at-breakpoint($break-1) {
+					display: none;
+				}
+				@include at-breakpoint($break-2) {
+					display: block;
+				}
+				@include at-breakpoint($break-3) {
+				display: block;
+				}
 				ul {
 					@include span-columns(2 omega, 15);
 					position: absolute;
@@ -67,6 +78,11 @@ $container-width: 100%;
 					&:hover li {
 						display: block;
 					}
+				}
+			}
+			select {
+				@include at-breakpoint($break-2) {
+					display: none;
 				}
 			}
 		}
@@ -142,8 +158,8 @@ $container-width: 100%;
 		    @include post(1);
 				overflow: hidden;
 				li{
-					@include span-columns(3, 12);
-					@include nth-omega(4n);
+					@include span-columns(3, 15);
+					@include nth-omega(5n);
 					@include margin-trailer;
 
 					div.box {

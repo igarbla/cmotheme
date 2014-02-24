@@ -62,7 +62,6 @@ sup {
 	padding-bottom: 0;
 	@include adjust-font-size-to(16px);
 	letter-spacing: 0.05em;
-	text-transform: capitalize;
 	ul {
 		li,
 		li.first,
@@ -72,13 +71,20 @@ sup {
 				@include apply-side-rhythm-border(right);
 				border: none;
 				@include rhythm(0,0.3,0.3,0);
-			}
-			ul {
-				//border: solid 1px rgba(gray, 0.5);
+				text-transform: uppercase;
 			}
 		}
 		li.expanded {
+	    @include adjust-font-size-to(15px);
 			padding: 0;
+			ul li a {
+				text-transform: capitalize;
+			}
+		}
+		li {
+			a:hover {
+				//font-weight: bold;
+			}
 		}
 	}
 }
@@ -198,14 +204,14 @@ sup {
 			div.scontent {
 				text-align: left;
 				h2 {
-					@include adjust-font-size-to(16px);
+					@include adjust-font-size-to(12px);
 					font-weight: bold;
 					//text-align: left;
 					text-transform: uppercase;
 					@include text-shadow(rgba(#036, 1) 2px 2px 3px);
 				}
 				p {
-					@include adjust-font-size-to(14px);
+					@include adjust-font-size-to(12px);
 					font-weight: bold;
 					@include text-shadow(rgba(#036, 0.5) 2px 2px 3px);
 					letter-spacing: 0.12em;
