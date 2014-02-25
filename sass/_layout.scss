@@ -112,6 +112,8 @@ $container-width: 100%;
 
 #site-nav {
 
+	display: block;
+
 	@include at-breakpoint($break-1) {
 		position: relative;
 		z-index: 10;
@@ -154,6 +156,7 @@ $container-width: 100%;
 	}
 
 	@include at-breakpoint($break-2) {
+		display: block;
 	}
 
 	@include at-breakpoint($break-3) {
@@ -313,10 +316,19 @@ $container-width: 100%;
 
 #site-banner,
 div.hot {
-	@include span-columns(15, 15);
-	//@include margin-leader(0.7);
-	position: relative;
-	z-index: 1;
+
+	display: none;
+
+	@include at-breakpoint($break-1) {
+		display: block;
+	}
+
+	@include at-breakpoint($break-1) {
+		@include span-columns(15, 15);
+		//@include margin-leader(0.7);
+		position: relative;
+		z-index: 1;
+	}
 }
 
 #site-footer {
