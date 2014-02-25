@@ -205,16 +205,19 @@ sup {
 				text-align: left;
 				h2 {
 					@include adjust-font-size-to(13px);
+					@include border-radius(3px);
 					letter-spacing: 0.1em;
-					//font-weight: bold;
+					font-weight: bold;
 					//text-align: left;
 					text-transform: uppercase;
 					@include text-shadow(rgba(#036, 1) 2px 2px 3px);
 				}
 				p {
 				  font-family: "Open Sans";
-					@include adjust-font-size-to(10px);
+					@include adjust-font-size-to(12px);
 					@include rhythm;
+					@include word-break(break-all);
+					@include hyphens(auto);
 					font-weight: bold;
 					@include text-shadow(rgba(#036, 0.5) 2px 2px 3px);
 					letter-spacing: 0.12em;
