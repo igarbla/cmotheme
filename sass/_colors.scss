@@ -132,6 +132,7 @@ $gris: #333131;
     		          background: $azul url(../images/cmo_logo_white.png) 0.5em no-repeat;
           				background-size: 1.5em;
 									color: white;
+									//@include border-radius(3px);
 								}
 								p {
 								}
