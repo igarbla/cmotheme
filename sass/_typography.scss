@@ -204,7 +204,7 @@ sup {
 			div.scontent {
 				text-align: left;
 				h2 {
-					@include adjust-font-size-to(13px);
+					@include adjust-font-size-to(16px);
 					@include border-radius(3px);
 					letter-spacing: 0.1em;
 					font-weight: bold;
