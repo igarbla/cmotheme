@@ -34,13 +34,13 @@
 										}
 									}
 									img {
-										@include scale(1.1, 1.1);
+										@include scale(1.2, 1.2);
 									}
 								}
 							}
 							img {
 								@include transition-property(all);
-								@include transition-duration(1s);
+								@include transition-duration(0.5s);
 							}
 							div.scontent {
 								@include transition-property(all);
