@@ -216,8 +216,8 @@ sup {
 				  font-family: "Open Sans";
 					@include adjust-font-size-to(12px);
 					@include rhythm;
-					@include word-break(break-all);
-					@include hyphens(auto);
+					//@include word-break(break-all);
+					@include hyphenation;
 					font-weight: bold;
 					@include text-shadow(rgba(#036, 0.5) 2px 2px 3px);
 					letter-spacing: 0.12em;

@@ -24,16 +24,23 @@ $container-width: 100%;
 }
 
 #site-header {
-	@include at-breakpoint($break-3) {
-		@include span-columns(15, 15);
+
+	#block-locale-language {
+		div.item-list {
+			display: none;
+		}
+	}
+
+	@include at-breakpoint($break-2) {
+		@include span-columns(12, 12);
 		overflow: visible;
 		h1.title {
-			@include span-columns(5, 15);
+			@include span-columns(5, 12);
 			margin-left: -4em;
 		}
 
 		p {
-			@include span-columns(10 omega, 15);
+			@include span-columns(7 omega, 12);
 			@include adjust-font-size-to(13px);
 			padding-right: 1em;
 			text-align: right;
@@ -43,24 +50,14 @@ $container-width: 100%;
 			@include margin-leader;
 			position: relative; // http://www.desarrolloweb.com/articulos/propiedad-z-index.html
 			z-index: 20;
-			@include span-columns(10 omega, 15);
+			@include span-columns(7 omega, 12);
 			padding-right: 1em;
 			position: relative;
 			min-height: 2.5em;
-
-			div {
-				display: none;
-				@include at-breakpoint($break-1) {
-					display: none;
-				}
-				@include at-breakpoint($break-2) {
-					display: block;
-				}
-				@include at-breakpoint($break-3) {
+			div.item-list {
 				display: block;
-				}
 				ul {
-					@include span-columns(2 omega, 15);
+					@include span-columns(3 omega, 12);
 					position: absolute;
 					top: 0;
 					right: 1em;
@@ -81,11 +78,34 @@ $container-width: 100%;
 					}
 				}
 			}
+
 			select {
 				@include at-breakpoint($break-2) {
 					display: none;
 				}
 			}
+		}
+	}
+
+	@include at-breakpoint($break-3) {
+		@include span-columns(15, 15);
+		h1.title {
+			@include span-columns(5, 15);
+		}
+
+		p {
+			@include span-columns(10 omega, 15);
+		}
+
+		#block-locale-language {
+			@include span-columns(10 omega, 15);
+
+			div.item-list {
+				ul {
+					@include span-columns(2 omega, 15);
+				}
+			}
+
 		}
 	}
 }
