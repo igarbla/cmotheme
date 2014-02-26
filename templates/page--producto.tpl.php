@@ -84,7 +84,7 @@
         </a>
       <?php endif; ?>
     </h1>
-    <p><span type="email">contact@cmo.es</span> - <span type="tel">TEL:+34 902 408050</span></p>
+    <p><span type="email">contact@cmo.es</span> - <span type="tel">+34 902 408050</span></p>
     <?php print render($page['header']); ?>
   </header>
 

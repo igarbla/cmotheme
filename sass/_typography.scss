@@ -310,20 +310,10 @@ sup {
 			ul {
 				li{
 					a:before {
-						@include adjust-font-size-to(14px);
-						font-weight: normal;
-						font-family: "entypo";
-						content: "\e6d0";
 					}
 					ul {
 						li {
-							@include adjust-font-size-to(14px);
-							font-weight: normal;
-							letter-spacing: 0.65px;
-							text-transform: none;
 							a:before {
-								font-family: "entypo";
-								content: "\e6d0";
 							}
 						}
 					}
@@ -334,14 +324,7 @@ sup {
 		section#copyright {
 			p {
 				@include adjust-font-size-to(14px);
-				font-weight: normal;
-				letter-spacing: 0.65px;
-				text-transform: none;
 				&:before {
-					@include adjust-font-size-to(72px);
-					font-family: "cmo";
-					content: "\e600";
-					vertical-align: middle;
 				}
 			}
 		}

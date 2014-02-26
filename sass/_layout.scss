@@ -14,12 +14,26 @@ $container-width: 100%;
 
 .site {
 	@include container;
-	//@include susy-grid-background;
 	margin: 0 auto;
+	//@include susy-grid-background;
+	&:berfore {
+		content: "Break-0";
+	}
 
+	@include at-breakpoint($break-1) {
+		&:before {
+			content: "Break-1";
+		}
+	}
+	@include at-breakpoint($break-2) {
+		&:before {
+			content: "Break-2";
+		}
+	}
 	@include at-breakpoint($break-3) {
-		//@include container;
-		//@include susy-grid-background;
+		&:before {
+			content: "Break-3";
+		}
 	}
 }
 
@@ -40,17 +54,20 @@ $container-width: 100%;
 		}
 	}
 	
-
-
 	#block-locale-language {
 		div.item-list {
 			display: none;
 		}
 	}
 
+	@include at-breakpoint($break-1) {
+		@include span-columns(6, 6);
+		overflow: visible;
+
+	}
+
 	@include at-breakpoint($break-2) {
 		@include span-columns(12, 12);
-		overflow: visible;
 		h1.title {
 			@include span-columns(5, 12);
 			margin-left: -4em;
@@ -97,9 +114,7 @@ $container-width: 100%;
 			}
 
 			select {
-				@include at-breakpoint($break-2) {
 					display: none;
-				}
 			}
 		}
 	}
@@ -149,7 +164,7 @@ $container-width: 100%;
 		}
 	}
 
-	@include at-breakpoint($break-1) {
+	@include at-breakpoint($break-2) {
 		display: block;
 		position: relative;
 		z-index: 10;
@@ -377,22 +392,21 @@ div.hot {
 
 	display: none;
 
-	@include at-breakpoint($break-1) {
+	@include at-breakpoint($break-2) {
 		display: block;
-	}
-
-	@include at-breakpoint($break-1) {
-		@include span-columns(15, 15);
-		//@include margin-leader(0.7);
+		@include span-columns(12, 12);
 		position: relative;
 		z-index: 1;
+	}
+
+	@include at-breakpoint($break-3) {
+		@include span-columns(15, 15);
 	}
 }
 
 #site-footer {
 
 	nav {
-		//@include span-columns(4,4);
 		ul {
 			//@include horizontal-list;
 			//overflow: visible;
@@ -438,15 +452,37 @@ div.hot {
 	}
 
 	@include at-breakpoint($break-1) {
+
+		nav {
+			@include span-columns(6, 6);
+			ul {
+				@include horizontal-list;
+				li,
+			  li.first,
+			  li.last	{
+					@include span-columns(2, 4);
+					margin-right: 0;
+				}
+			}
+		}
 	}
 
 	@include at-breakpoint($break-2) {
+		overflow: hidden;
 		nav {
 			@include span-columns(12, 12);
 			overflow: visible;
+			ul {
+				@include horizontal-list;
+				li,
+			  li.first,
+			  li.last	{
+					@include span-columns(3, 12);
+				}
+			}
 		}
 		section#copyright {
-			@include span-columns(7, 15);
+			@include span-columns(12, 12);
 		}
 	}
 
@@ -465,11 +501,13 @@ div.hot {
 				content: " ";
 			}
 
-			ul li {
-				@include span-columns(3, 15);
-			}
-			ul li:first-child {
-				display: none;
+			ul {
+				@include horizontal-list;
+				li,
+			  li.first,
+			  li.last	{
+					@include span-columns(2, 11);
+				}
 			}
 		}
 	}
