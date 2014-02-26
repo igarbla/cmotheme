@@ -17,22 +17,22 @@ $container-width: 100%;
 	margin: 0 auto;
 	//@include susy-grid-background;
 	&:berfore {
-		content: "Break-0";
+		//content: "Break-0";
 	}
 
 	@include at-breakpoint($break-1) {
 		&:before {
-			content: "Break-1";
+			//content: "Break-1";
 		}
 	}
 	@include at-breakpoint($break-2) {
 		&:before {
-			content: "Break-2";
+			//content: "Break-2";
 		}
 	}
 	@include at-breakpoint($break-3) {
 		&:before {
-			content: "Break-3";
+			//content: "Break-3";
 		}
 	}
 }
@@ -433,7 +433,7 @@ div.hot {
 			  list-style: none;
 				ul {
 					//position: absolute;
-					display: block;
+					//display: block;
 					//top: 1.5em;
 					//left: 0;
 					li {
@@ -457,11 +457,16 @@ div.hot {
 			@include span-columns(6, 6);
 			ul {
 				@include horizontal-list;
+				@include margin-trailer;
 				li,
 			  li.first,
-			  li.last	{
+			  li.last,
+			  li.leaf	{
 					@include span-columns(2, 4);
 					margin-right: 0;
+				}
+				li.leaf {
+					//@include span-columns(2, 4);
 				}
 			}
 		}
@@ -476,8 +481,10 @@ div.hot {
 				@include horizontal-list;
 				li,
 			  li.first,
-			  li.last	{
+			  li.last,
+			  li.leaf	{
 					@include span-columns(3, 12);
+					margin-right: 0;
 				}
 			}
 		}
@@ -505,7 +512,8 @@ div.hot {
 				@include horizontal-list;
 				li,
 			  li.first,
-			  li.last	{
+			  li.last,
+			  li.leaf	{
 					@include span-columns(2, 11);
 				}
 			}
