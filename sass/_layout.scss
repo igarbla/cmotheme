@@ -25,6 +25,22 @@ $container-width: 100%;
 
 #site-header {
 
+	margin: 0;
+	margin-top: 0.5em;
+	padding: 0;
+
+	h1.title {
+		@include span-columns(4, 4);
+		img {
+			display: block;
+			width: 100%;
+		}
+		&>p:first-of-type {
+			@include span-columns(4, 4);
+		}
+	}
+	
+
 
 	#block-locale-language {
 		div.item-list {
@@ -375,36 +391,36 @@ div.hot {
 
 #site-footer {
 
-	@include at-breakpoint($break-3) {
-		overflow: hidden;
-		clear: both;
-		&:after {
-			content: " ";
-		}
-	}
 	nav {
-		min-height: 8em;
+		//@include span-columns(4,4);
 		ul {
-			@include horizontal-list;
-			overflow: visible;
+			//@include horizontal-list;
+			//overflow: visible;
+			@include margin-trailer;
 			li,
 			li.first,
 			li.last	{
-				margin-right: 4em;
+				//margin-right: 4em;
+				//display: inline-block;
+			  list-style: none;
+				width: 100%;
+				margin: 0;
+				padding: 0;
 				a {
 				}
 			}
 			li.leaf {
 				padding: 0;
+			  list-style: none;
 			}
 			li.expanded {
-				padding-top: 0;
-				padding-left: 0;
-				position: relative;
+				padding: 0;
+				//position: relative;
+			  list-style: none;
 				ul {
-					position: absolute;
+					//position: absolute;
 					display: block;
-					top: 1.5em;
+					//top: 1.5em;
 					//left: 0;
 					li {
 						display: inline-block;
@@ -412,17 +428,37 @@ div.hot {
 					}
 				}
 			}
+			&>li:first-of-type {
+				display: none;
+			}
 		}
+	}
 
-		@include at-breakpoint($break-2) {
+	section#copyright {
+	}
+
+	@include at-breakpoint($break-1) {
+	}
+
+	@include at-breakpoint($break-2) {
+		nav {
 			@include span-columns(12, 12);
 			overflow: visible;
-			//@include pre(1);
-			//@include post(1);
 		}
-		@include at-breakpoint($break-3) {
+		section#copyright {
+			@include span-columns(7, 15);
+		}
+	}
+
+	@include at-breakpoint($break-3) {
+		overflow: hidden;
+		clear: both;
+		&:after {
+			content: " ";
+		}
+
+		nav {
 			@include span-columns(15, 15);
-			//overflow: visible;
 			overflow: visible;
 			clear: both;
 			&:after {
@@ -435,24 +471,6 @@ div.hot {
 			ul li:first-child {
 				display: none;
 			}
-		}
-	}
-
-	section#copyright {
-		
-		@include at-breakpoint($break-3) {
-			@include span-columns(7, 15);
-		}
-	}
-
-	div.region-footer {
-		@include at-breakpoint($break-2) {
-			@include pre(1);
-			@include post(1);
-		}
-		@include at-breakpoint($break-3) {
-			@include pre(2);
-			@include post(2);
 		}
 	}
 }
