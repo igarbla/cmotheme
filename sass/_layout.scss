@@ -63,6 +63,15 @@ $container-width: 100%;
 	@include at-breakpoint($break-1) {
 		@include span-columns(6, 6);
 		overflow: visible;
+		h1.title {
+			@include span-columns(4, 6);
+			margin-left: -4em;
+		}
+		p {
+			span {
+				display: block;
+			}
+		}
 
 	}
 
@@ -78,6 +87,9 @@ $container-width: 100%;
 			@include adjust-font-size-to(13px);
 			padding-right: 1em;
 			text-align: right;
+			span {
+				display: inline;
+			}
 		}
 
 		#block-locale-language {
