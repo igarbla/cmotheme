@@ -54,14 +54,12 @@ $gris: #333131;
 	//background-color: rgba(blue, 0.5);
 	li {
 		&:hover {
-			//background-color: #017cc2;
 			background-color: $azul;
 			a {
 				color: white;
 			}
 		}
 		a {
-			//color: #017cc2;
 			color: $azul;
 		}
 	}

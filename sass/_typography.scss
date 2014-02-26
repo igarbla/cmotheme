@@ -56,34 +56,45 @@ sup {
 }
 
 #site-nav {
-	@include rhythm-borders;
-	border: none;
-	padding-right: 10em;
-	padding-bottom: 0;
-	@include adjust-font-size-to(16px);
-	letter-spacing: 0.05em;
-	ul {
-		li,
-		li.first,
-		li.last	{
-			a {
-				@include apply-side-rhythm-border(left);
-				@include apply-side-rhythm-border(right);
-				border: none;
-				@include rhythm(0,0.3,0.3,0);
-				text-transform: uppercase;
-			}
+
+	&>ul>li:first-of-type {
+		a{
 		}
-		li.expanded {
-	    @include adjust-font-size-to(15px);
-			padding: 0;
-			ul li a {
-				text-transform: capitalize;
+	}
+	&>ul ul {
+		display: none;
+	}
+
+	@include at-breakpoint($break-1) {
+		@include rhythm-borders;
+		border: none;
+		padding-right: 10em;
+		padding-bottom: 0;
+		@include adjust-font-size-to(16px);
+		letter-spacing: 0.05em;
+		ul {
+			li,
+			li.first,
+			li.last	{
+				a {
+					@include apply-side-rhythm-border(left);
+					@include apply-side-rhythm-border(right);
+					border: none;
+					@include rhythm(0,0.3,0.3,0);
+					text-transform: uppercase;
+				}
 			}
-		}
-		li {
-			a:hover {
-				//font-weight: bold;
+			li.expanded {
+				@include adjust-font-size-to(15px);
+				padding: 0;
+				ul li a {
+					text-transform: capitalize;
+				}
+			}
+			li {
+				a:hover {
+					//font-weight: bold;
+				}
 			}
 		}
 	}

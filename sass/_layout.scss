@@ -25,6 +25,7 @@ $container-width: 100%;
 
 #site-header {
 
+
 	#block-locale-language {
 		div.item-list {
 			display: none;
@@ -113,11 +114,30 @@ $container-width: 100%;
 #site-nav {
 
 	display: block;
+	//background-color: gray;
+	ul {
+		@include horizontal-list;
+		@include rhythm-borders;
+		border: none;
+		li {
+			margin: 0;
+			padding: 0 0.5em;
+			a {
+			}
+		}
+		li,
+		li.leaf,
+		li.expanded	{
+			list-style-type: none;
+			list-style-image: none;
+		}
+	}
 
 	@include at-breakpoint($break-1) {
+		display: block;
 		position: relative;
 		z-index: 10;
-		@include span-columns(12, 12);
+		@include span-columns(6, 6);
 		overflow: visible;
 		margin-top: -3em;
 
@@ -156,7 +176,7 @@ $container-width: 100%;
 	}
 
 	@include at-breakpoint($break-2) {
-		display: block;
+		@include span-columns(12, 12);
 	}
 
 	@include at-breakpoint($break-3) {
@@ -167,28 +187,54 @@ $container-width: 100%;
 
 #main-content {
 
+	article.producto {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+		div.field-name-field-foto-producto {
+			@include span-columns(4, 4);
+			img {
+				display: block;
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+			}	
+		}
+
+		section#catalogo {
+			div.field-name-field-fichero-catalogo-producto {
+			}
+			div.field-name-field-detalles-producto {
+				img {
+					display: block;
+					max-width: 100%;
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	@include at-breakpoint($break-1) {
+	}
+
+	@include at-breakpoint($break-2) {
+	}
+
 	@include at-breakpoint($break-3) {
 		@include span-columns(13, 15);
 		@include squish(1,1);
 		overflow: visible;
 
 		article.serie {
-			//overflow: hidden;
 			div.item-list {
-				//overflow: hidden;
-				//clear: both;
-				//@include margin-trailer;
 			}
 			h3 {
-				//@include rhythm-borders;
-				//border: none;
-				//@include rhythm(0,0.1,0.1,0);
 				padding-left: 3em;
-				//@include margin-trailer;
 			}
 			ul {
-		    @include pre(1);
-		    @include post(1);
+				@include pre(1);
+				@include post(1);
 				overflow: hidden;
 				li{
 					@include span-columns(3, 15);
@@ -218,14 +264,12 @@ $container-width: 100%;
 								top: 0;
 								padding: 0.5em;
 								h2 {
-					        padding-left: 2.5em;
+									padding-left: 2.5em;
 								}
 							}
 
 							div.slide.catalogo {
 								div.scontent {
-									//padding: 0;
-									//padding-top: 2em;
 									h2 {
 										padding-left: 0;
 									}
@@ -244,14 +288,13 @@ $container-width: 100%;
 			header {
 				overflow: hidden;
 				@include trailing-border;
-				//@include margin-trailer;
 			}
 			h1 {
 				@include span-columns(4, 12);
 			}
-      section#ficheros {
+			section#ficheros {
 				@include span-columns(8 omega, 12);
-					padding: 0 3em;
+				padding: 0 3em;
 
 				span.file {
 				}
@@ -271,8 +314,6 @@ $container-width: 100%;
 			div.field-name-field-foto-producto {
 				@include span-columns(6 omega, 12);
 				img {
-					//max-width: 100%;
-					//width: 100%;
 					display: block;
 					margin: 3em auto;
 					height: auto;
