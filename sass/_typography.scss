@@ -108,7 +108,7 @@ sup {
 
 	@include at-breakpoint($break-2) {
 		padding-bottom: 0;
-		&>ul>li.expanded ul li {
+		ul>li.expanded ul li {
 			a {
 				text-transform: none;
 			}

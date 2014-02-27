@@ -156,7 +156,8 @@ $container-width: 100%;
 
 #site-nav {
 
-	display: block;
+	//display: block;
+	
 
 	ul {
 		@include horizontal-list;
@@ -199,6 +200,8 @@ $container-width: 100%;
 		  padding: 0;
 			//float: right;
 			overflow: visible;
+			li {
+			}
 			li,
 			li.first,
 			li.last	{
@@ -233,6 +236,10 @@ $container-width: 100%;
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
 		//margin-top: -3em;
+		ul:first-of-type {
+			width: auto;
+			float: right;
+		}
 		ul {
 		}
 	}
