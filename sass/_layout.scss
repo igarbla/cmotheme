@@ -186,10 +186,10 @@ $container-width: 100%;
 		z-index: 10;
 		@include span-columns(12, 12);
 		overflow: visible;
-		margin-top: -3em;
 
 		ul {
 			//@include horizontal-list;
+		  padding: 0;
 			float: right;
 			overflow: visible;
 			li,
@@ -222,12 +222,9 @@ $container-width: 100%;
 		}
 	}
 
-	@include at-breakpoint($break-2) {
-		@include span-columns(12, 12);
-	}
-
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
+		margin-top: -3em;
 	}
 
 }

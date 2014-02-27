@@ -76,8 +76,6 @@ sup {
 	@include at-breakpoint($break-1) {
 		@include rhythm-borders;
 		border: none;
-		padding-right: 10em;
-		padding-bottom: 0;
 		@include adjust-font-size-to(16px);
 		letter-spacing: 0.05em;
 		ul {
@@ -105,6 +103,14 @@ sup {
 				}
 			}
 		}
+	}
+
+	@include at-breakpoint($break-2) {
+		padding-bottom: 0;
+	}
+
+	@include at-breakpoint($break-3) {
+		padding-right: 10em;
 	}
 }
 
