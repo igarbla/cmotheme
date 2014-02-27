@@ -429,7 +429,8 @@ div.hot {
 			@include margin-trailer;
 			li,
 			li.first,
-			li.last	{
+			li.last,
+		  li.leaf	{
 				//margin-right: 4em;
 				//display: inline-block;
 			  list-style: none;
@@ -437,6 +438,11 @@ div.hot {
 				margin: 0;
 				padding: 0;
 				a {
+				  display: block;
+				  width: 100%;
+				  white-space: nowrap;
+				  overflow: hidden;
+					text-overflow: ellipsis;
 				}
 			}
 			li.leaf {
