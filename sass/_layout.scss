@@ -176,16 +176,20 @@ $container-width: 100%;
 		}
 	}
 
+	@include at-breakpoint($break-1) {
+		@include span-columns(6, 6);
+	}
+
 	@include at-breakpoint($break-2) {
 		display: block;
 		position: relative;
 		z-index: 10;
-		@include span-columns(6, 6);
+		@include span-columns(12, 12);
 		overflow: visible;
 		margin-top: -3em;
 
 		ul {
-			@include horizontal-list;
+			//@include horizontal-list;
 			float: right;
 			overflow: visible;
 			li,
