@@ -67,6 +67,7 @@ sup {
 
 	&>ul>li:first-of-type {
 		a{
+			color: magenta;
 		}
 	}
 	&>ul ul {
@@ -107,10 +108,16 @@ sup {
 
 	@include at-breakpoint($break-2) {
 		padding-bottom: 0;
+		&>ul>li.expanded ul li {
+			a {
+				text-transform: none;
+			}
+		}
 	}
 
 	@include at-breakpoint($break-3) {
-		padding-right: 10em;
+		@include rhythm;
+		//padding-right: 10em;
 	}
 }
 
