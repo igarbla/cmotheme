@@ -157,7 +157,7 @@ $container-width: 100%;
 #site-nav {
 
 	display: block;
-	//background-color: gray;
+
 	ul {
 		@include horizontal-list;
 		@include rhythm-borders;
@@ -177,20 +177,20 @@ $container-width: 100%;
 	}
 
 	@include at-breakpoint($break-1) {
-		@include span-columns(6, 6);
+		overflow: visible;
+		ul {
+			@include span-columns(6, 6);
+		}
 	}
 
 	@include at-breakpoint($break-2) {
-		display: block;
 		position: relative;
 		z-index: 10;
-		@include span-columns(12, 12);
-		overflow: visible;
+	  overflow: visible;
 
 		ul {
-			//@include horizontal-list;
+		  @include span-columns(12, 12);
 		  padding: 0;
-			padding-right: 1em;
 			float: right;
 			overflow: visible;
 			li,
@@ -213,9 +213,10 @@ $container-width: 100%;
 						display: block;
 						top: 1.5em;
 						left: 0;
+			      width: auto;
 						li {
 							display: inline-block;
-							width: 100%;
+			        width: 100%;
 						}
 					}
 				}
@@ -227,7 +228,6 @@ $container-width: 100%;
 		@include span-columns(15, 15);
 		margin-top: -3em;
 		ul {
-			padding-right: 0;
 		}
 	}
 
@@ -425,8 +425,6 @@ div.hot {
 
 	nav {
 		ul {
-			//@include horizontal-list;
-			//overflow: visible;
 			@include margin-trailer;
 			li,
 			li.first,
@@ -452,13 +450,8 @@ div.hot {
 			}
 			li.expanded {
 				padding: 0;
-				//position: relative;
 			  list-style: none;
 				ul {
-					//position: absolute;
-					//display: block;
-					//top: 1.5em;
-					//left: 0;
 					li {
 						display: inline-block;
 						width: 100%;
@@ -475,6 +468,7 @@ div.hot {
 	}
 
 	@include at-breakpoint($break-1) {
+		overflow: hidden;
 
 		nav {
 			@include span-columns(6, 6);
@@ -489,14 +483,13 @@ div.hot {
 					margin-right: 0;
 				}
 				li.leaf {
-					//@include span-columns(2, 4);
 				}
 			}
 		}
 	}
 
 	@include at-breakpoint($break-2) {
-		overflow: hidden;
+
 		nav {
 			@include span-columns(12, 12);
 			overflow: visible;
