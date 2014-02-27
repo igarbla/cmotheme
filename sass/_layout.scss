@@ -190,6 +190,7 @@ $container-width: 100%;
 		ul {
 			//@include horizontal-list;
 		  padding: 0;
+			padding-right: 1em;
 			float: right;
 			overflow: visible;
 			li,
@@ -225,6 +226,9 @@ $container-width: 100%;
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
 		margin-top: -3em;
+		ul {
+			padding-right: 0;
+		}
 	}
 
 }
