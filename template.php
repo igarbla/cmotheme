@@ -20,6 +20,14 @@ function cmotheme_process_html(&$variables) {
 
   // http://www.milesjcarter.co.uk/blog/web-design-development/drupal-7-seo-controlling-page-titles-theme-layer/
   //$variables['head_title'] = implode(' | ', array(drupal_get_title(), variable_get('site_name', ''), ));
+  $variables['head'] .= '<link rel="apple-touch-icon" href="' . .'/imagenes/apple-touch-icon.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="57x57" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-57x57.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="72x72" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-72x72.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="76x76" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-76x76.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="114x114" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-114x114.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="120x120" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-120x120.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="144x144" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-144x144.png" />';
+  $variables['head'] .= '<link rel="apple-touch-icon" sizes="152x152" href="' . drupal_get_path('theme', 'cmotheme') . '/imagenes/apple-touch-icon-152x152.png" /> ';
 }
 
 function cmotheme_css_alter(&$css) {
