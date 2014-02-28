@@ -4,27 +4,17 @@ function cmotheme_preprocess_html(&$variables) {
   $options = array(
     'group' => JS_THEME,
   );
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.js', $options);
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.jcarousel.js', $options);
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/index.js', $options);
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jcarousel.responsive.js', $options);
   drupal_add_js('http://code.jquery.com/jquery-1.10.1.min.js', $options);
   drupal_add_js('http://code.jquery.com/jquery-migrate-1.2.1.min.js', $options);
   drupal_add_js(drupal_get_path('theme', 'cmotheme') . '/js/jquery.easing.1.3.js', $options);
-//  drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/jquery.jcarousel.min.js', $options);
   drupal_add_js(drupal_get_path('theme', 'cmotheme') . '/js/jquery.jcarousel.pack.js', $options);
-//  //drupal_add_js(drupal_get_path('theme', 'crazybird') . '/js/index.js', $options);
 }
 
 
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
   $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
-  $variables['head'] .= '<meta name="viewport" content="width=device-width, initial-scale=1" />';
-  //$variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">';
-  //$variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">';
-  //$variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Purple+Purse" rel="stylesheet">';
-  //$variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Purple+Purse" rel="stylesheet">';
+  $variables['head'] .= '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable="no" />';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Exo+2:400,600,900" rel="stylesheet" type="text/css">';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
