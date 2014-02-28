@@ -14,7 +14,7 @@ function cmotheme_preprocess_html(&$variables) {
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
   $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
-  $variables['head'] .= '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable="no" />';
+  $variables['head'] .= '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Exo+2:400,600,900" rel="stylesheet" type="text/css">';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
