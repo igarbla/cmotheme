@@ -133,6 +133,11 @@ $container-width: 100%;
 
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
+		position: fixed;
+		top: -0.5em;
+		background-color: white;
+		z-index: 10;
+		@include single-box-shadow;
 		h1.title {
 			@include span-columns(5, 15);
 		}
@@ -434,6 +439,7 @@ div.hot {
 
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
+		margin-top: 8em;
 	}
 }
 
