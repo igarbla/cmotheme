@@ -444,7 +444,7 @@ div.hot {
 
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
-		margin-top: 9em;
+		margin-top: 9.5em;
 	}
 }
 #site-banner {
