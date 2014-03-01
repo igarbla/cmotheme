@@ -140,6 +140,11 @@ $container-width: 100%;
 		@include single-box-shadow;
 		h1.title {
 			@include span-columns(5, 15);
+			a {
+				img {
+					max-width: 16em;
+				}
+			}
 		}
 
 		p {
@@ -439,7 +444,12 @@ div.hot {
 
 	@include at-breakpoint($break-3) {
 		@include span-columns(15, 15);
-		margin-top: 8em;
+		margin-top: 9em;
+	}
+}
+#site-banner {
+	@include at-breakpoint($break-3) {
+		margin-top: 7em;
 	}
 }
 
