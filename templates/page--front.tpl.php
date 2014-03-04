@@ -129,9 +129,6 @@
       <div class="focusR"><a href="#"><img src="<?php print path_to_theme(); ?>/images/slider/slider2_2.png" width="1000" height="250" /></a></div>
     </li>
      
-    <li id="focusIndex5" style="background:url(<?php print path_to_theme(); ?>/images/slider/slider8_bg.jpg) repeat-x center top; width: 1905px; left: -1905px; display: none;">
-      <div class="focusL"><a href="#"><img src="<?php print path_to_theme(); ?>/images/slider/slider2_1.png" width="1000" height="250" /></a></div>
-      <div class="focusR"><a href="#"><img src="<?php print path_to_theme(); ?>/images/slider/slider2_2.png" width="1000" height="250" /></a></div>
     </li>
   </ul>
 </div>
