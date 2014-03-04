@@ -618,6 +618,11 @@ div.hot {
 
 	@include at-breakpoint($break-1) {
 		overflow: hidden;
+	  clear: both;
+		&:after {
+			content: " ";
+		}
+
 
 		nav {
 			@include span-columns(6, 6);
