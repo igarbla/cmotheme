@@ -87,7 +87,7 @@ $gris: #333131;
 
 #main-content {
 
-	@include at-breakpoint($break-3) {
+	@include at-breakpoint($break-1) {
 		//background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
 		h1, h2 {
 			color: $azul;
