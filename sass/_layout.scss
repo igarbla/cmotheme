@@ -715,7 +715,8 @@ div.hot {
 		}
 
 		nav {
-			@include span-columns(12, 12);
+			@include span-columns(10, 12);
+			@include squish(1,1);
 			overflow: visible;
 			ul {
 				@include horizontal-list;
@@ -723,10 +724,16 @@ div.hot {
 			  li.first,
 			  li.last,
 			  li.leaf	{
-					@include span-columns(3, 12);
+					//@include span-columns(4, 12);
+					//@include nth-omega(4n);
+					width: 25%;
 					margin-right: 0;
 				}
 			}
+			&>ul>li {
+					min-height: 8em;
+				}
+
 		}
 		section#copyright {
 			@include span-columns(12, 12);
@@ -741,7 +748,8 @@ div.hot {
 		}
 
 		nav {
-			@include span-columns(15, 15);
+			@include span-columns(13, 15);
+			@include squish(1,1);
 			overflow: visible;
 			clear: both;
 			&:after {
@@ -754,8 +762,13 @@ div.hot {
 			  li.first,
 			  li.last,
 			  li.leaf	{
-					@include span-columns(2, 11);
+					//@include span-columns(2, 11);
+					width: 20%;
 				}
+			}
+			ul~li {
+				margin: 0 auto;
+				background-color: red;
 			}
 		}
 	}
