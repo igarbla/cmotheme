@@ -146,6 +146,26 @@ sup {
 			@include adjust-font-size-to(24px);
 		}
 
+		article#descargas {
+			caption {
+				padding: 0 1em;
+				&:before {
+					@include adjust-font-size-to(48px);
+					line-height: 48px;
+					font-family: "cmo";
+					content: "\e600 ";
+					vertical-align: middle;
+				}
+			}
+			tbody {
+				tr.odd {
+				}
+				td {
+					padding: 0.5em;
+				}
+			}
+		}
+
 		article.basic-page {
 			@include rhythm-borders;
 			border: none;

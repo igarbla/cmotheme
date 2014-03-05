@@ -87,6 +87,20 @@ $gris: #333131;
 
 #main-content {
 
+	article#descargas {
+		table {
+			caption {
+				background-color: $azul;
+				color: white;
+			}
+			tbody {
+				tr.odd {
+					background-color: #ddd;
+				}
+			}
+		}
+	}
+
 	@include at-breakpoint($break-1) {
 		//background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
 		h1, h2 {
