@@ -345,6 +345,28 @@ $container-width: 100%;
 		}
 	}
 
+	article#descargas {
+		table {
+			border: solid 1px black;
+			width: 100%;
+			@include margin-trailer;
+			caption {
+				text-align: center;
+			}
+			thead {
+				background-color: gray;
+			}
+			tbody {
+				tr.odd {
+					background-color: #ccc;
+				}
+				td {
+					padding: 0.5em;
+				}
+			}
+		}
+	}
+
 	@include at-breakpoint($break-1) {
 		@include span-columns(4, 6);
 		@include squish(1,1);
