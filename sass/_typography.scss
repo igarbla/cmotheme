@@ -150,10 +150,10 @@ sup {
 			caption {
 				padding: 0 1em;
 				&:before {
-					@include adjust-font-size-to(48px);
-					line-height: 48px;
+					@include adjust-font-size-to(40px);
+					line-height: 32px;
 					font-family: "cmo";
-					content: "\e600 ";
+					content: "\e600  ";
 					vertical-align: middle;
 				}
 			}
