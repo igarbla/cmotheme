@@ -359,6 +359,10 @@ $container-width: 100%;
 				tr.odd {
 				}
 				td {
+					width: 30%;
+				}
+				td:first-child {
+					width: 10%;
 				}
 			}
 		}
