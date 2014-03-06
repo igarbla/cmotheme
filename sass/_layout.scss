@@ -366,6 +366,30 @@ $container-width: 100%;
 				}
 			}
 		}
+		table.cols2 {
+			tbody {
+				tr.odd {
+				}
+				td {
+					width: 90%;
+				}
+				td:first-child {
+					width: 10%;
+				}
+			}
+		}
+		table.cols4 {
+			tbody {
+				tr.odd {
+				}
+				td {
+					width: 30%;
+				}
+				td:first-child {
+					width: 10%;
+				}
+			}
+		}
 	}
 
 	@include at-breakpoint($break-1) {
