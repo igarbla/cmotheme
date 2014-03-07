@@ -261,6 +261,25 @@ $container-width: 100%;
 		//@include squish(1,1);
 		overflow: visible;
 
+    // Front Page
+  	#block-system-main {
+	  	div.view-frontpage {
+		  	div.view-header {
+		  	}
+		  }
+	  }
+	  #block-views-catalogo-block-1 {
+			ul {
+				li {
+				}
+			}
+	  }
+	  #block-views-frontpage-block-1 {
+	  }
+	  #block-views-frontpage-block-2 {
+	  }
+	  // End Front Page
+
 		article.serie {
 			div.item-list {
 			}
@@ -521,6 +540,33 @@ $container-width: 100%;
 		@include squish(1,1);
 		overflow: visible;
 
+    // Front Page
+  	#block-system-main {
+	  	div.view-frontpage {
+		  	div.view-header {
+		  	}
+		  }
+	  }
+	  #block-views-catalogo-block-1 {
+			ul {
+				li {
+					display: inline-block;
+					width: 28%;
+				}
+			}
+	  }
+	  #block-views-frontpage-block-1 {
+					display: inline-block;
+					width: 45%;
+					vertical-align: top;
+	  }
+	  #block-views-frontpage-block-2 {
+					display: inline-block;
+					width: 45%;
+					vertical-align: top;
+	  }
+	  // End Front Page
+	
 		article.serie {
 			div.item-list {
 			}
