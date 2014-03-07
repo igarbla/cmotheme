@@ -87,6 +87,63 @@ $gris: #333131;
 
 #main-content {
 
+	#block-system-main {
+		.view-frontpage {
+			.view-header {
+				color: #333131;
+				h2 {
+  				color: #333131;
+				}
+			}
+		}
+	}
+	#block-views-catalogo-block-1 {
+		ul {
+			li {
+				position: relative;
+				border: solid 1px $azul;
+				@include border-radius(5px);
+				h2 {
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: white;
+					border: solid 1px $azul;
+					@include border-radius(5px);
+				}
+				img {
+					width: 100%;
+					max-width: 100%;
+					display: block;
+				}
+			}
+		}
+	}
+	#block-views-frontpage-block-1 {
+		border: solid 1px $azul;
+		@include border-radius(5px);
+		background: transparent url("../images/civil_valves.jpg") top left no-repeat;
+		.view-header {
+			h2 {
+				background-color: white;
+				border: solid 1px $azul;
+				@include border-radius(5px);
+			}
+		}
+	}
+	#block-views-frontpage-block-2 {
+		border: solid 1px $azul;
+		@include border-radius(5px);
+		background: transparent url("../images/eventos-proyectos.jpg") top left no-repeat;
+		.view-header {
+			h2 {
+				background-color: white;
+				border: solid 1px $azul;
+				@include border-radius(5px);
+			}
+		}
+	}
+
 	article#descargas {
 		table {
 			caption {

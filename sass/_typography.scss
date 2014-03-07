@@ -146,6 +146,20 @@ sup {
 			@include adjust-font-size-to(24px);
 		}
 
+		#block-system-main {
+			.view-frontpage {
+				.view-header {
+					@include adjust-font-size-to(13px);
+					h2 {
+						font-size: 13px;
+					}
+					p {
+						@include rhythm;
+					}
+				}
+			}
+		}
+
 		article#descargas {
 			caption {
 				padding: 0 1em;
