@@ -159,6 +159,33 @@ sup {
 				}
 			}
 		}
+		#block-views-catalogo-block-1 {
+			ul {
+				text-align: center;
+				li {
+					margin: 0 0.5em;
+					h2 {
+						font-size: 13px;
+						//text-align: left;
+						font-weight: bold;
+						text-transform: uppercase;
+						letter-spacing: 0.1em;
+
+            a,
+						a.visited	{
+							&:before {
+								font-size: 2em;
+								font-weight: normal;
+								line-height: 1.33333em;
+								font-family: "cmo";
+								content: "\e600";
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+			}
+		}
 
 		article#descargas {
 			caption {

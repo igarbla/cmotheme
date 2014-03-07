@@ -100,28 +100,25 @@ $gris: #333131;
 	#block-views-catalogo-block-1 {
 		ul {
 			li {
-				position: relative;
 				border: solid 1px $azul;
-				@include border-radius(5px);
+				@include border-radius(2px);
 				h2 {
-					position: absolute;
-					top: 0;
-					left: 0;
 					background-color: white;
 					border: solid 1px $azul;
 					@include border-radius(5px);
+					a,
+				  a.visited	{
+					  color: $azul;
+					}
 				}
 				img {
-					width: 100%;
-					max-width: 100%;
-					display: block;
 				}
 			}
 		}
 	}
 	#block-views-frontpage-block-1 {
 		border: solid 1px $azul;
-		@include border-radius(5px);
+		@include border-radius(2px);
 		background: transparent url("../images/civil_valves.jpg") top left no-repeat;
 		.view-header {
 			h2 {
@@ -133,7 +130,7 @@ $gris: #333131;
 	}
 	#block-views-frontpage-block-2 {
 		border: solid 1px $azul;
-		@include border-radius(5px);
+		@include border-radius(2px);
 		background: transparent url("../images/eventos-proyectos.jpg") top left no-repeat;
 		.view-header {
 			h2 {

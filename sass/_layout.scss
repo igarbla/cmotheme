@@ -540,6 +540,11 @@ $container-width: 100%;
 		@include squish(1,1);
 		overflow: visible;
 
+		a.feed-icon {
+			display: block;
+			clear: both;
+		}
+
     // Front Page
   	#block-system-main {
 	  	div.view-frontpage {
@@ -548,23 +553,75 @@ $container-width: 100%;
 		  }
 	  }
 	  #block-views-catalogo-block-1 {
+			margin: 0 auto;
 			ul {
 				li {
+				  position: relative;
 					display: inline-block;
-					width: 28%;
+					width: 30%;
+					height: auto;
+					h2 {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 85%;
+						margin: 0 7.5%;
+						margin-top: 2.5%;
+						padding: 0 1em;
+					}
+					img {
+						width: 100%;
+						max-width: 100%;
+						display: block;
+					}
 				}
 			}
 	  }
-	  #block-views-frontpage-block-1 {
-					display: inline-block;
-					width: 45%;
-					vertical-align: top;
-	  }
-	  #block-views-frontpage-block-2 {
-					display: inline-block;
-					width: 45%;
-					vertical-align: top;
-	  }
+		#block-views-frontpage-block-1 {
+			position: relative;
+			display: inline-block;
+			min-height: 200px;
+			width: 48%;
+			//margin-right: 2.5%;
+			padding: 0 2em;
+			padding-top: 4em;
+			vertical-align: top;
+			.view-header h2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 85%;
+				margin: 0 7.5%;
+				margin-top: 2.5%;
+				padding: 0 1em;
+			}
+			.node {
+
+			}
+		}
+		#block-views-frontpage-block-2 {
+			float: right;
+			position: relative;
+			display: inline-block;
+			min-height: 200px;
+			width: 48%;
+			//margin-right: 2.5%;
+			padding: 0 2em;
+			padding-top: 4em;
+			vertical-align: top;
+			.view-header h2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 85%;
+				margin: 0 7.5%;
+				margin-top: 2.5%;
+				padding: 0 1em;
+			}
+			.node {
+
+			}
+		}
 	  // End Front Page
 	
 		article.serie {
