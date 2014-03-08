@@ -83,6 +83,7 @@ sup {
 			li,
 			li.first,
 			li.last	{
+				@include adjust-font-size-to(15px);
 				a {
 					@include apply-side-rhythm-border(left);
 					@include apply-side-rhythm-border(right);
