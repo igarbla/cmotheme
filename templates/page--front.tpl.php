@@ -151,6 +151,12 @@
   <?php print render($page['help']); ?>
   <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
   <?php print render($page['content']); ?>
+  <aside class="fp-aside">
+  <?php print render($page['front_aside_first']); ?>
+  </aside>
+  <aside class="fp-aside">
+  <?php print render($page['front_aside_second']); ?>
+  </aside>
   <?php print $feed_icons; ?>
   </section> 
 
