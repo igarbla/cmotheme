@@ -13,8 +13,11 @@ function cmotheme_preprocess_html(&$variables) {
 
 function cmotheme_process_html(&$variables) {
   $variables['head'] = '<meta charshet="utf-8" />';
-  $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
+  $variables['head'] .= '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />';
   $variables['head'] .= '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />';
+  $variables['head'] .= '<meta name="description" content="Knife gate valves, Válvulas de guillotina, Construcciones Metálicas de Obturación, S.L. (C.M.O.) is a company that designs, manufactures and adjusts standard and special valves. Knife gate valves in general, water treatment, dams and weirs fro, for fluids with suspended solids, solids, special gases for produce pus." />';
+  $variables['head'] .= '<meta name="keywords" content="Valvulas de guillotina, Válvulas de guillotina, knifevalve, knifegatevalves, knife gate valves , Valvulas para Aguas, Guillotina, Tratamiento de Aguas, Valvulas Mineria, Mineria, Valvulas Bi-direccionales, Bi-direccionales, Alta Presion, gate valves, valves for water, Water Treatment, Mining valves, gate valves, butterfly valves, Water valves, Valves, Water Treatment Valves" />';
+  $variables['head'] .= '<meta name="Author" content="Virtual Data" />';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Exo+2:400,600,900" rel="stylesheet" type="text/css">';
   $variables['head'] .= '<link href="http://fonts.googleapis.com/css?family=Open%20Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css">';
 
