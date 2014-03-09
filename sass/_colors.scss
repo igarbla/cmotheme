@@ -119,7 +119,7 @@ $gris: #333131;
 	#block-views-frontpage-block-1 {
 		border: solid 1px $azul;
 		@include border-radius(2px);
-		background: transparent url("../images/civil_valves.jpg") top left no-repeat;
+		background: transparent url("../images/eventos-proyectos.jpg") top left no-repeat;
 		.view-header {
 			h2 {
 				background-color: white;
@@ -131,7 +131,7 @@ $gris: #333131;
 	#block-views-frontpage-block-2 {
 		border: solid 1px $azul;
 		@include border-radius(2px);
-		background: transparent url("../images/eventos-proyectos.jpg") top left no-repeat;
+		background: transparent url("../images/civil_valves.jpg") top left no-repeat;
 		.view-header {
 			h2 {
 				background-color: white;

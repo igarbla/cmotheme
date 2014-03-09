@@ -260,6 +260,9 @@ $container-width: 100%;
 		@include span-columns(4, 4);
 		//@include squish(1,1);
 		overflow: visible;
+		padding-left: .5em;
+		padding-right: .5em;
+
 
     // Front Page
   	#block-system-main {
@@ -269,16 +272,82 @@ $container-width: 100%;
 		  }
 	  }
 	  #block-views-catalogo-block-1 {
+			margin: 0 auto;
 			ul {
 				li {
+				  position: relative;
+					display: inline-block;
+					width: 100%;
+					height: auto;
+					h2 {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 85%;
+						margin: 0 7.5%;
+						margin-top: 2.5%;
+						padding: 0 1em;
+					}
+					img {
+						display: block;
+						width: 100%;
+						max-width: 100%;
+						height: auto;
+						//min-height: 147px;
+					}
 				}
 			}
 	  }
-	  #block-views-frontpage-block-1 {
-	  }
-	  #block-views-frontpage-block-2 {
-	  }
+		#block-views-frontpage-block-1 {
+			position: relative;
+			display: inline-block;
+			//min-height: 200px;
+			width: 100%;
+			//margin-right: 1%;
+			//margin-right: 2.5%;
+			margin-bottom: 1%;
+			padding: 0 2em;
+			padding-top: 4em;
+			vertical-align: top;
+			.view-header h2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 85%;
+				margin: 0 7.5%;
+				margin-top: 2.5%;
+				padding: 0 1em;
+			}
+			.node {
+
+			}
+		}
+		#block-views-frontpage-block-2 {
+			//float: right;
+			position: relative;
+			display: inline-block;
+			//min-height: 200px;
+			width: 100%;
+			//margin-left: 1%;
+			//margin-right: 2.5%;
+			padding: 0 2em;
+			padding-top: 4em;
+			vertical-align: top;
+			.view-header h2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 85%;
+				margin: 0 7.5%;
+				margin-top: 2.5%;
+				padding: 0 1em;
+			}
+			.node {
+
+			}
+		}
 	  // End Front Page
+
 
 		article.serie {
 			div.item-list {
@@ -412,8 +481,8 @@ $container-width: 100%;
 	}
 
 	@include at-breakpoint($break-1) {
-		@include span-columns(4, 6);
-		@include squish(1,1);
+		@include span-columns(6, 6);
+		//@include squish(1,1);
 		overflow: visible;
 
 		article.serie {
