@@ -155,6 +155,57 @@ $gris: #333131;
 		}
 	}
 
+	article.serie {
+		h3 {
+			background: $azul url(../images/cmo_logo_white.png) 1em no-repeat;
+			background-size: 1.5em;
+			color: white;
+		}
+		ul {
+			li {
+				div.box {
+					border: solid 2px #666;
+					@include border-radius(0.5em);
+					a {
+						div.slide {
+							&:hover {
+								div.scontent {
+									p {
+									}
+								}
+								img {
+								}
+							}
+						}
+						img {
+						}
+						div.scontent {
+							color: white;
+							background-color: rgba(0,0,60,.25);
+							//opacity: 0.5;
+							h2 {
+								background: $azul url(../images/cmo_logo_white.png) 0.5em no-repeat;
+								background-size: 1.5em;
+								color: white;
+								//@include border-radius(3px);
+							}
+							p {
+							}
+						}
+
+						div.slide.catalogo {
+							div.scontent {
+								h2 {
+									background: transparent;
+								}
+							}
+						}
+					} 
+				}
+			}
+		}
+	}
+
 	article.producto {
 		div.product-navigation {
 			.icon-icomoon-arrow-left2:before {
@@ -186,7 +237,7 @@ $gris: #333131;
 		}
 		article.serie {
 			h3 {
-    		background: $azul url(../images/cmo_logo_white.png) 1em no-repeat;
+				background: $azul url(../images/cmo_logo_white.png) 1em no-repeat;
 				background-size: 1.5em;
 				color: white;
 			}
@@ -194,7 +245,7 @@ $gris: #333131;
 				li {
 					div.box {
 						border: solid 2px #666;
-				    @include border-radius(0.5em);
+						@include border-radius(0.5em);
 						a {
 							div.slide {
 								&:hover {
@@ -213,8 +264,8 @@ $gris: #333131;
 								background-color: rgba(0,0,60,.25);
 								//opacity: 0.5;
 								h2 {
-    		          background: $azul url(../images/cmo_logo_white.png) 0.5em no-repeat;
-          				background-size: 1.5em;
+									background: $azul url(../images/cmo_logo_white.png) 0.5em no-repeat;
+									background-size: 1.5em;
 									color: white;
 									//@include border-radius(3px);
 								}
@@ -226,9 +277,9 @@ $gris: #333131;
 								div.scontent {
 									h2 {
 										background: transparent;
+									}
 								}
 							}
-						}
 						} 
 					}
 				}
