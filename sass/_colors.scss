@@ -347,4 +347,19 @@ $gris: #333131;
 			}
 		}
 	}
+	section#legal {
+		ul {
+			&:before {
+				color: #999;
+			}
+			li {
+				&:before {
+					color: $azul;
+				}
+			}
+			a {
+				color: white;
+			}
+		}
+	}
 }

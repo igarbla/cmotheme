@@ -422,6 +422,28 @@ sup {
 			}
 		}
 	}
+	section#legal	{
+		ul {
+			@include adjust-font-size-to(11px);
+			font-weight: normal;
+			letter-spacing: 0.65px;
+			text-transform: none;
+			&:before {
+				@include adjust-font-size-to(72px);
+				font-family: "cmo";
+				content: "\e600 ";
+				vertical-align: middle;
+			}
+			li {
+				&:before {
+					@include adjust-font-size-to(11px);
+					font-family: "entypo";
+					content: "\e6d0";
+					vertical-align: middle;
+				}
+			}
+		}
+	}
 
 	@include at-breakpoint($break-1) {
 		@include adjust-font-size-to(16px);
@@ -446,6 +468,11 @@ sup {
 				@include adjust-font-size-to(14px);
 				&:before {
 				}
+			}
+		}
+		section#legal {
+			ul {
+				@include adjust-font-size-to(14px);
 			}
 		}
 	}
