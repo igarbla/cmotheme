@@ -361,8 +361,8 @@ $container-width: 100%;
 				padding-left: 3em;
 			}
 			ul {
-				@include pre(1);
-				@include post(1);
+				//@include pre(1);
+				//@include post(1);
 				overflow: hidden;
 				li{
 					@include span-columns(4, 4);
