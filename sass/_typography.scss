@@ -138,6 +138,26 @@ sup {
 	p, ul {
 		@include rhythm(0,1,1,0);
 	}
+
+	article.producto {
+		div.product-navigation {
+			div {
+				@include rhythm(0,1,1,0);
+				a {
+					font-weight: bold;
+					padding: 0 4em;
+				}
+			}
+			div.icon-icomoon-arrow-left2 {
+				font-family: 'Exo 2', sans-serif;
+			}
+			div.icon-icomoon-arrow-right2 {
+				font-family: 'Exo 2', sans-serif;
+				text-align: right;
+			}
+		}
+	}
+
 	@include at-breakpoint($break-3) {
 		h1 {
 			@include adjust-font-size-to(48px);
