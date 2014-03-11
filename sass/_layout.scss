@@ -324,8 +324,11 @@ $container-width: 100%;
 				margin-top: 2.5%;
 				padding: 0 1em;
 			}
-			.node {
-
+			.view-content {
+				.node {
+					margin-bottom: 1em;
+					padding: 1em;
+				}
 			}
 		}
 		#block-views-frontpage-block-2 {
@@ -348,8 +351,11 @@ $container-width: 100%;
 				margin-top: 2.5%;
 				padding: 0 1em;
 			}
-			.node {
-
+			.view-content {
+				.node {
+					margin-bottom: 1em;
+					padding: 1em;
+				}
 			}
 		}
 	  // End Front Page

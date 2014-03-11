@@ -87,6 +87,10 @@ $gris: #333131;
 
 #main-content {
 
+	h1, h2 {
+		color: $azul;
+	}
+
 	#block-system-main {
 		.view-frontpage {
 			.view-header {
@@ -127,6 +131,13 @@ $gris: #333131;
 				@include border-radius(5px);
 			}
 		}
+		.view-content {
+			.node {
+				background-color: white;
+        border: solid 1px $azul;
+    		@include border-radius(5px);
+			}
+		}
 	}
 	#block-views-frontpage-block-2 {
 		border: solid 1px $azul;
@@ -137,6 +148,13 @@ $gris: #333131;
 				background-color: white;
 				border: solid 1px $azul;
 				@include border-radius(5px);
+			}
+		}
+		.view-content {
+			.node {
+			  background-color: white;
+        border: solid 1px $azul;
+    		@include border-radius(5px);
 			}
 		}
 	}
@@ -227,9 +245,6 @@ $gris: #333131;
 
 	@include at-breakpoint($break-1) {
 		//background: #fff url(../images/backgr_factory_group.jpg) bottom left no-repeat;
-		h1, h2 {
-			color: $azul;
-		}
 		article {
   	}
 		article.basic-page {

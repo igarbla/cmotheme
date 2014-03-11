@@ -139,6 +139,76 @@ sup {
 		@include rhythm(0,1,1,0);
 	}
 
+	#block-system-main {
+		.view-frontpage {
+			.view-header {
+				@include adjust-font-size-to(13px);
+				@include trailing-border;
+				border-bottom-width: 1px;
+				h2 {
+					font-size: 13px;
+				}
+				p {
+					@include rhythm;
+				}
+			}
+		}
+	}
+	#block-views-catalogo-block-1 {
+		ul {
+			text-align: center;
+			li {
+				margin: 0 0.5em;
+				h2 {
+					font-size: 13px;
+					//text-align: left;
+					font-weight: bold;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+
+					a,
+					a.visited	{
+						&:before {
+							font-size: 2em;
+							font-weight: normal;
+							line-height: 1.33333em;
+							font-family: "cmo";
+							content: "\e600";
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+		}
+	}
+	#block-views-frontpage-block-1,
+	#block-views-frontpage-block-2 {
+		.view-frontpage {
+			.view-header {
+				h2 {
+					font-size: 13px;
+					//text-align: left;
+					font-weight: bold;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+
+					&:before {
+						font-size: 2em;
+						font-weight: normal;
+						line-height: 1.33333em;
+						font-family: "cmo";
+						content: "\e600";
+						vertical-align: middle;
+					}
+				}
+			}
+			.view-content {
+				.node {
+				}
+			}
+		}
+	}
+
 	article.producto {
 		div.product-navigation {
 			div {
@@ -167,71 +237,7 @@ sup {
 			@include adjust-font-size-to(24px);
 		}
 
-		#block-system-main {
-			.view-frontpage {
-				.view-header {
-					@include adjust-font-size-to(13px);
-					@include trailing-border;
-					border-bottom-width: 1px;
-					h2 {
-						font-size: 13px;
-					}
-					p {
-						@include rhythm;
-					}
-				}
-			}
-		}
-		#block-views-catalogo-block-1 {
-			ul {
-				text-align: center;
-				li {
-					margin: 0 0.5em;
-					h2 {
-						font-size: 13px;
-						//text-align: left;
-						font-weight: bold;
-						text-transform: uppercase;
-						letter-spacing: 0.1em;
 
-            a,
-						a.visited	{
-							&:before {
-								font-size: 2em;
-								font-weight: normal;
-								line-height: 1.33333em;
-								font-family: "cmo";
-								content: "\e600";
-								vertical-align: middle;
-							}
-						}
-					}
-				}
-			}
-		}
-		#block-views-frontpage-block-1,
-		#block-views-frontpage-block-2 {
-			.view-frontpage {
-				.view-header {
-					h2 {
-						font-size: 13px;
-						//text-align: left;
-						font-weight: bold;
-						text-transform: uppercase;
-						letter-spacing: 0.1em;
-
-						&:before {
-							font-size: 2em;
-							font-weight: normal;
-							line-height: 1.33333em;
-							font-family: "cmo";
-							content: "\e600";
-							vertical-align: middle;
-						}
-					}
-				}
-			}
-		}
 
 		article#descargas {
 			caption {
