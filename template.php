@@ -237,6 +237,26 @@ function cmotheme_views_view_fields__catalogo__page($variables) {
 	return $output;
 }
 
+function cmotheme_views_view_fields__catalogo__block_1($variables) {
+	//dsm($variables);
+	$enlace = $variables['fields']['name_field']->content;
+	$nombre = $variables['fields']['name_field_1']->content;
+	$foto   = $variables['fields']['field_catalogo_foto']->content;
+
+	$output  = '<div class="box">';
+	//$output .= $variables['fields']['name_field']->content;
+	//$output .= substr($variables['fields']['name_field']->content, 0, -4);
+	$output .= str_replace($nombre .'</a>', '', $enlace);
+	$output .= '<div class="slide catalogo">';
+	$output .= $foto;
+	$output .= '<div class="scontent">';
+	$output .= '<h2>'. $nombre . '</h2>';
+	$output .= '</div></div>';
+	$output .= '</a>';
+	$output .= '</div>';
+	return $output;
+}
+
 /*
  * Productos por serie View Theme Functions
  */
