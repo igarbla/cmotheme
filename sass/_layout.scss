@@ -705,7 +705,25 @@ $container-width: 100%;
 				padding: 0 1em;
 			}
 			.node {
-
+				.content {
+					.field {
+						width: 70%;
+						display: inline-block;
+						vertical-align: top;
+						padding: 0.3em;
+					}
+					.field-name-field-foto-evento {
+						width: 30%;
+						img {
+							width: 100%;
+							max-width: 100%;
+							height: auto;
+						}
+					}
+				}
+				.link-wrapper {
+					text-align: right;
+				}
 			}
 		}
 		#block-views-frontpage-block-2 {

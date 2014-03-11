@@ -186,7 +186,8 @@ sup {
 		.view-frontpage {
 			.view-header {
 				h2 {
-					font-size: 13px;
+				  @include adjust-font-size-to(13px);
+					//font-size: 13px;
 					//text-align: left;
 					font-weight: bold;
 					text-transform: uppercase;
@@ -204,6 +205,13 @@ sup {
 			}
 			.view-content {
 				.node {
+					h2 {
+						@include adjust-font-size-to(15px);
+					}
+					.link-wrapper {
+						@include adjust-font-size-to(12px);
+					}
+
 				}
 			}
 		}

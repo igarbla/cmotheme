@@ -124,6 +124,7 @@ $gris: #333131;
 		border: solid 1px $azul;
 		@include border-radius(2px);
 		background: transparent url("../images/eventos-proyectos.jpg") top left no-repeat;
+		background-size: cover;
 		.view-header {
 			h2 {
 				background-color: white;
@@ -136,6 +137,11 @@ $gris: #333131;
 				background-color: white;
         border: solid 1px $azul;
     		@include border-radius(5px);
+				h2 {
+					a {
+						color: $azul;
+					}
+				}
 			}
 		}
 	}
@@ -143,6 +149,7 @@ $gris: #333131;
 		border: solid 1px $azul;
 		@include border-radius(2px);
 		background: transparent url("../images/civil_valves.jpg") top left no-repeat;
+		background-size: cover;
 		.view-header {
 			h2 {
 				background-color: white;
