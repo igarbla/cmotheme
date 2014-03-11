@@ -142,11 +142,12 @@ sup {
 	#block-system-main {
 		.view-frontpage {
 			.view-header {
-				@include adjust-font-size-to(13px);
+				@include adjust-font-size-to(14px);
 				@include trailing-border;
 				border-bottom-width: 1px;
 				h2 {
-					font-size: 13px;
+					font-size: 15px;
+					font-weight: bold;
 				}
 				p {
 					@include rhythm;
@@ -160,11 +161,11 @@ sup {
 			li {
 				margin: 0 0.5em;
 				h2 {
-					font-size: 13px;
+					font-size: 15px;
 					//text-align: left;
 					font-weight: bold;
 					text-transform: uppercase;
-					letter-spacing: 0.1em;
+					letter-spacing: 0.07em;
 
 					a,
 					a.visited	{
@@ -186,12 +187,12 @@ sup {
 		.view-frontpage {
 			.view-header {
 				h2 {
-				  @include adjust-font-size-to(13px);
+				  @include adjust-font-size-to(15px);
 					//font-size: 13px;
 					//text-align: left;
 					font-weight: bold;
 					text-transform: uppercase;
-					letter-spacing: 0.1em;
+					letter-spacing: 0.07em;
 
 					&:before {
 						font-size: 2em;

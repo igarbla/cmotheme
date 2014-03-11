@@ -328,6 +328,11 @@ $container-width: 100%;
 				.node {
 					margin-bottom: 1em;
 					padding: 1em;
+					padding-top: 0.2em;
+
+					.link-wrapper {
+						margin-top: -3em;
+					}
 				}
 			}
 		}
