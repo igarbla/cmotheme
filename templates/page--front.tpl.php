@@ -85,7 +85,7 @@
         </a>
       <?php endif; ?>
     </h1>
-    <p><a href="#"><span class="icon-icomoon-location2">Ubicación</span></a> - <span type="email">contact@cmo.es</span> - <span type="tel">+34 943 673399</span></p>
+	    <p><a href="#"><span class="icon-icomoon-location2">Ubicación</span></a> - <a href="<?php print url('contact'); ?>"><span type="email">cmo@cmo.es</span></a> - <a href="tel:+34943673399"><span type="tel">+34 943 673399</span></a></p>
     <?php print render($page['header']); ?>
 
   <?php if ($main_menu || $secondary_menu): ?>
