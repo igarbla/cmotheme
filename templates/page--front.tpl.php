@@ -85,7 +85,21 @@
         </a>
       <?php endif; ?>
     </h1>
-	    <p><a href="#"><span class="icon-icomoon-location2">Ubicación</span></a> - <a href="<?php print url('contact'); ?>"><span type="email">cmo@cmo.es</span></a> - <a href="tel:+34943673399"><span type="tel">+34 943 673399</span></a></p>
+	    <p>
+	     <a href="#">
+               <span class="geo">
+		 <span class="latitude">
+                   <span class="value-title" title="43.110946"> </span>
+                 </span>
+                 <span class="longitude">
+                  <span class="value-title" title="-2.070472"> </span>
+		 </span>
+               </span>
+               <span class="icon-icomoon-location2"><?php print t('Location'); ?></span>
+             </a> - 
+	     <a href="<?php print url('contact'); ?>"><span type="email">cmo@cmo.es</span></a> - 
+             <a href="tel:+34943673399"><span type="tel">+34 943 673399</span></a>
+           </p>
     <?php print render($page['header']); ?>
 
   <?php if ($main_menu || $secondary_menu): ?>
