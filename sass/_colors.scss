@@ -13,6 +13,8 @@ $gris: #333131;
 }
 
 #site-header {
+	background: #fff url(../images/head_image.jpg) 0 -1.7em no-repeat;
+  background-size: cover;
 	p {
 	  color: #999;
 	}
@@ -51,6 +53,7 @@ $gris: #333131;
 }
 
 #site-nav {
+	background-color: #fff;
 	li {
 		&:hover {
 			background-color: $azul;
