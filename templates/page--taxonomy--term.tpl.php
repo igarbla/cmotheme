@@ -95,7 +95,7 @@
            <span class="value-title" title="-2.070472"> </span>
          </span>
        </span>
-       <span class="icon-icomoon-location2"><?php print t('Location'); ?></span>
+       <span type="location"><?php print t('Location'); ?></span>
       </a> - 
       <a href="<?php print url('contact'); ?>"><span type="email">cmo@cmo.es</span></a> - 
       <a href="tel:+34943673399"><span type="tel">+34 943 673399</span></a>
