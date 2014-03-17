@@ -53,6 +53,7 @@ sup {
 	@include at-breakpoint($break-1) {
 		@include rhythm-borders;
 		border: none;
+		padding-top: 0;
 		padding-right: 4em;
 		padding-bottom: 0;
 
