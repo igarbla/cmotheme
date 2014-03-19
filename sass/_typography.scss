@@ -226,6 +226,18 @@ sup {
 		}
 	}
 
+	.field-name-field-ficheros-basic-page {
+		@include rhythm(0,1,1,0);
+		span.file {
+			a {
+				font-size: 13px;
+				letter-spacing: 0.65px;
+				vertical-align: middle;
+				line-height: 4em;
+			}
+		}
+	}
+
 	article.producto {
 		div.product-navigation {
 			div {
