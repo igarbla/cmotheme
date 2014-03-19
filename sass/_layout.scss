@@ -374,13 +374,14 @@ $container-width: 100%;
 		.field-name-field-ficheros-basic-page {
 			.field-item {
 				display: inline-block;
+				width: 25%;
 				float: left;
-				padding: 0 1em;
+				//padding: 0 1em;
 			}
       span.file {
 		  	display: inline-block;
 			  min-height: 60px;
-		  	padding-left: 4em;
+		  	padding-left: 3em;
 			img {
 				display: none;
 			}
