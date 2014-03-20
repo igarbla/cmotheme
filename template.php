@@ -43,6 +43,7 @@ function cmotheme_preprocess_page(&$variables, $hook) {
   if (isset($variables['node'])) {
     // If the node type is "blog_madness" the template suggestion will be "page--blog-madness.tpl.php".
     $variables['theme_hook_suggestions'][] = 'page__'. str_replace('_', '--', $variables['node']->type);
+    $variables['theme_hook_suggestions'][] = 'page__'. str_replace('_', '--', $variables['node']->type) . '__' . $variables['node']->nid;
  
   if ($variables['node']->type == 'producto') {
 	  $term = $variables['node']->field_catalogo['und'][0]['taxonomy_term'];
