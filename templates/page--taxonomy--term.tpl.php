@@ -112,6 +112,7 @@
      */
     ?>
     <?php $menu = theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+    <?php $menu_legal = theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
     <?php print $menu; ?>
   </nav> 
   <?php endif; ?>
@@ -148,6 +149,10 @@
 
     <section id="copyright">
       <p>&copy;2014 <?php print $site_name; ?></p>
+    </section>
+
+    <section id="legal">
+      <?php print $menu_legal; ?>
     </section>
 
   <?php print render($page['footer']); ?>
