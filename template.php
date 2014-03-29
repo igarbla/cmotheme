@@ -157,6 +157,7 @@ function cmotheme_item_list($variables) {
 }
 
 function cmotheme_links__locale_block(&$variables) {
+  kpr($variables);
   // the global $language variable tells you what the current language is
   global $language;
   // an array of list items
@@ -174,7 +175,8 @@ function cmotheme_links__locale_block(&$variables) {
                                              'language' => $info['language'],
                                              'html'     => true
                                              );
-      $link = l($name, $href, $options);
+      //$link = l($name, $href, $options);
+      $link = l($info['title'], $href, $options);
       // display only translated links
       if ($href) $items[] = array('data' => $link, 'class' => $li_classes);
    }
