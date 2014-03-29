@@ -157,7 +157,6 @@ function cmotheme_item_list($variables) {
 }
 
 function cmotheme_links__locale_block(&$variables) {
-  kpr($variables);
   // the global $language variable tells you what the current language is
   global $language;
   // an array of list items
