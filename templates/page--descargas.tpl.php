@@ -86,7 +86,7 @@
       <?php endif; ?>
     </h1>
     <p>
-      <a href="#">
+      <a href="http://www.cmo.es/html/nueva/map3d.html" target="_blank">
        <span class="geo">
 	 <span class="latitude">
             <span class="value-title" title="43.110946"> </span>
